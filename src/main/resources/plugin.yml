@@ -1,0 +1,24 @@
+name: MultiverseCore
+main: com.multiverse.core.MultiverseCore
+version: 1.0.0
+api-version: 1.19
+description: 다양한 차원, 포탈, 웨이포인트를 관리하는 멀티버스 플러그인
+author: junggyeol4444
+
+commands:
+  admin:
+    description: 관리자 명령어를 사용합니다.
+    usage: /admin
+    permission: multiversecore.admin
+  player:
+    description: 플레이어 명령어를 사용합니다.
+    usage: /player
+    permission: multiversecore.player
+
+permissions:
+  multiversecore.admin:
+    description: 관리자용 명령어 사용 권한
+    default: op
+  multiversecore.player:
+    description: 일반 플레이어 명령어 사용 권한
+    default: true

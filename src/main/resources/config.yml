@@ -1,0 +1,24 @@
+economy:
+  enabled: true
+  default-balance: 1000.0
+  decay-rate: 0.03
+
+autosave:
+  enabled: true
+  interval: 600 # 초 단위 (10분)
+
+waypoint:
+  max-count: 5
+
+portal:
+  particle-effect: true
+
+dimension:
+  default: "world"
+  list:
+    - world
+    - nether
+    - the_end
+
+messages:
+  prefix: "&b[MultiverseCore] &r"
