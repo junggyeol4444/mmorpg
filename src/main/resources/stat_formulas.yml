@@ -1,0 +1,10 @@
+stat-formulas:
+  physical-damage: "STR * 1.5 + DEX * 0.5 + base"
+  magic-damage: "INT * 2.0 + WIS * 0.7 + base"
+  critical-chance: "LUK * 0.005"
+  max-health: "VIT * 7 + RES * 2 + 100"
+  move-speed: "AGI * 0.35 + DEX * 0.15 + 4"
+  charisma-bonus: "CHA * 0.2"
+
+  evolution-requirement: "level >= required_level && stat >= required_stat" # 예시 구문
+  transcendence-power-unlock: "transcend-level >= power.level-required"

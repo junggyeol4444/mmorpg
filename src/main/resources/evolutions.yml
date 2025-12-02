@@ -1,0 +1,53 @@
+evolutions:
+  elf_to_high_elf:
+    from: elf
+    to: high_elf
+    display: "상급 엘프로의 진화"
+    description: "마법 능력이 크게 향상됩니다."
+    requirements:
+      level: 30
+      INT: 18
+    bonus-stats:
+      INT: 5
+      WIS: 4
+      DEX: 2
+
+  elf_to_dark_elf:
+    from: elf
+    to: dark_elf
+    display: "암흑 엘프로의 진화"
+    description: "어둠과 저항에 특화됩니다."
+    requirements:
+      level: 30
+      RES: 15
+      WIS: 13
+    bonus-stats:
+      RES: 5
+      INT: 2
+      WIS: 3
+
+  human_to_beastman:
+    from: human
+    to: beastman
+    display: "야수인으로 진화"
+    description: "적응력 대신 강한 힘과 체력을 획득합니다."
+    requirements:
+      level: 25
+      STR: 17
+      VIT: 15
+    bonus-stats:
+      STR: 6
+      VIT: 4
+
+  dwarf_to_mountain_dwarf:
+    from: dwarf
+    to: mountain_dwarf
+    display: "산맥 드워프로 진화"
+    description: "방어력과 체력에 특화됩니다."
+    requirements:
+      level: 28
+      VIT: 18
+      RES: 18
+    bonus-stats:
+      VIT: 5
+      RES: 6

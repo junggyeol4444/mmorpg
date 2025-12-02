@@ -1,0 +1,18 @@
+name: PlayerDataCore
+main: com.multiverse.playerdata.PlayerDataCore
+version: 1.0.0
+api-version: 1.19
+author: junggyeol4444
+description: 플레이어 진화/초월/스탯 관리 플러그인
+depend: [Vault]
+commands:
+  playerstats:
+    description: 플레이어 스탯을 확인합니다.
+  evolution:
+    description: 진화 정보를 확인합니다.
+  transcendence:
+    description: 초월 능력을 선택합니다.
+permissions:
+  playerdata.use:
+    description: PlayerDataCore 기본 권한
+    default: true

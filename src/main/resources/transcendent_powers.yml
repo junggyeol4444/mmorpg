@@ -1,0 +1,38 @@
+transcendent-powers:
+  TIME_STOP:
+    display: "시간 정지"
+    description: "일정 시간 모든 행동을 정지시킬 수 있습니다."
+    level-required: 3
+    cooldown-seconds: 600
+    effect:
+      - "모든 주변 엔티티 행동 정지 (5초)"
+      - "자신은 자유롭게 움직임"
+      - "대미지/상호작용 제한"
+
+  REGENERATION:
+    display: "재생"
+    description: "매 초마다 체력이 회복됩니다."
+    level-required: 1
+    cooldown-seconds: 60
+    effect:
+      - "매 초 5 체력 회복"
+      - "중첩 불가"
+
+  ULTIMATE_VISION:
+    display: "궁극의 시야"
+    description: "모든 투명·숨김된 객체, 적 실시간 감지 가능"
+    level-required: 2
+    cooldown-seconds: 300
+    effect:
+      - "투명/숨김 적 표시"
+      - "지속 시간 10초"
+      - "상태이상 면역 (지속 중)"
+
+  RESURRECTION:
+    display: "부활"
+    description: "사망시 1회 자동 부활"
+    level-required: 5
+    cooldown-seconds: 7200
+    effect:
+      - "사망 후 즉시 체력 50%로 복구"
+      - "쿨타임 내 한 번만 발동"

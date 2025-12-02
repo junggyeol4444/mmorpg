@@ -1,0 +1,30 @@
+data-folder: "playerdata"
+autosave-interval-ticks: 6000    # 5분마다 자동 저장 (20틱=1초)
+backup-interval-ticks: 36000     # 30분마다 백업
+backup-folder: "backups"
+
+penalty-check-interval-ticks: 400 # 패널티 검사 주기
+
+default-stats:
+  STR: 10
+  DEX: 10
+  INT: 10
+  LUK: 5
+  VIT: 10
+  RES: 7
+  AGI: 9
+  CHA: 8
+  WIS: 11
+
+max-stats:
+  STR: 999
+  DEX: 999
+  INT: 999
+  LUK: 999
+  VIT: 999
+  RES: 999
+  AGI: 999
+  CHA: 999
+  WIS: 999
+
+language: "ko_KR"

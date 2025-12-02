@@ -1,0 +1,52 @@
+races:
+  human:
+    display: "인간"
+    description: "제일 보편적인 종족. 평범한 능력치와 적응력."
+    base-stats:
+      STR: 10
+      DEX: 10
+      INT: 10
+      LUK: 10
+      VIT: 10
+      RES: 10
+      AGI: 10
+      CHA: 10
+      WIS: 10
+    evolutions:
+      - elf
+      - dwarf
+      - beastman
+
+  elf:
+    display: "엘프"
+    description: "민첩하고 마법에 특화된 종족."
+    base-stats:
+      STR: 6
+      DEX: 14
+      INT: 15
+      LUK: 11
+      VIT: 7
+      RES: 10
+      AGI: 13
+      CHA: 12
+      WIS: 16
+    evolutions:
+      - high_elf
+      - dark_elf
+
+  dwarf:
+    display: "드워프"
+    description: "강인한 체력과 힘을 자랑하는 종족."
+    base-stats:
+      STR: 15
+      DEX: 8
+      INT: 7
+      LUK: 9
+      VIT: 16
+      RES: 14
+      AGI: 7
+      CHA: 8
+      WIS: 9
+    evolutions:
+      - mountain_dwarf
+      - deep_dwarf
