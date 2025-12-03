@@ -1,0 +1,33 @@
+# DeathAndRebirth 플러그인 기본 설정 파일
+
+soulCoin:
+  startingAmount: 10
+  earnOnRevive: 5
+  itemMaterial: GOLD_INGOT
+
+insurance:
+  enabled: true
+  types:
+    basic:
+      price: 50
+      durationMinutes: 60
+    premium:
+      price: 150
+      durationMinutes: 180
+    revival:
+      price: 300
+      durationMinutes: 360
+
+quests:
+  enabled: true
+  dailyLimit: 2
+
+netherRealm:
+  worldName: "nether_realm"
+  particleEnabled: true
+  particleType: "SOUL_FIRE_FLAME"
+
+messages:
+  reviveSuccess: "&a성공적으로 부활하였습니다! 소울 코인이 지급되었습니다."
+  notEnoughSoulCoin: "&c소울 코인이 부족합니다."
+  insuranceExpired: "&e보험이 만료되었습니다. 다시 구매해주세요."

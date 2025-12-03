@@ -1,0 +1,35 @@
+# 명계에서 등장하는 NPC 목록 및 대화 설정
+
+npcs:
+  - id: "reaper"
+    name: "저승사자"
+    location:
+      world: "nether_realm"
+      x: 110.0
+      y: 33.0
+      z: -45.0
+    dialogues:
+      - "이곳에서 영혼을 정화하거나, 퀘스트를 받을 수 있네."
+      - "부활을 원하면 소울 코인이 충분한지 확인하게!"
+
+  - id: "soulMerchant"
+    name: "소울 상인"
+    location:
+      world: "nether_realm"
+      x: -65.1
+      y: 30.0
+      z: 80.5
+    dialogues:
+      - "소울 코인을 거래하고 보험을 가입할 수 있네."
+      - "필요한 만큼 소울 코인을 모아오게나."
+
+  - id: "revivalPriest"
+    name: "부활 사제"
+    location:
+      world: "nether_realm"
+      x: 1.5
+      y: 65.0
+      z: 2.0
+    dialogues:
+      - "이 탑에서 부활 의식을 진행하네."
+      - "퀘스트를 완수하면 부활이 가능하네."

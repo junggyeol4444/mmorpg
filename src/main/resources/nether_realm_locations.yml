@@ -1,0 +1,23 @@
+# 명계(네더) 지역별 위치 설정
+
+locations:
+  - name: "소울 샘"
+    world: "nether_realm"
+    x: 105.5
+    y: 34.0
+    z: -42.3
+    description: "생명의 샘에서 영혼을 정화하세요."
+
+  - name: "망자 숲"
+    world: "nether_realm"
+    x: -60.0
+    y: 29.0
+    z: 78.2
+    description: "어둠이 깃든 죽음의 숲."
+
+  - name: "부활의 탑"
+    world: "nether_realm"
+    x: 0.0
+    y: 64.0
+    z: 0.0
+    description: "부활 의식이 진행되는 신성한 공간."

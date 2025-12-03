@@ -1,0 +1,15 @@
+name: DeathAndRebirth
+main: com.multiverse.death.DeathAndRebirthPlugin
+version: 1.0.0
+description: "플레이어의 사망, 부활, 보험, 소울 코인 등 명계 컨셉 시스템을 제공하는 플러그인"
+authors: [junggyeol4444]
+api-version: 1.21
+commands:
+  revive:
+    description: "플레이어를 부활시킵니다."
+  soulcoin:
+    description: "소울 코인 관련 명령어"
+permissions:
+  deathandrebrith.admin:
+    description: "DeathAndRebirth의 관리자 권한"
+    default: op
