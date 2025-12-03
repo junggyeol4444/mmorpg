@@ -1,0 +1,16 @@
+name: NPC-AI
+main: com.multiverse.npcai.Main
+version: 1.0.0
+api-version: 1.16
+authors:
+  - junggyeol4444
+description: >-
+  다양한 NPC 인공지능 행동과 인터랙션, 상점 및 퀘스트등을 제공하는 플러그인
+commands:
+  npcaidb:
+    description: NPC AI 디버그 명령어
+    usage: /<command>
+permissions:
+  npcaiai.admin:
+    description: NPC AI 관리 권한
+    default: op

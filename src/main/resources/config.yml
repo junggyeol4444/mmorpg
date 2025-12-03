@@ -1,0 +1,23 @@
+# NPC AI 플러그인 설정 파일
+
+npc:
+  default-type: VILLAGER
+  default-reputation: NEUTRAL
+  max-skill-count: 5
+
+shop:
+  reset-interval-minutes: 120
+  currency-item: "emerald"
+
+behavior:
+  patrol-interval: 30
+  wander-interval: 45
+  guard-radius: 5
+
+autosave:
+  enabled: true
+  interval-minutes: 10
+
+logging:
+  enabled: true
+  level: INFO

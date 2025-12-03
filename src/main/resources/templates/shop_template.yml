@@ -1,0 +1,35 @@
+# NPC 상점 템플릿 예시
+
+shop:
+  name: "여행자의 잡화점"
+  owner: "엔피씨 주인장"
+  greeting: "무엇을 찾으시나요?"
+  categories:
+    - 무기
+    - 방어구
+    - 소비아이템
+    - 기타
+  items:
+    - id: "iron_sword"
+      type: "무기"
+      display: "철 검"
+      price: 30
+      stock: 8
+      description: "튼튼한 철로 만들어진 검"
+    - id: "leather_armor"
+      type: "방어구"
+      display: "가죽 갑옷"
+      price: 22
+      stock: 5
+      description: "가벼운 방어구"
+    - id: "potion"
+      type: "소비아이템"
+      display: "체력 포션"
+      price: 8
+      stock: 20
+      description: "사용 시 체력을 회복"
+
+currency: "emerald"
+currency_display: "에메랄드"
+tax_rate: 0.05
+restock_interval: 60
