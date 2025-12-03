@@ -1,0 +1,32 @@
+interest-rate: 0.01
+
+statistics:
+  transaction-count: 0
+  total-balance: 0.0
+  total-loans: 0.0
+  total-burned: 0.0
+  inflation-rate: 0.0
+
+economy:
+  banks:
+    default-bank:
+      interest-rate: 0.01
+      loan-limit: 10000
+      overdraft-limit: 1000
+  currencies: 
+    - id: USD
+      name: Dollar
+      symbol: $
+      default: true
+    - id: EUR
+      name: Euro
+      symbol: €
+      default: false
+    - id: KRW
+      name: Won
+      symbol: ₩
+      default: false
+
+tasks:
+  statistics-update-interval-minutes: 5
+  data-save-interval-minutes: 10

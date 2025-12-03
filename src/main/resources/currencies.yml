@@ -1,0 +1,21 @@
+currencies:
+  USD:
+    name: Dollar
+    symbol: $
+    default: true
+    exchange-enabled: true
+    decimals: 2
+
+  EUR:
+    name: Euro
+    symbol: €
+    default: false
+    exchange-enabled: true
+    decimals: 2
+
+  KRW:
+    name: Won
+    symbol: ₩
+    default: false
+    exchange-enabled: true
+    decimals: 0

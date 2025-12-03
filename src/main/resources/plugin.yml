@@ -1,0 +1,17 @@
+name: MultiverseEconomy
+main: com.multiverse.economy.MultiverseEconomyPlugin
+version: 1.0.0
+api-version: 1.21
+authors: [junggyeol4444]
+description: 'A multi-currency, multi-bank economy plugin for Bukkit/Spigot servers'
+commands:
+  mveconomy:
+    description: Main command for MultiverseEconomy
+    usage: /<command>
+permissions:
+  multiverseeconomy.use:
+    description: Allows use of basic economy commands.
+    default: true
+  multiverseeconomy.admin:
+    description: Full admin access for economy management.
+    default: op

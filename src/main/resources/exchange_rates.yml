@@ -1,0 +1,30 @@
+exchange_rates:
+  # USD ↔ EUR
+  USD_EUR:
+    from: USD
+    to: EUR
+    rate: 0.9
+  EUR_USD:
+    from: EUR
+    to: USD
+    rate: 1.1
+
+  # USD ↔ KRW
+  USD_KRW:
+    from: USD
+    to: KRW
+    rate: 1200.0
+  KRW_USD:
+    from: KRW
+    to: USD
+    rate: 0.00083
+
+  # EUR ↔ KRW
+  EUR_KRW:
+    from: EUR
+    to: KRW
+    rate: 1350.0
+  KRW_EUR:
+    from: KRW
+    to: EUR
+    rate: 0.00074

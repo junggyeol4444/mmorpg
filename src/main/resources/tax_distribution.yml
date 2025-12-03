@@ -1,0 +1,16 @@
+tax_distribution:
+  bank-reserve:
+    percentage: 20
+    description: Portion retained for bank reserves.
+
+  government:
+    percentage: 30
+    description: Portion required by government/tax authority.
+
+  server-fund:
+    percentage: 40
+    description: Fund used for server-wide events, projects, etc.
+
+  burned:
+    percentage: 10
+    description: Currency permanently removed from circulation.
