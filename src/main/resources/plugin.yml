@@ -1,0 +1,160 @@
+name: QuestCore
+version: 1.0.0
+main: com.multiverse.quest.QuestCore
+description: 포괄적인 퀨스트 시스템 플러그인
+authors:
+  - junggyeol4444
+website: https://github.com/junggyeol4444/QuestCore
+api-version: '1.20'
+
+# ============ 명령어 ============
+commands:
+  quest:
+    description: 퀨스트 관련 명령어
+    usage: /quest <subcommand> [args]
+    aliases: [q]
+    permission: questcore.use
+    subcommands:
+      - accept <quest_id>
+      - complete <quest_id>
+      - abandon <quest_id>
+      - list [type]
+      - track <quest_id>
+      - untrack
+      - journal
+      - tracker
+      - daily
+      - weekly
+      - stats
+      - help
+
+  questadmin:
+    description: 퀨스트 관리 명령어
+    usage: /questadmin <subcommand> [args]
+    aliases: [qa]
+    permission: questcore.admin
+    subcommands:
+      - reload
+      - reset <player>
+      - give <player> <quest_id>
+      - remove <player> <quest_id>
+      - force-complete <player> <quest_id>
+      - debug
+      - status
+
+  questreport:
+    description: 퀨스트 버그 보고
+    usage: /questreport <message>
+    aliases: [qr]
+    permission: questcore.report
+
+# ============ 권한 ============
+permissions:
+  questcore.use:
+    description: 기본 퀨스트 사용 권한
+    default: true
+    children:
+      - questcore.command.accept
+      - questcore.command. complete
+      - questcore.command.abandon
+      - questcore. command.list
+      - questcore.command.track
+      - questcore.command.journal
+      - questcore.command. tracker
+      - questcore.command.daily
+      - questcore. command.weekly
+      - questcore.command.stats
+      - questcore.command.help
+
+  questcore.command.accept:
+    description: 퀨스트 수락 권한
+    default: true
+
+  questcore.command.complete:
+    description: 퀨스트 완료 권한
+    default: true
+
+  questcore.command.abandon:
+    description: 퀨스트 포기 권한
+    default: true
+
+  questcore.command. list:
+    description: 퀨스트 목록 조회 권한
+    default: true
+
+  questcore.command. track:
+    description: 퀨스트 추적 권한
+    default: true
+
+  questcore.command.journal:
+    description: 퀨스트 저널 열기 권한
+    default: true
+
+  questcore.command. tracker:
+    description: 퀨스트 추적기 열기 권한
+    default: true
+
+  questcore.command. daily:
+    description: 일일 퀨스트 열기 권한
+    default: true
+
+  questcore.command. weekly:
+    description: 주간 퀨스트 열기 권한
+    default: true
+
+  questcore.command.stats:
+    description: 통계 조회 권한
+    default: true
+
+  questcore.command. help:
+    description: 도움말 보기 권한
+    default: true
+
+  questcore.report:
+    description: 버그 보고 권한
+    default: true
+
+  questcore.admin:
+    description: 관리자 권한
+    default: op
+    children:
+      - questcore.command.admin
+      - questcore.command. reload
+      - questcore.command.reset
+      - questcore. command.give
+      - questcore.command.remove
+      - questcore.command.force-complete
+      - questcore.command.debug
+      - questcore.command. status
+
+  questcore.command.admin:
+    description: 관리 명령어 사용 권한
+    default: op
+
+  questcore.command.reload:
+    description: 플러그인 리로드 권한
+    default: op
+
+  questcore.command.reset:
+    description: 플레이어 퀨스트 초기화 권한
+    default: op
+
+  questcore.command.give:
+    description: 퀨스트 강제 부여 권한
+    default: op
+
+  questcore.command. remove:
+    description: 퀨스트 강제 제거 권한
+    default: op
+
+  questcore.command.force-complete:
+    description: 퀨스트 강제 완료 권한
+    default: op
+
+  questcore.command.debug:
+    description: 디버그 명령어 권한
+    default: op
+
+  questcore.command.status:
+    description: 상태 조회 권한
+    default: op

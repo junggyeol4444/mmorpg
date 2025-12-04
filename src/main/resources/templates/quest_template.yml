@@ -1,0 +1,237 @@
+# ============ QuestCore 퀨스트 템플릿 ============
+# 이 파일은 퀨스트 생성 시 참조하는 템플릿입니다.
+# quests/ 디렉토리에 이 파일을 기반으로 퀨스트를 생성하세요.
+
+# ============ 기본 정보 ============
+id: "example_quest"                    # 퀨스트 고유 ID (필수)
+name: "예제 퀨스트"                     # 퀨스트 이름 (필수)
+description: "이것은 예제 퀨스트입니다" # 퀨스트 설명
+type: "normal"                         # 퀨스트 타입: normal, daily, weekly
+difficulty: "normal"                   # 난이도: easy, normal, hard, very_hard
+required-level: 1                      # 필요 레벨
+time-limit: 0                          # 제한 시간 (초, 0 = 제한 없음)
+
+# ============ 목표 (Objectives) ============
+objectives:
+  # 목표 1: 몬스터 사냥
+  obj_1:
+    id: "kill_mobs"
+    type: "kill_mobs"
+    description: "좀비 10마리 사냥하기"
+    target: 10
+    mob-type: "ZOMBIE"
+    location:
+      world: "world"
+      x: 0
+      y: 64
+      z: 0
+      radius: 100  # 반경 (블록)
+  
+  # 목표 2: 아이템 수집
+  obj_2:
+    id: "collect_items"
+    type: "collect_items"
+    description: "목재 32개 수집하기"
+    target: 32
+    item-type: "OAK_LOG"
+  
+  # 목표 3: 지역 탐험
+  obj_3:
+    id: "explore_region"
+    type: "explore_region"
+    description: "마을 탐험하기"
+    target: 1
+    location:
+      world: "world"
+      x: 100
+      y: 64
+      z: 100
+      radius: 50
+  
+  # 목표 4: 커스텀 목표
+  obj_4:
+    id: "custom_objective"
+    type: "custom"
+    description: "커스텀 목표 완료하기"
+    target: 1
+
+# ============ 보상 (Rewards) ============
+rewards:
+  # 보상 1: 경험치
+  reward_1:
+    type: "experience"
+    amount: 100
+  
+  # 보상 2: 돈
+  reward_2:
+    type: "money"
+    amount: 500
+  
+  # 보상 3: 아이템
+  reward_3:
+    type: "item"
+    item-name: "다이아몬드"
+    amount: 5
+    item-type: "DIAMOND"
+  
+  # 보상 4: 명령어 실행
+  reward_4:
+    type: "command"
+    command: "give @p golden_apple 1"
+
+# ============ 선택 가능한 보상 ============
+# (플레이어가 여러 보상 중 하나를 선택할 수 있음)
+optional-rewards:
+  choice_1:
+    type: "item"
+    item-name: "철 검"
+    amount: 1
+    item-type: "IRON_SWORD"
+  
+  choice_2:
+    type: "item"
+    item-name: "금 블록"
+    amount: 3
+    item-type: "GOLD_BLOCK"
+  
+  choice_3:
+    type: "experience"
+    amount: 200
+
+# ============ 보상 조건 ============
+reward-conditions:
+  # 난이도 별 보상 배수
+  difficulty-multiplier:
+    easy: 0.5
+    normal: 1.0
+    hard: 1.5
+    very_hard: 2.0
+  
+  # 레벨 별 보상 배수
+  level-multiplier: 0.1  # 플레이어 레벨당 추가 배수
+
+# ============ 퀨스트 체인 ============
+chain:
+  enabled: false
+  previous-quest: ""      # 이전 퀨스트 ID
+  next-quest: ""          # 다음 퀨스트 ID
+  chain-name: "퀨스트 체인" # 체인 이름
+
+# ============ 보상 확인 설정 ============
+completion:
+  auto-claim: false       # 자동 보상 수령
+  require-npc: false      # NPC를 통한 보상 확인 필수
+  npc-id: ""             # NPC ID (require-npc가 true인 경우)
+
+# ============ 반복 설정 ============
+repeatable:
+  enabled: false
+  cooldown: 86400         # 재시작 대기 시간 (초, 24시간 = 86400)
+
+# ============ 고급 설정 ============
+advanced:
+  # 동시 진행 제한
+  max-concurrent: 1
+  
+  # 퀨스트 포기 허용
+  abandonable: true
+  
+  # 진행 상황 저장
+  save-progress: true
+  
+  # 서버 재시작 시 진행 상황 유지
+  persist-on-restart: true
+  
+  # 플레이어 오프라인 시 타이머 정지
+  pause-on-offline: false
+  
+  # 실패 조건
+  fail-conditions:
+    - "time-limit-exceeded"
+    - "player-died"
+  
+  # 성공 조건
+  success-conditions:
+    - "all-objectives-complete"
+
+# ============ 제약 조건 ============
+restrictions:
+  # 최대 완료 횟수
+  max-completions: -1  # -1 = 무제한
+  
+  # 완료 순서 필수
+  require-order: false
+  
+  # 특정 권한 필요
+  required-permission: ""
+  
+  # 특정 퀨스트 완료 필수
+  required-quests: []
+  
+  # 특정 아이템 소유 필수
+  required-items: []
+  
+  # 특정 지역에서만 진행 가능
+  restricted-locations: []
+
+# ============ 알림 설정 ============
+notifications:
+  # 수락 시 메시지
+  on-accept: "§a퀨스트를 수락했습니다!"
+  
+  # 완료 시 메시지
+  on-complete: "§a퀨스트를 완료했습니다!"
+  
+  # 포기 시 메시지
+  on-abandon: "§c퀨스트를 포기했습니다."
+  
+  # 실패 시 메시지
+  on-fail: "§c퀨스트에 실패했습니다."
+  
+  # 목표 완료 시 메시지
+  on-objective-complete: "§a목표를 완료했습니다!"
+  
+  # 진행도 표시
+  show-progress: true
+  
+  # 액션바 표시
+  show-actionbar: true
+
+# ============ 예제 퀨스트들 ============
+
+# --- 일반 퀨스트 예제 ---
+# quest_id: "dragon_slayer"
+# name: "드래곤 슬레이어"
+# description: "엔더 드래곤을 처치하고 보상을 받으세요"
+# type: "normal"
+# difficulty: "very_hard"
+# required-level: 30
+# time-limit: 3600  # 1시간
+
+# --- 일일 퀨스트 예제 ---
+# quest_id: "daily_wood"
+# name: "매일의 벌목꾼"
+# description: "매일 목재 64개를 수집하세요"
+# type: "daily"
+# difficulty: "easy"
+# required-level: 1
+
+# --- 주간 퀨스트 예제 ---
+# quest_id: "weekly_miner"
+# name: "주간 채광꾼"
+# description: "매주 다이아몬드 광석 10개를 채굴하세요"
+# type: "weekly"
+# difficulty: "hard"
+# required-level: 15
+
+# ============ 팁 ============
+# 1. 퀨스트는 quests/ 디렉토리에 {quest_id}.yml 형식으로 저장합니다. 
+# 2. 각 필드는 설명된 형식을 따라야 합니다.
+# 3.  type은 반드시 normal, daily, weekly 중 하나여야 합니다. 
+# 4. difficulty는 easy, normal, hard, very_hard 중 하나여야 합니다. 
+# 5. 시간 제한은 초 단위입니다.  (3600 = 1시간)
+# 6. 목표와 보상은 최소 1개 이상 필요합니다.
+# 7. 선택 가능한 보상이 있으면 플레이어가 선택할 수 있습니다. 
+# 8. 퀨스트 체인으로 여러 퀨스트를 연결할 수 있습니다.
+# 9. 반복 설정으로 일정 시간 후 다시 진행할 수 있게 설정합니다.
+# 10.  제약 조건을 통해 특정 플레이어만 진행하도록 제한할 수 있습니다.

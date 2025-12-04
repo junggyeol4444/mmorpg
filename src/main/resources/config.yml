@@ -1,0 +1,213 @@
+# ============ QuestCore 설정 파일 ============
+
+# 플러그인 기본 설정
+plugin:
+  enabled: true
+  debug: false
+  
+  # 자동 저장 설정
+  auto-save:
+    enabled: true
+    interval: 20  # 분 단위
+
+  # 일일 초기화 설정
+  daily-reset:
+    enabled: true
+    reset-time: "00:00"  # 자정
+
+  # 주간 초기화 설정
+  weekly-reset:
+    enabled: true
+    reset-day: "MONDAY"  # 월요일
+    reset-time: "00:00"  # 자정
+
+# ============ 퀨스트 설정 ============
+quest:
+  # 기본 시간 제한 (초, 0 = 제한 없음)
+  default-time-limit: 0
+  
+  # 동시에 진행 가능한 최대 퀨스트 개수
+  max-concurrent-quests: 5
+  
+  # 보상 배수
+  reward-multiplier: 1.0
+  
+  # 경험치 배수
+  exp-multiplier: 1.0
+  
+  # 퀨스트 수락 최소 레벨
+  min-accept-level: 1
+
+# ============ 데이터베이스 설정 ============
+database:
+  # 데이터베이스 타입: yaml, mysql, mongodb
+  type: yaml
+  
+  # YAML 저장소 설정
+  yaml:
+    path: data/quests
+    auto-backup: true
+    backup-interval: 60  # 분 단위
+  
+  # MySQL 설정
+  mysql:
+    host: localhost
+    port: 3306
+    database: questcore
+    user: root
+    password: ""
+    ssl: false
+    connection-timeout: 30000
+    max-lifetime: 1800000
+  
+  # MongoDB 설정
+  mongodb:
+    connection-string: "mongodb://localhost:27017"
+    database: questcore
+    collection: quests
+
+# ============ 알림 설정 ============
+notification:
+  enabled: true
+  
+  # 액션바 알림
+  actionbar:
+    enabled: true
+  
+  # 제목 알림
+  title:
+    enabled: true
+    fade-in: 10
+    stay: 60
+    fade-out: 10
+  
+  # 채팅 알림
+  chat:
+    enabled: true
+  
+  # 사운드 알림
+  sound:
+    enabled: true
+    quest-accept: "ENTITY_PLAYER_LEVELUP"
+    quest-complete: "BLOCK_NOTE_BLOCK_CHIME"
+    quest-fail: "ENTITY_VILLAGER_NO"
+    quest-abandon: "BLOCK_ANVIL_FALL"
+
+# ============ GUI 설정 ============
+gui:
+  # 퀨스트 저널 GUI
+  journal:
+    enabled: true
+    rows: 6
+  
+  # 퀨스트 추적기 GUI
+  tracker:
+    enabled: true
+    rows: 3
+  
+  # 보상 선택 GUI
+  reward-choice:
+    enabled: true
+    rows: 3
+  
+  # 일일 퀨스트 GUI
+  daily:
+    enabled: true
+    rows: 5
+  
+  # 주간 퀨스트 GUI
+  weekly:
+    enabled: true
+    rows: 5
+
+# ============ 메시지 설정 ============
+messages:
+  # 일반 메시지
+  prefix: "§6【 QuestCore 】§r"
+  
+  # 퀨스트 수락
+  quest-accepted: "§a퀨스트를 수락했습니다: §f{quest_name}"
+  
+  # 퀨스트 완료
+  quest-completed: "§a퀨스트를 완료했습니다: §f{quest_name}"
+  quest-completed-rewards: "§a보상을 받았습니다!"
+  
+  # 퀨스트 포기
+  quest-abandoned: "§c퀨스트를 포기했습니다: §f{quest_name}"
+  
+  # 목표 완료
+  objective-completed: "§a목표 완료: §f{objective_description}"
+  
+  # 오류 메시지
+  error-already-accepted: "§c이미 수락한 퀨스트입니다."
+  error-max-quests: "§c더 이상 퀨스트를 수락할 수 없습니다."
+  error-insufficient-level: "§c필요 레벨: §f{required_level}"
+  error-quest-not-found: "§c해당 퀨스트를 찾을 수 없습니다."
+  error-not-in-progress: "§c진행 중인 퀨스트가 아닙니다."
+
+# ============ 통계 설정 ============
+statistics:
+  # 통계 추적 활성화
+  enabled: true
+  
+  # 순위 업데이트 간격 (분)
+  ranking-update-interval: 60
+  
+  # 순위 표시 개수
+  ranking-display-count: 10
+
+# ============ 일일 퀨스트 설정 ============
+daily-quests:
+  # 일일 퀨스트 활성화
+  enabled: true
+  
+  # 초기화 시간
+  reset-time: "00:00"
+  
+  # 최대 일일 퀨스트 개수
+  max-daily-quests: 3
+  
+  # 일일 퀨스트 보상 배수
+  reward-multiplier: 1.5
+
+# ============ 주간 퀨스트 설정 ============
+weekly-quests:
+  # 주간 퀨스트 활성화
+  enabled: true
+  
+  # 초기화 요일
+  reset-day: "MONDAY"
+  
+  # 초기화 시간
+  reset-time: "00:00"
+  
+  # 최대 주간 퀨스트 개수
+  max-weekly-quests: 5
+  
+  # 주간 퀨스트 보상 배수
+  reward-multiplier: 2.0
+
+# ============ NPC 설정 ============
+npc:
+  # NPC 상호작용 활성화
+  enabled: true
+  
+  # NPC 클릭 범위 (블록)
+  interaction-range: 5
+  
+  # NPC 대화 지속 시간 (초)
+  dialogue-duration: 30
+
+# ============ 개발자 설정 ============
+developer:
+  # 디버그 로그
+  debug-log: false
+  
+  # 상세 에러 로그
+  verbose-errors: false
+  
+  # 성능 모니터링
+  performance-monitoring: false
+  
+  # 메모리 사용량 표시
+  show-memory-usage: false
