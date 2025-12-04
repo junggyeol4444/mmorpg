@@ -1,0 +1,52 @@
+name: CombatCore
+version: 1.0. 0
+main: com.multiverse.combat.CombatCore
+author: Multiverse
+description: 고급 전투 시스템 플러그인
+
+commands:
+  combat:
+    description: 전투 시스템 메인 명령어
+    usage: /combat [명령어]
+    permission: combat.use
+    aliases:
+      - skill
+      - fight
+  skill:
+    description: 스킬 명령어
+    usage: /skill [스킬ID]
+    permission: combat.player.skills
+  pvp:
+    description: PvP 명령어
+    usage: /pvp [on/off]
+    permission: combat.player.pvp
+  ranking:
+    description: 랭킹 조회
+    usage: /ranking
+    permission: combat.player.ranking
+
+permissions:
+  combat.use:
+    description: 전투 시스템 사용 권한
+    default: true
+  combat.player.skills:
+    description: 스킬 사용 권한
+    default: true
+  combat.player.stats:
+    description: 통계 조회 권한
+    default: true
+  combat.player.pvp:
+    description: PvP 권한
+    default: true
+  combat.player.ranking:
+    description: 랭킹 조회 권한
+    default: true
+  combat.admin.reload:
+    description: 설정 재로드 권한
+    default: op
+  combat.admin.reset:
+    description: 데이터 초기화 권한
+    default: op
+  combat.admin:
+    description: 관리자 권한
+    default: op

@@ -1,0 +1,123 @@
+# CombatCore 설정 파일
+
+# 전투 시스템 활성화
+combat:
+  enabled: true
+  version: 1.0.0
+
+# 데이터 저장 설정
+data:
+  type: yaml
+  auto-save-interval: 300
+  storage-path: plugins/CombatCore/data
+
+# 메시지 설정
+messages:
+  prefix: "§8[§c전투§8] "
+  combat:
+    damage: "§a{damage}§f의 데미지를 입혔습니다!"
+    critical: "§c§l크리티컬!"
+    dodge: "§a§l회피!"
+    kill: "§a{player}을(를) 처치했습니다!"
+    death: "§c{player}에게 처치당했습니다."
+  skill:
+    learned: "§a스킬 §e{skill}§a을(를) 습득했습니다!"
+    upgraded: "§a스킬 §e{skill}§a이(가) §6Lv. {level}§a(으)로 성장했습니다!"
+    insufficient-cost: "§c{type}이(가) 부족합니다."
+    cooldown: "§c쿨다운 중... ({time}초)"
+    casting: "§a{skill}§a을(를) 시전 중... ({time}초)"
+  pvp:
+    enabled: "§aPvP가 활성화되었습니다."
+    disabled: "§cPvP가 비활성화되었습니다."
+    protected: "§e보호 대상입니다."
+  status:
+    applied: "§c{effect}§f 상태이상에 걸렸습니다!"
+    removed: "§a{effect}§f 상태이상이 해제되었습니다!"
+  combo:
+    milestone: "§e§l콤보 ×{combo}!"
+    reset: "§c콤보가 초기화되었습니다."
+
+# 파티클 효과 설정
+particles:
+  enabled: true
+  skills: true
+  damage: true
+  combo: true
+  status: true
+  density: 1.0
+
+# 데미지 지표 설정
+damage-indicators:
+  enabled: true
+  show-critical: true
+  show-combo: true
+  duration: 2
+
+# 데미지 계산 설정
+damage:
+  critical-chance-base: 0.05
+  critical-multiplier: 1.5
+  armor-reduction-max: 0.9
+  magic-resistance-max: 0. 8
+
+# 방어력 설정
+defense:
+  armor-per-point: 0.05
+  magic-resistance-per-point: 0.04
+  calculation-type: linear
+
+# 콤보 설정
+combo:
+  timeout: 10000
+  reset-on-death: true
+  max-combo: 999
+  combo-multiplier: 0.02
+
+# PvP 설정
+pvp:
+  level-restriction:
+    enabled: true
+    max-difference: 10
+    min-level: 10
+  newbie-protection:
+    enabled: true
+    level-threshold: 20
+    duration: 604800
+  penalties:
+    death-exp-loss: true
+    exp-loss-percent: 10. 0
+  rewards:
+    fame-per-kill: 10
+    infamy-per-kill: 5
+
+# 내구도 설정
+durability:
+  enabled: true
+  damage-per-skill: 1
+  repair:
+    cost-multiplier: 1.0
+    enabled: true
+
+# 상태이상 설정
+status-effects:
+  poison:
+    damage-per-tick: 2. 0
+    tick-interval: 500
+  burn:
+    damage-per-tick: 3.0
+    tick-interval: 500
+    fire-ticks: 100
+  bleed:
+    damage-per-tick: 2.5
+    tick-interval: 500
+
+# 데이터베이스 설정
+database:
+  type: yaml
+  mysql:
+    host: localhost
+    port: 3306
+    database: combatcore
+    username: root
+    password: password
+    max-connections: 10
