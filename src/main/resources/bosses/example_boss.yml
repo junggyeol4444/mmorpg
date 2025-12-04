@@ -1,0 +1,144 @@
+# ===== 예시 보스 설정 =====
+
+boss:
+  id: "example_boss_1"
+  name: "§c초급 보스"
+  display-name: "§c[보스] 초급 보스"
+  description: "초심자 던전의 보스"
+  
+  # 기본 스탯
+  stats:
+    health: 100
+    damage: 10
+    armor: 5
+    speed: 1. 0
+
+  # 보스 타입
+  type: "MELEE"
+  
+  # 레벨
+  level: 1
+
+# 페이즈 설정
+phases:
+  - phase: 1
+    health-threshold: 100
+    health-min: 66
+    message: "§c보스가 공격을 시작했습니다!"
+    speed-multiplier: 1.0
+    damage-multiplier: 1.0
+  
+  - phase: 2
+    health-threshold: 66
+    health-min: 33
+    message: "§c보스가 더욱 강해졌습니다!"
+    speed-multiplier: 1.2
+    damage-multiplier: 1.3
+  
+  - phase: 3
+    health-threshold: 33
+    health-min: 0
+    message: "§4보스가 광기로 변했습니다!"
+    speed-multiplier: 1.5
+    damage-multiplier: 1.6
+
+# 스킬 설정
+skills:
+  - skill_id: "skill_aoe"
+    skill_name: "범위 공격"
+    type: "AOE_DAMAGE"
+    health-threshold: 0
+    cooldown: 15
+    damage: 20
+    radius: 5
+    duration: 0
+    cast-message: "보스가 범위 공격을 시작했습니다!"
+  
+  - skill_id: "skill_summon"
+    skill_name: "추가 소환"
+    type: "SUMMON"
+    health-threshold: 50
+    cooldown: 30
+    damage: 0
+    radius: 0
+    duration: 0
+    cast-message: "보스가 추가 몬스터를 소환했습니다!"
+  
+  - skill_id: "skill_teleport"
+    skill_name: "텔레포트"
+    type: "TELEPORT"
+    health-threshold: 0
+    cooldown: 20
+    damage: 0
+    radius: 0
+    duration: 0
+    cast-message: "보스가 순간이동했습니다!"
+
+# 보상 설정
+rewards:
+  experience: 5000
+  money:
+    currency: "gold"
+    amount: 2000
+  
+  items:
+    - material: "DIAMOND_SWORD"
+      amount: 1
+      rarity: "rare"
+      enchantments:
+        - "DAMAGE_ALL:2"
+    
+    - material: "DIAMOND_CHESTPLATE"
+      amount: 1
+      rarity: "rare"
+      enchantments:
+        - "PROTECTION_ENVIRONMENTAL:2"
+  
+  dungeon-points: 500
+
+# 드롭 설정
+drops:
+  - item_id: "drop_1"
+    material: "DIAMOND"
+    amount: 1
+    chance: 0.5
+  
+  - item_id: "drop_2"
+    material: "EMERALD"
+    amount: 2
+    chance: 0.3
+
+# 특수 설정
+features:
+  # 패턴 공격 활성화
+  pattern-attacks-enabled: true
+  
+  # 보스 소환물
+  summon-enabled: true
+  
+  # 소환 제한
+  max-summons: 3
+  
+  # 소환 타입
+  summon-types:
+    - zombie
+    - skeleton
+    - spider
+
+# 난이도별 스케일링
+scaling:
+  easy:
+    health-multiplier: 0.6
+    damage-multiplier: 0.7
+  
+  normal:
+    health-multiplier: 1.0
+    damage-multiplier: 1.0
+  
+  hard:
+    health-multiplier: 1.5
+    damage-multiplier: 1.3
+  
+  extreme:
+    health-multiplier: 2. 5
+    damage-multiplier: 1.8

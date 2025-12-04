@@ -1,0 +1,197 @@
+# ===== DungeonCore 설정 =====
+
+# 플러그인 활성화 여부
+enabled: true
+
+# 디버그 모드
+debug: false
+
+# 언어
+language: "ko_KR"
+
+# ===== 난이도 설정 =====
+difficulty:
+  EASY:
+    mob-health: 0.7
+    mob-damage: 0.8
+    reward: 1.0
+    display-name: "§a쉬움"
+  
+  NORMAL:
+    mob-health: 1.0
+    mob-damage: 1.0
+    reward: 1.5
+    display-name: "§b보통"
+  
+  HARD:
+    mob-health: 1.5
+    mob-damage: 1.2
+    reward: 2.0
+    display-name: "§6어려움"
+  
+  EXTREME:
+    mob-health: 2.0
+    mob-damage: 1.5
+    reward: 3.0
+    display-name: "§c극악"
+
+# ===== 던전 설정 =====
+dungeons:
+  # 파티 스케일링
+  scaling:
+    enable-party-scaling: true
+    party-scaling-per-player: 0.15
+  
+  # 시간 제한
+  time-limit: 1800 # 30분 (초)
+  
+  # 입장 제한
+  entry-limit:
+    daily: 3
+    weekly: 1
+  
+  # 최대 플레이어
+  max-players: 5
+  min-players: 1
+
+# ===== 파티 설정 =====
+party:
+  max-members: 5
+  min-members: 1
+  
+  # 초대 설정
+  invite:
+    expiration-time: 300 # 5분 (초)
+    max-invites-per-player: 5
+
+# ===== 보상 설정 =====
+rewards:
+  # 기본 경험치 배율
+  experience-multiplier: 1.0
+  
+  # 기본 드롭율
+  drop-rate: 0.5
+  
+  # 드롭 테이블
+  drops:
+    common: 70
+    uncommon: 20
+    rare: 8
+    epic: 2
+    legendary: 0
+
+# ===== 랜덤 던전 설정 =====
+random-dungeon:
+  enabled: true
+  
+  # 방 설정
+  rooms:
+    min-count: 3
+    max-count: 8
+    templates:
+      - default
+      - large
+      - corridor
+  
+  # 몬스터 설정
+  mobs:
+    min-per-room: 2
+    max-per-room: 5
+    pool:
+      - zombie
+      - skeleton
+      - creeper
+  
+  # 보스 설정
+  bosses:
+    count: 2
+    pool:
+      - boss_1
+      - boss_2
+      - boss_3
+  
+  # 함정 설정
+  traps:
+    density: 10 # 10%
+    types:
+      - spikes
+      - fire
+      - lightning
+  
+  # 보물 상자
+  chests:
+    min-count: 3
+    max-count: 8
+
+# ===== 저장 설정 =====
+save:
+  # 자동 저장 간격 (분)
+  auto-save-interval: 5
+  
+  # 데이터 저장 경로
+  data-folder: "plugins/DungeonCore/data"
+
+# ===== 리더보드 설정 =====
+leaderboard:
+  # 상위 순위 개수
+  top-count: 10
+  
+  # 리더보드 업데이트 간격 (분)
+  update-interval: 10
+
+# ===== 메시지 설정 =====
+messages:
+  # 성공 메시지
+  success-color: "§a"
+  
+  # 오류 메시지
+  error-color: "§c"
+  
+  # 경고 메시지
+  warning-color: "§e"
+  
+  # 정보 메시지
+  info-color: "§b"
+
+# ===== 플러그인 훅 설정 =====
+hooks:
+  mythicmobs:
+    enabled: true
+  
+  economycore:
+    enabled: true
+  
+  playerdatacore:
+    enabled: true
+  
+  combatcore:
+    enabled: true
+  
+  questcore:
+    enabled: true
+  
+  multiversecore:
+    enabled: true
+  
+  worldedit:
+    enabled: true
+  
+  worldguard:
+    enabled: true
+
+# ===== 기능 설정 =====
+features:
+  # GUI 활성화
+  gui-enabled: true
+  
+  # 커스텀 아이템
+  custom-items: true
+  
+  # 파티 시스템
+  party-system: true
+  
+  # 리더보드
+  leaderboard: true
+  
+  # 랜덤 던전
+  random-dungeons: true

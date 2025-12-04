@@ -1,0 +1,83 @@
+# ===== 예시 던전 설정 =====
+
+# 던전 기본 정보
+dungeon:
+  id: "example_normal"
+  name: "§b초급 던전"
+  description: "초심자를 위한 던전입니다."
+  type: "NORMAL"
+  difficulty: "NORMAL"
+  required-level: 1
+
+# 입장 설정
+entry:
+  max-players: 5
+  min-players: 1
+  time-limit: 1800 # 30분
+  
+  # 일일/주간 제한
+  daily-limit: 3
+  weekly-limit: 1
+
+# 위치 설정
+locations:
+  entrance: "world,100,64,100"
+  spawn: "world,105,65,105"
+
+# 보스 설정
+bosses:
+  - boss_id: "example_boss_1"
+    boss_name: "§c초급 보스"
+    level: 1
+    health: 100
+    damage: 10
+
+# 보상 설정
+rewards:
+  experience: 1000
+  money:
+    currency: "gold"
+    amount: 500
+  
+  items:
+    - material: "IRON_SWORD"
+      amount: 1
+      rarity: "common"
+    - material: "IRON_PICKAXE"
+      amount: 1
+      rarity: "uncommon"
+  
+  dungeon-points: 100
+
+# 난이도별 스케일링
+scaling:
+  easy:
+    health-multiplier: 0.7
+    damage-multiplier: 0.8
+    reward-multiplier: 1.0
+  
+  normal:
+    health-multiplier: 1. 0
+    damage-multiplier: 1.0
+    reward-multiplier: 1.5
+  
+  hard:
+    health-multiplier: 1. 5
+    damage-multiplier: 1.2
+    reward-multiplier: 2.0
+  
+  extreme:
+    health-multiplier: 2.0
+    damage-multiplier: 1.5
+    reward-multiplier: 3.0
+
+# 특수 설정
+features:
+  # 파티 스케일링 활성화
+  party-scaling-enabled: true
+  
+  # 랜덤 던전 활성화
+  random-dungeon-enabled: false
+  
+  # 함정 활성화
+  traps-enabled: true
