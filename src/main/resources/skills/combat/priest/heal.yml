@@ -1,0 +1,16 @@
+skill:
+  id: heal
+  name: "치유"
+  description: "대상을 회복시킨다"
+  type: SUPPORT
+  skill-type: INSTANT
+  required-level: 1
+  mana-cost: 15
+  cooldown: 2000
+  casting-time: 500
+  healing: 20.0
+  range: 25
+  target-type: ALLY
+  animation: HEALING
+  sound: ENTITY_GENERIC_DRINK
+  particle: SPELL_INSTANT

@@ -1,0 +1,58 @@
+# 메시지 설정 파일
+
+prefix: "&6[SkillCore] &r"
+
+# 스킬 명령어 메시지
+skill:
+  no-permission: "{prefix}&c권한이 없습니다!"
+  skill-not-found: "{prefix}&c스킬을 찾을 수 없습니다!"
+  player-not-found: "{prefix}&c플레이어를 찾을 수 없습니다!"
+  skill-not-learned: "{prefix}&c이 스킬을 배우지 않았습니다!"
+  insufficient-mana: "{prefix}&c마나가 부족합니다!  필요 마나: {required}"
+  cooldown-remaining: "{prefix}&c쿨다운 중입니다!  남은 시간: {time}"
+  skill-learned: "{prefix}&a스킬을 배웠습니다!  ({skill})"
+  skill-upgraded: "{prefix}&a스킬을 강화했습니다! 레벨: {level}"
+  skill-used: "{prefix}&a스킬을 사용했습니다! ({skill})"
+
+# 관리자 명령어 메시지
+admin:
+  reload-success: "{prefix}&a설정을 다시 로드했습니다!"
+  player-skill-set: "{prefix}&a{player}의 스킬을 설정했습니다!  ({skill})"
+  player-skill-reset: "{prefix}&a{player}의 스킬을 리셋했습니다!"
+  skill-points-set: "{prefix}&a{player}의 스킬 포인트를 설정했습니다! ({points})"
+
+# 프리셋 명령어 메시지
+preset:
+  preset-saved: "{prefix}&a프리셋을 저장했습니다! ({name})"
+  preset-loaded: "{prefix}&a프리셋을 불러왔습니다! ({name})"
+  preset-deleted: "{prefix}&a프리셋을 삭제했습니다! ({name})"
+  preset-not-found: "{prefix}&c프리셋을 찾을 수 없습니다!  ({name})"
+
+# 스킬 트리 메시지
+skill-tree:
+  tree-opened: "{prefix}&a스킬 트리를 열었습니다!"
+  tree-not-found: "{prefix}&c스킬 트리를 찾을 수 없습니다!"
+  node-learned: "{prefix}&a노드를 습득했습니다! ({node})"
+  cannot-learn-node: "{prefix}&c노드를 습득할 수 없습니다!"
+
+# 콤보 메시지
+combo:
+  combo-completed: "{prefix}&a콤보를 완성했습니다! ({combo})"
+  combo-timeout: "{prefix}&c콤보 시간이 초과되었습니다!"
+
+# 진화 메시지
+evolution:
+  evolution-started: "{prefix}&a진화를 시작했습니다!  ({skill})"
+  evolution-completed: "{prefix}&a진화가 완료되었습니다! ({skill})"
+  evolution-failed: "{prefix}&c진화에 실패했습니다!"
+  insufficient-evolution-exp: "{prefix}&c진화 경험치가 부족합니다!"
+
+# 생활 스킬 메시지
+life-skill:
+  life-skill-used: "{prefix}&a생활 스킬을 사용했습니다! ({skill})"
+  life-skill-completed: "{prefix}&a생활 스킬이 완료되었습니다!"
+
+# 스킬 북 메시지
+skill-book:
+  book-opened: "{prefix}&a스킬 북을 열었습니다!"
+  skill-info: "{prefix}&e{skill} - 레벨: {level}, 경험치: {exp}/{max-exp}"

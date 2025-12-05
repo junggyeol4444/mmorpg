@@ -1,0 +1,16 @@
+skill:
+  id: shield
+  name: "마법 방패"
+  description: "자신을 보호하는 방패를 생성한다"
+  type: DEFENSE
+  skill-type: BUFF
+  required-level: 8
+  mana-cost: 30
+  cooldown: 6000
+  casting-time: 500
+  absorption: 25. 0
+  duration: 10000
+  target-type: SELF
+  animation: CASTING
+  sound: ENTITY_GENERIC_SHIELD_HIT
+  particle: ENCHANTMENT_TABLE

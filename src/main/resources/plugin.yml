@@ -1,0 +1,32 @@
+name: SkillCore
+version: 1.0. 0
+main: com.multiverse.skill.SkillCore
+description: 멀티버스 스킬 시스템 플러그인
+authors:
+  - MultiVerse
+website: https://multiverse.com
+
+commands:
+  skill:
+    description: 스킬 명령어
+    usage: /skill <subcommand>
+    aliases: [s]
+  skilladmin:
+    description: 스킬 관리자 명령어
+    usage: /skilladmin <subcommand>
+    aliases: [sa]
+  skillpreset:
+    description: 스킬 프리셋 명령어
+    usage: /skillpreset <subcommand>
+    aliases: [sp]
+
+permissions:
+  skill.use:
+    description: 스킬 사용 권한
+    default: true
+  skill.admin:
+    description: 스킬 관리자 권한
+    default: op
+  skill.preset:
+    description: 스킬 프리셋 권한
+    default: true

@@ -1,0 +1,16 @@
+skill:
+  id: slash
+  name: "참격"
+  description: "검으로 앞쪽을 휩쓸며 참격한다"
+  type: OFFENSIVE
+  skill-type: MELEE
+  required-level: 1
+  mana-cost: 10
+  cooldown: 1500
+  casting-time: 0
+  damage: 12. 0
+  range: 5
+  target-type: ENEMY
+  animation: SWING_SWORD
+  sound: ENTITY_PLAYER_ATTACK_SWEEP
+  particle: SWEEP_ATTACK

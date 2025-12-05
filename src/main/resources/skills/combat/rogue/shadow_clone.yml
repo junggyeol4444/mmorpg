@@ -1,0 +1,17 @@
+skill:
+  id: shadow_clone
+  name: "그림자 분신"
+  description: "자신의 분신을 만들어 적을 공격하게 한다"
+  type: OFFENSIVE
+  skill-type: SUMMON
+  required-level: 11
+  mana-cost: 45
+  cooldown: 7000
+  casting-time: 800
+  clone-count: 2
+  clone-duration: 8000
+  clone-damage: 0. 8
+  target-type: ENEMY
+  animation: CASTING
+  sound: ENTITY_ENDERMAN_TELEPORT
+  particle: SMOKE_NORMAL

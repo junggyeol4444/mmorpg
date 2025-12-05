@@ -1,0 +1,16 @@
+skill:
+  id: smithing
+  name: "대장장이"
+  description: "도구와 무기를 제작한다"
+  type: LIFE_SKILL
+  skill-type: CRAFTING
+  required-level: 5
+  experience-gain: 25
+  duration: 4000
+  recipes:
+    - IRON_SWORD
+    - IRON_PICKAXE
+    - IRON_AXE
+    - IRON_HELMET
+  particle: FLAME
+  sound: BLOCK_ANVIL_PLACE

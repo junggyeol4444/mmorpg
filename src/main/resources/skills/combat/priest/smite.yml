@@ -1,0 +1,17 @@
+skill:
+  id: smite
+  name: "신성한 일격"
+  description: "신성한 빛으로 악을 무찌른다"
+  type: OFFENSIVE
+  skill-type: MELEE
+  required-level: 4
+  mana-cost: 18
+  cooldown: 2500
+  casting-time: 400
+  damage: 16.0
+  range: 5
+  holy-bonus: 1.3
+  target-type: ENEMY
+  animation: SWING_SWORD
+  sound: ENTITY_LIGHTNING_BOLT_THUNDER
+  particle: FLAME

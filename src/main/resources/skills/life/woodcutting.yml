@@ -1,0 +1,16 @@
+skill:
+  id: woodcutting
+  name: "벌목"
+  description: "나무를 베어 목재를 채집한다"
+  type: LIFE_SKILL
+  skill-type: GATHERING
+  required-level: 1
+  experience-gain: 8
+  duration: 2000
+  resources:
+    - OAK_LOG
+    - BIRCH_LOG
+    - SPRUCE_LOG
+    - DARK_OAK_LOG
+  particle: BLOCK_DUST
+  sound: BLOCK_WOOD_BREAK

@@ -1,0 +1,16 @@
+skill:
+  id: alchemy
+  name: "연금술"
+  description: "다양한 포션을 제조한다"
+  type: LIFE_SKILL
+  skill-type: CRAFTING
+  required-level: 8
+  experience-gain: 30
+  duration: 5000
+  recipes:
+    - HEALING_POTION
+    - MANA_POTION
+    - STRENGTH_POTION
+    - SPEED_POTION
+  particle: SPELL_MOB
+  sound: BLOCK_BREWING_STAND_BREW

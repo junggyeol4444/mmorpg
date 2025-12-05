@@ -1,0 +1,17 @@
+skill:
+  id: divine_protection
+  name: "신성한 보호"
+  description: "모든 파티 멤버를 신성한 빛으로 보호한다"
+  type: SUPPORT
+  skill-type: BUFF
+  required-level: 16
+  mana-cost: 50
+  cooldown: 8000
+  casting-time: 1000
+  absorption: 15. 0
+  duration: 12000
+  range: 30
+  target-type: ALLY
+  animation: CASTING
+  sound: ENTITY_GENERIC_SHIELD_HIT
+  particle: ENCHANTMENT_TABLE

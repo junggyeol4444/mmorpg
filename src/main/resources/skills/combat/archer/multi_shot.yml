@@ -1,0 +1,18 @@
+skill:
+  id: multi_shot
+  name: "다중 사격"
+  description: "여러 개의 화살을 한 번에 발사한다"
+  type: OFFENSIVE
+  skill-type: PROJECTILE
+  required-level: 3
+  mana-cost: 22
+  cooldown: 3000
+  casting-time: 400
+  damage: 14.0
+  range: 35
+  projectile-count: 3
+  spread: 15
+  target-type: ENEMY
+  animation: SHOOTING
+  sound: ENTITY_ARROW_SHOOT
+  particle: CRIT

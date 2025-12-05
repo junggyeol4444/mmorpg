@@ -1,0 +1,16 @@
+skill:
+  id: mining
+  name: "채광"
+  description: "광석을 채집한다"
+  type: LIFE_SKILL
+  skill-type: GATHERING
+  required-level: 1
+  experience-gain: 10
+  duration: 3000
+  resources:
+    - STONE
+    - IRON_ORE
+    - GOLD_ORE
+    - DIAMOND_ORE
+  particle: BLOCK_DUST
+  sound: BLOCK_STONE_BREAK

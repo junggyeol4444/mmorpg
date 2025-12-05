@@ -1,0 +1,18 @@
+skill:
+  id: leap
+  name: "도약"
+  description: "높이 도약하여 착지 지점에 피해를 입힌다"
+  type: OFFENSIVE
+  skill-type: JUMP
+  required-level: 8
+  mana-cost: 30
+  cooldown: 5000
+  casting-time: 500
+  damage: 16.0
+  range: 15
+  radius: 6
+  jump-height: 2.5
+  target-type: ENEMY
+  animation: JUMPING
+  sound: ENTITY_GENERIC_EXPLODE
+  particle: CLOUD

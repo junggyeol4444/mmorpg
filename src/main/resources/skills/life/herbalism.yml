@@ -1,0 +1,16 @@
+skill:
+  id: herbalism
+  name: "약초 채집"
+  description: "약초를 채집한다"
+  type: LIFE_SKILL
+  skill-type: GATHERING
+  required-level: 3
+  experience-gain: 9
+  duration: 2500
+  resources:
+    - POPPY
+    - DANDELION
+    - BLUE_ORCHID
+    - ALLIUM
+  particle: SPELL_MOB
+  sound: BLOCK_GRASS_BREAK

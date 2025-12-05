@@ -1,0 +1,17 @@
+skill:
+  id: piercing_shot
+  name: "관통 사격"
+  description: "적을 관통하며 날아가는 화살을 발사한다"
+  type: OFFENSIVE
+  skill-type: PROJECTILE
+  required-level: 7
+  mana-cost: 28
+  cooldown: 4000
+  casting-time: 500
+  damage: 22.0
+  range: 50
+  piercing-count: 3
+  target-type: ENEMY
+  animation: SHOOTING
+  sound: ENTITY_ARROW_SHOOT
+  particle: CRIT

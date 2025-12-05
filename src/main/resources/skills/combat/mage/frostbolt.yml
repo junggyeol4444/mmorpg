@@ -1,0 +1,19 @@
+skill:
+  id: frostbolt
+  name: "프로스트볼트"
+  description: "얼음 창을 던진다"
+  type: OFFENSIVE
+  skill-type: PROJECTILE
+  required-level: 5
+  mana-cost: 25
+  cooldown: 3000
+  casting-time: 600
+  damage: 18.0
+  range: 35
+  projectile-type: SNOWBALL
+  slow-duration: 5000
+  slow-amplifier: 1
+  target-type: ENEMY
+  animation: CASTING
+  sound: BLOCK_GLASS_HIT
+  particle: SNOWBALL

@@ -1,0 +1,60 @@
+# SkillCore 설정 파일
+
+# 데이터베이스 설정
+database:
+  type: YAML
+  path: plugins/SkillCore/data/
+
+# 스킬 설정
+skill:
+  # 최대 스킬 레벨
+  max-level: 100
+  
+  # 스킬 포인트 설정
+  skill-points:
+    initial: 10
+    per-level: 1
+  
+  # 마나 설정
+  mana:
+    enabled: true
+    max-mana: 100
+    regen-per-second: 2
+  
+  # 쿨다운 설정
+  cooldown:
+    show-title: true
+    show-actionbar: true
+
+# 스킬 트리 설정
+skill-tree:
+  enabled: true
+  max-trees: 5
+  
+# 콤보 설정
+combo:
+  enabled: true
+  timeout: 3000  # 밀리초
+
+# 진화 설정
+evolution:
+  enabled: true
+  max-level: 5
+
+# 생활 스킬 설정
+life-skill:
+  enabled: true
+  
+# 스킬 북 설정
+skill-book:
+  enabled: true
+
+# GUI 설정
+gui:
+  enabled: true
+  inventory-size: 54
+
+# 메시지 설정
+messages:
+  prefix: "&6[SkillCore]"
+  enabled: true

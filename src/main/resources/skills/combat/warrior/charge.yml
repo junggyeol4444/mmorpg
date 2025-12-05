@@ -1,0 +1,18 @@
+skill:
+  id: charge
+  name: "돌격"
+  description: "앞쪽으로 빠르게 돌진한다"
+  type: OFFENSIVE
+  skill-type: DASH
+  required-level: 5
+  mana-cost: 25
+  cooldown: 4000
+  casting-time: 500
+  damage: 18.0
+  range: 20
+  speed: 2.0
+  duration: 2000
+  target-type: ENEMY
+  animation: CHARGING
+  sound: ENTITY_ENDERMAN_TELEPORT
+  particle: CLOUD

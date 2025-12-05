@@ -1,0 +1,16 @@
+skill:
+  id: evasion
+  name: "회피"
+  description: "일시적으로 피해를 회피한다"
+  type: DEFENSE
+  skill-type: BUFF
+  required-level: 8
+  mana-cost: 22
+  cooldown: 5000
+  casting-time: 200
+  evasion-chance: 0.5
+  duration: 6000
+  target-type: SELF
+  animation: ROLLING
+  sound: ENTITY_PLAYER_HURT_ON_FIRE
+  particle: SMOKE_LARGE

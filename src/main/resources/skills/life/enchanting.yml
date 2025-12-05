@@ -1,0 +1,16 @@
+skill:
+  id: enchanting
+  name: "인챈팅"
+  description: "도구에 마법을 부여한다"
+  type: LIFE_SKILL
+  skill-type: CRAFTING
+  required-level: 10
+  experience-gain: 35
+  duration: 6000
+  recipes:
+    - SHARPNESS
+    - PROTECTION
+    - EFFICIENCY
+    - UNBREAKING
+  particle: ENCHANTMENT_TABLE
+  sound: BLOCK_ENCHANTING_TABLE_USE

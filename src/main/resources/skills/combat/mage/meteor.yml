@@ -1,0 +1,18 @@
+skill:
+  id: meteor
+  name: "운석"
+  description: "하늘에서 운석을 소환한다"
+  type: OFFENSIVE
+  skill-type: SUMMON
+  required-level: 15
+  mana-cost: 50
+  cooldown: 8000
+  casting-time: 2000
+  damage: 30.0
+  range: 40
+  radius: 10
+  summon-duration: 5000
+  target-type: ENEMY
+  animation: CASTING
+  sound: ENTITY_WITHER_SHOOT
+  particle: LAVA

@@ -1,0 +1,16 @@
+skill:
+  id: cooking
+  name: "요리"
+  description: "음식을 요리한다"
+  type: LIFE_SKILL
+  skill-type: CRAFTING
+  required-level: 4
+  experience-gain: 15
+  duration: 3000
+  recipes:
+    - COOKED_BEEF
+    - COOKED_CHICKEN
+    - COOKED_FISH
+    - COOKED_MUTTON
+  particle: SMOKE_NORMAL
+  sound: BLOCK_FURNACE_FIRE_CRACKLE

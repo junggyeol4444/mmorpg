@@ -1,0 +1,16 @@
+skill:
+  id: fishing
+  name: "낚시"
+  description: "물고기를 낚는다"
+  type: LIFE_SKILL
+  skill-type: GATHERING
+  required-level: 1
+  experience-gain: 12
+  duration: 5000
+  resources:
+    - COD
+    - SALMON
+    - TROPICAL_FISH
+    - PUFFERFISH
+  particle: SPLASH
+  sound: ENTITY_FISHING_BOBBER_SPLASH

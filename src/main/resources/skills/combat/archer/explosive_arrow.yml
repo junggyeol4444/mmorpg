@@ -1,0 +1,18 @@
+skill:
+  id: explosive_arrow
+  name: "폭발 화살"
+  description: "폭발하는 화살을 발사한다"
+  type: OFFENSIVE
+  skill-type: PROJECTILE
+  required-level: 12
+  mana-cost: 35
+  cooldown: 5000
+  casting-time: 600
+  damage: 25.0
+  range: 40
+  radius: 8
+  explosion-force: 2.0
+  target-type: ENEMY
+  animation: SHOOTING
+  sound: ENTITY_GENERIC_EXPLODE
+  particle: EXPLOSION_LARGE

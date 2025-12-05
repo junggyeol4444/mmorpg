@@ -1,0 +1,18 @@
+skill:
+  id: poison_blow
+  name: "독 타격"
+  description: "독을 입힌 타격을 가한다"
+  type: OFFENSIVE
+  skill-type: MELEE
+  required-level: 9
+  mana-cost: 25
+  cooldown: 3500
+  casting-time: 400
+  damage: 16.0
+  range: 5
+  poison-duration: 8000
+  poison-amplifier: 1
+  target-type: ENEMY
+  animation: SWING_SWORD
+  sound: ENTITY_GENERIC_POISON
+  particle: SPELL_MOB

@@ -1,0 +1,17 @@
+skill:
+  id: backstab
+  name: "백스탭"
+  description: "뒤에서 급습하여 높은 피해를 입힌다"
+  type: OFFENSIVE
+  skill-type: MELEE
+  required-level: 6
+  mana-cost: 20
+  cooldown: 3000
+  casting-time: 300
+  damage: 24.0
+  range: 5
+  backstab-multiplier: 1.5
+  target-type: ENEMY
+  animation: BACKSTAB
+  sound: ENTITY_PLAYER_ATTACK_CRIT
+  particle: CRIT

@@ -1,0 +1,15 @@
+skill:
+  id: resurrection
+  name: "부활"
+  description: "죽은 플레이어를 되살린다"
+  type: SUPPORT
+  skill-type: RITUAL
+  required-level: 20
+  mana-cost: 80
+  cooldown: 30000
+  casting-time: 5000
+  resurrection-delay: 3000
+  target-type: ALLY
+  animation: RITUAL
+  sound: ENTITY_ENDER_DRAGON_DEATH
+  particle: SPELL_MOB
