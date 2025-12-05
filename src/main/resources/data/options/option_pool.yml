@@ -1,0 +1,29 @@
+pool:
+  common_options:
+    - attack_increase
+    - defense_increase
+    - health_increase
+    - speed_increase
+
+  uncommon_options:
+    - critical_strike
+    - lifesteal
+    - block
+    - dodge
+    - fire_damage
+
+  rare_options:
+    - poison_damage
+    - thorns
+    - regeneration
+    - blessing
+
+  epic_options:
+    - curse
+    - harmony
+    - eternal_life
+
+  legendary_options:
+    - all_stat_increase
+    - ultimate_power
+    - divine_blessing

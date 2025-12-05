@@ -1,0 +1,23 @@
+sets:
+  warrior_set:
+    name: "전사의 세트"
+    id: "warrior_set"
+    description: "전사를 위한 완벽한 세트"
+    items:
+      - dragon_slayer
+      - legendary_chestplate
+      - steel_leggings
+      - steel_boots
+    bonuses:
+      2-piece:
+        - "공격력 +10%"
+      3-piece:
+        - "공격력 +15%"
+        - "방어력 +5%"
+      4-piece:
+        - "공격력 +20%"
+        - "방어력 +10%"
+        - "생명력 +100"
+    effects:
+      - "치명타 확률 증가"
+      - "치명타 피해 증가"

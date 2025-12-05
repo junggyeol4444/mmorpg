@@ -1,0 +1,45 @@
+weapons:
+  basic_spear:
+    name: "기본 창"
+    type: SPEAR
+    rarity: COMMON
+    damage: 5
+    base-stats:
+      attack: 5.0
+      accuracy: 82.0
+      range: 30.0
+    description: "기본적인 창입니다."
+
+  pike:
+    name: "파이크"
+    type: SPEAR
+    rarity: UNCOMMON
+    damage: 10
+    base-stats:
+      attack: 10.0
+      accuracy: 85.0
+      range: 35.0
+    description: "긴 창입니다."
+
+  halberd:
+    name: "할버드"
+    type: SPEAR
+    rarity: RARE
+    damage: 15
+    base-stats:
+      attack: 15.0
+      accuracy: 88.0
+      range: 40.0
+    description: "도끼와 창이 합쳐진 무기입니다."
+
+  divine_spear:
+    name: "신성한 창"
+    type: SPEAR
+    rarity: LEGENDARY
+    damage: 28
+    base-stats:
+      attack: 28.0
+      accuracy: 92.0
+      range: 45.0
+      holy_damage: 15.0
+    description: "신의 축복을 받은 창입니다."

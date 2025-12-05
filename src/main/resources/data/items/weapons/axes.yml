@@ -1,0 +1,41 @@
+weapons:
+  basic_axe:
+    name: "기본 도끼"
+    type: AXE
+    rarity: COMMON
+    damage: 6
+    base-stats:
+      attack: 6.0
+      accuracy: 70.0
+    description: "기본적인 도끼입니다."
+
+  iron_axe:
+    name: "철 도끼"
+    type: AXE
+    rarity: UNCOMMON
+    damage: 12
+    base-stats:
+      attack: 12.0
+      accuracy: 75.0
+    description: "철로 만든 도끼입니다."
+
+  battle_axe:
+    name: "전투 도끼"
+    type: AXE
+    rarity: RARE
+    damage: 18
+    base-stats:
+      attack: 18.0
+      accuracy: 80.0
+    description: "전투용 도끼입니다."
+
+  berserker_axe:
+    name: "광전사의 도끼"
+    type: AXE
+    rarity: LEGENDARY
+    damage: 35
+    base-stats:
+      attack: 35.0
+      accuracy: 85.0
+      lifesteal: 10.0
+    description: "광전사의 분노가 담긴 도끼입니다."

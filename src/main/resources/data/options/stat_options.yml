@@ -1,0 +1,32 @@
+options:
+  attack_increase:
+    name: "공격력 증가"
+    type: STAT
+    trigger: PASSIVE
+    value: 10. 0
+    percentage: true
+    description: "공격력을 10% 증가시킵니다."
+
+  defense_increase:
+    name: "방어력 증가"
+    type: STAT
+    trigger: PASSIVE
+    value: 10.0
+    percentage: true
+    description: "방어력을 10% 증가시킵니다."
+
+  health_increase:
+    name: "생명력 증가"
+    type: STAT
+    trigger: PASSIVE
+    value: 50.0
+    percentage: false
+    description: "생명력을 50 증가시킵니다."
+
+  speed_increase:
+    name: "이동 속도 증가"
+    type: STAT
+    trigger: PASSIVE
+    value: 20.0
+    percentage: true
+    description: "이동 속도를 20% 증가시킵니다."

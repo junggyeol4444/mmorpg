@@ -1,0 +1,41 @@
+weapons:
+  basic_sword:
+    name: "기본 검"
+    type: SWORD
+    rarity: COMMON
+    damage: 5
+    base-stats:
+      attack: 5. 0
+      accuracy: 80.0
+    description: "기본적인 검입니다."
+
+  iron_sword:
+    name: "철 검"
+    type: SWORD
+    rarity: UNCOMMON
+    damage: 10
+    base-stats:
+      attack: 10.0
+      accuracy: 85.0
+    description: "철로 만든 검입니다."
+
+  steel_sword:
+    name: "강철 검"
+    type: SWORD
+    rarity: RARE
+    damage: 15
+    base-stats:
+      attack: 15.0
+      accuracy: 90.0
+    description: "강철로 만든 검입니다."
+
+  dragon_slayer:
+    name: "드래곤 슬레이어"
+    type: SWORD
+    rarity: LEGENDARY
+    damage: 30
+    base-stats:
+      attack: 30.0
+      accuracy: 95.0
+      critical: 15.0
+    description: "용을 죽이기 위해 만들어진 전설의 검입니다."

@@ -1,0 +1,24 @@
+gems:
+  basic_intelligence_gem:
+    name: "기본 지능 보석"
+    type: INTELLIGENCE
+    rarity: COMMON
+    color: BLUE
+    effect: "지능 +5"
+    description: "지능을 높이는 보석입니다."
+
+  intelligence_gem:
+    name: "지능 보석"
+    type: INTELLIGENCE
+    rarity: UNCOMMON
+    color: BLUE
+    effect: "지능 +10"
+    description: "지능을 크게 높이는 보석입니다."
+
+  legendary_intelligence_gem:
+    name: "전설의 지능 보석"
+    type: INTELLIGENCE
+    rarity: LEGENDARY
+    color: BLUE
+    effect: "지능 +25"
+    description: "뛰어난 지능을 제공하는 전설의 보석입니다."

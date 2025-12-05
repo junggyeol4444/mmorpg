@@ -1,0 +1,24 @@
+gems:
+  basic_dexterity_gem:
+    name: "기본 민첩성 보석"
+    type: DEXTERITY
+    rarity: COMMON
+    color: YELLOW
+    effect: "민첩성 +5"
+    description: "민첩성을 높이는 보석입니다."
+
+  dexterity_gem:
+    name: "민첩성 보석"
+    type: DEXTERITY
+    rarity: UNCOMMON
+    color: YELLOW
+    effect: "민첩성 +10"
+    description: "민첩성을 크게 높이는 보석입니다."
+
+  legendary_dexterity_gem:
+    name: "전설의 민첩성 보석"
+    type: DEXTERITY
+    rarity: LEGENDARY
+    color: YELLOW
+    effect: "민첩성 +25"
+    description: "놀라운 민첩성을 제공하는 전설의 보석입니다."

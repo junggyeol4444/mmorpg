@@ -1,0 +1,24 @@
+gems:
+  basic_resistance_gem:
+    name: "기본 저항 보석"
+    type: RESISTANCE
+    rarity: COMMON
+    color: PURPLE
+    effect: "방어력 +5"
+    description: "방어력을 높이는 보석입니다."
+
+  resistance_gem:
+    name: "저항 보석"
+    type: RESISTANCE
+    rarity: UNCOMMON
+    color: PURPLE
+    effect: "방어력 +10"
+    description: "방어력을 크게 높이는 보석입니다."
+
+  legendary_resistance_gem:
+    name: "전설의 저항 보석"
+    type: RESISTANCE
+    rarity: LEGENDARY
+    color: PURPLE
+    effect: "방어력 +25"
+    description: "완벽한 방어력을 제공하는 전설의 보석입니다."

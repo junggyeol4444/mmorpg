@@ -1,0 +1,28 @@
+options:
+  block:
+    name: "방어"
+    type: DEFENSE
+    trigger: ON_HIT
+    value: 25.0
+    description: "25% 확률로 피해를 50% 감소시킵니다."
+
+  dodge:
+    name: "회피"
+    type: DEFENSE
+    trigger: ON_HIT
+    value: 20.0
+    description: "20% 확률로 피해를 완전히 회피합니다."
+
+  thorns:
+    name: "가시"
+    type: DEFENSE
+    trigger: ON_HIT
+    value: 30.0
+    description: "30% 확률로 피해자에게 반사 피해를 입힙니다."
+
+  regeneration:
+    name: "재생"
+    type: DEFENSE
+    trigger: PASSIVE
+    value: 5.0
+    description: "초당 5의 생명력을 회복합니다."

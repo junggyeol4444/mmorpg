@@ -1,0 +1,52 @@
+# 멀티버스 아이템 시스템 - 메시지 설정
+
+prefix: "&6[아이템 시스템]&f"
+
+# 강화 메시지
+enhance:
+  success: "&a강화에 성공했습니다!  +{0}"
+  fail: "&c강화에 실패했습니다."
+  downgrade: "&e아이템이 한 단계 하락했습니다.  +{0} → +{1}"
+  max-level: "&c최대 강화 레벨입니다."
+  insufficient-gold: "&c골드가 부족합니다."
+  insufficient-material: "&c재료가 부족합니다."
+
+# 소켓 메시지
+socket:
+  insert-success: "&a보석을 끼웠습니다!"
+  insert-fail: "&c보석을 끼울 수 없습니다."
+  remove-success: "&a보석을 빼냈습니다!"
+  remove-fail: "&c보석을 뺄 수 없습니다."
+  color-mismatch: "&e색상이 일치하지 않습니다.  효율이 감소합니다."
+  socket-full: "&c더 이상 보석을 끼울 수 없습니다."
+
+# 분해 메시지
+disassemble:
+  success: "&a아이템을 분해했습니다!"
+  fail: "&c분해할 수 없습니다."
+  reward: "&7보상: &a{0}"
+
+# 식별 메시지
+identify:
+  success: "&a아이템을 식별했습니다!"
+  fail: "&c식별할 수 없습니다."
+  already-identified: "&c이미 식별된 아이템입니다."
+
+# 리롤 메시지
+reroll:
+  success: "&a옵션이 변경되었습니다!"
+  fail: "&c리롤할 수 없습니다."
+
+# 거래 메시지
+trade:
+  success: "&a거래가 완료되었습니다!"
+  fail: "&c거래할 수 없습니다."
+  soulbound: "&c이 아이템은 거래할 수 없습니다."
+  insufficient-gold: "&c골드가 부족합니다."
+
+# 일반 메시지
+general:
+  insufficient-inventory: "&c인벤토리가 가득 찼습니다."
+  insufficient-level: "&c필요 레벨: {0}"
+  invalid-item: "&c유효하지 않은 아이템입니다."
+  no-permission: "&c권한이 없습니다."

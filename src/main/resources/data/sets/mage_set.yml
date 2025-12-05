@@ -1,0 +1,23 @@
+sets:
+  mage_set:
+    name: "마법사의 세트"
+    id: "mage_set"
+    description: "마법사를 위한 완벽한 세트"
+    items:
+      - basic_staff
+      - mage_robe
+      - wisdom_ring
+      - magic_bracelet
+    bonuses:
+      2-piece:
+        - "마나 +50"
+      3-piece:
+        - "마나 +100"
+        - "마법 피해 +15%"
+      4-piece:
+        - "마나 +150"
+        - "마법 피해 +25%"
+        - "마나 회복 +20%"
+    effects:
+      - "마법 크리티컬 확률 증가"
+      - "마법 강화 효과"

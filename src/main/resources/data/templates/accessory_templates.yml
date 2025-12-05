@@ -1,0 +1,32 @@
+templates:
+  basic_accessory:
+    name: "기본 악세사리"
+    type: ACCESSORY
+    rarity: COMMON
+    base-stats:
+      health: 10. 0
+    socket-count: 1
+
+  common_accessory:
+    name: "일반 악세사리"
+    type: ACCESSORY
+    rarity: UNCOMMON
+    base-stats:
+      health: 20.0
+    socket-count: 1
+
+  rare_accessory:
+    name: "희귀 악세사리"
+    type: ACCESSORY
+    rarity: RARE
+    base-stats:
+      health: 50.0
+    socket-count: 2
+
+  legendary_accessory:
+    name: "전설의 악세사리"
+    type: ACCESSORY
+    rarity: LEGENDARY
+    base-stats:
+      health: 100. 0
+    socket-count: 2

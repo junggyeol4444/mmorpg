@@ -1,0 +1,33 @@
+accessories:
+  basic_necklace:
+    name: "기본 목걸이"
+    type: NECKLACE
+    rarity: COMMON
+    base-stats:
+      health: 15.0
+    description: "기본적인 목걸이입니다."
+
+  strength_necklace:
+    name: "힘의 목걸이"
+    type: NECKLACE
+    rarity: UNCOMMON
+    base-stats:
+      attack: 8.0
+    description: "공격력을 높이는 목걸이입니다."
+
+  protection_necklace:
+    name: "보호의 목걸이"
+    type: NECKLACE
+    rarity: RARE
+    base-stats:
+      defense: 8.0
+    description: "방어력을 높이는 목걸이입니다."
+
+  eternal_necklace:
+    name: "영원의 목걸이"
+    type: NECKLACE
+    rarity: LEGENDARY
+    base-stats:
+      health: 100.0
+      defense: 20.0
+    description: "영원한 생명력을 주는 목걸이입니다."

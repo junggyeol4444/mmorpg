@@ -1,0 +1,37 @@
+armors:
+  basic_helmet:
+    name: "기본 투구"
+    type: HELMET
+    rarity: COMMON
+    defense: 3
+    base-stats:
+      defense: 3.0
+    description: "기본적인 투구입니다."
+
+  iron_helmet:
+    name: "철 투구"
+    type: HELMET
+    rarity: UNCOMMON
+    defense: 6
+    base-stats:
+      defense: 6.0
+    description: "철로 만든 투구입니다."
+
+  steel_helmet:
+    name: "강철 투구"
+    type: HELMET
+    rarity: RARE
+    defense: 10
+    base-stats:
+      defense: 10.0
+    description: "강철로 만든 투구입니다."
+
+  dragon_helm:
+    name: "용의 투구"
+    type: HELMET
+    rarity: LEGENDARY
+    defense: 18
+    base-stats:
+      defense: 18.0
+      fire_resistance: 50.0
+    description: "용의 비늘로 만든 투구입니다."

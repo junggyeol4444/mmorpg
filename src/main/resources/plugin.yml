@@ -1,0 +1,29 @@
+name: MultiverseItemSystem
+version: 1.0. 0
+main: com.multiverse.item.ItemCore
+description: 멀티버스 커스텀 아이템 시스템
+authors:
+  - junggyeol4444
+api-version: "1.13"
+
+commands:
+  item:
+    description: 아이템 커맨드
+    usage: /item <subcommand>
+    aliases: [i]
+    permission: item.command
+    permission-message: "권한이 없습니다."
+
+permissions:
+  item.command:
+    description: 아이템 커맨드 사용
+    default: op
+  item.admin:
+    description: 관리자 커맨드
+    default: op
+  item.enhance:
+    description: 강화 커맨드
+    default: true
+  item.trade:
+    description: 거래 커맨드
+    default: true

@@ -1,0 +1,28 @@
+materials:
+  iron_ore:
+    name: "철광석"
+    type: ORE
+    rarity: COMMON
+    description: "철을 추출할 수 있는 광석입니다."
+    value: 100
+
+  gold_ore:
+    name: "금광석"
+    type: ORE
+    rarity: UNCOMMON
+    description: "금을 추출할 수 있는 광석입니다."
+    value: 500
+
+  diamond_ore:
+    name: "다이아몬드 광석"
+    type: ORE
+    rarity: RARE
+    description: "다이아몬드를 추출할 수 있는 광석입니다."
+    value: 2000
+
+  mithril_ore:
+    name: "미스릴 광석"
+    type: ORE
+    rarity: LEGENDARY
+    description: "미스릴을 추출할 수 있는 희귀 광석입니다."
+    value: 5000

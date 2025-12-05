@@ -1,0 +1,67 @@
+# 멀티버스 아이템 시스템 - 메인 설정
+
+# 서버 설정
+server:
+  debug: false
+  language: ko_KR
+
+# 아이템 시스템
+item:
+  max-enhance-level: 15
+  default-rarity: common
+  max-sockets: 3
+  default-durability: 100
+  enable-random-options: true
+  min-options: 1
+  max-options: 5
+
+# 강화 시스템
+enhance:
+  base-cost: 1000
+  cost-multiplier: 500
+  base-success-rate: 100. 0
+  success-rate-decrease: 5.0
+  min-success-rate: 10.0
+  enable-downgrade: true
+  downgrade-multiplier: 2.0
+  max-downgrade-chance: 50.0
+
+# 소켓 시스템
+socket:
+  enable: true
+  max-sockets-per-item: 3
+  socket-unlock-enhance-level: 5
+  enable-color-restriction: true
+
+# 옵션 시스템
+option:
+  enable-random-generation: true
+  min-options: 1
+  max-options: 5
+
+# 거래 시스템
+trade:
+  enable: true
+  soulbound-items-tradeable: false
+  enable-player-to-player: true
+  enable-npc-trading: true
+  enable-tax: true
+  tax-rate: 0.1
+
+# 세트 시스템
+set:
+  enable: true
+  max-items-per-set: 5
+  min-items-for-bonus: 2
+
+# GUI 설정
+gui:
+  enable: true
+  open-animation-enabled: true
+  close-animation-enabled: true
+
+# 저장소 설정
+storage:
+  type: YAML
+  auto-save-interval: 300
+  cache-ttl: 3600000

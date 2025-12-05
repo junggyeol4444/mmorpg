@@ -1,0 +1,24 @@
+gems:
+  shadow_gem:
+    name: "그림자 보석"
+    type: SPECIAL
+    rarity: EPIC
+    color: DARK
+    effect: "회피율 +20%, 뒷공격 피해 +15%"
+    description: "어둠의 힘을 담은 보석입니다."
+
+  light_gem:
+    name: "빛의 보석"
+    type: SPECIAL
+    rarity: EPIC
+    color: LIGHT
+    effect: "방어력 +20%, 생명력 회복 +10%"
+    description: "빛의 축복을 담은 보석입니다."
+
+  chaos_gem:
+    name: "혼돈의 보석"
+    type: SPECIAL
+    rarity: LEGENDARY
+    color: CHAOS
+    effect: "모든 스탯 +15%, 치명타 피해 +30%"
+    description: "혼돈의 에너지를 담은 보석입니다."

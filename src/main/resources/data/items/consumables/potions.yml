@@ -1,0 +1,33 @@
+consumables:
+  health_potion:
+    name: "체력 포션"
+    type: POTION
+    rarity: COMMON
+    effect: "HEAL"
+    amount: 20
+    description: "체력을 회복합니다."
+
+  mana_potion:
+    name: "마나 포션"
+    type: POTION
+    rarity: COMMON
+    effect: "RESTORE_MANA"
+    amount: 30
+    description: "마나를 회복합니다."
+
+  strength_potion:
+    name: "힘의 포션"
+    type: POTION
+    rarity: UNCOMMON
+    effect: "STRENGTH"
+    amount: 10
+    duration: 300
+    description: "일시적으로 힘을 높입니다."
+
+  legendary_potion:
+    name: "전설의 포션"
+    type: POTION
+    rarity: LEGENDARY
+    effect: "FULL_HEAL"
+    amount: 100
+    description: "완전히 체력을 회복합니다."

@@ -1,0 +1,28 @@
+options:
+  critical_strike:
+    name: "치명타"
+    type: DAMAGE
+    trigger: ON_ATTACK
+    value: 30.0
+    description: "30% 확률로 치명타를 입힙니다."
+
+  lifesteal:
+    name: "생명력 흡수"
+    type: DAMAGE
+    trigger: ON_ATTACK
+    value: 20.0
+    description: "20% 확률로 피해의 20%를 회복합니다."
+
+  fire_damage:
+    name: "불 피해"
+    type: DAMAGE
+    trigger: ON_ATTACK
+    value: 15. 0
+    description: "15% 확률로 추가 불 피해를 입힙니다."
+
+  poison_damage:
+    name: "독 피해"
+    type: DAMAGE
+    trigger: ON_ATTACK
+    value: 12.0
+    description: "12% 확률로 독 피해를 입힙니다."

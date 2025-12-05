@@ -1,0 +1,28 @@
+materials:
+  leather:
+    name: "가죽"
+    type: CRAFTING
+    rarity: COMMON
+    description: "갑옷 제작에 사용됩니다."
+    value: 50
+
+  cloth:
+    name: "천"
+    type: CRAFTING
+    rarity: COMMON
+    description: "옷 제작에 사용됩니다."
+    value: 40
+
+  wood:
+    name: "나무"
+    type: CRAFTING
+    rarity: COMMON
+    description: "무기 제작에 사용됩니다."
+    value: 30
+
+  mana_crystal:
+    name: "마나 크리스탈"
+    type: CRAFTING
+    rarity: RARE
+    description: "마법 아이템 제작에 사용됩니다."
+    value: 1000

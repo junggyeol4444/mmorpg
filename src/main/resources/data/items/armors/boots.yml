@@ -1,0 +1,37 @@
+armors:
+  basic_boots:
+    name: "기본 부츠"
+    type: BOOTS
+    rarity: COMMON
+    defense: 2
+    base-stats:
+      defense: 2.0
+    description: "기본적인 부츠입니다."
+
+  iron_boots:
+    name: "철 부츠"
+    type: BOOTS
+    rarity: UNCOMMON
+    defense: 4
+    base-stats:
+      defense: 4.0
+    description: "철로 만든 부츠입니다."
+
+  steel_boots:
+    name: "강철 부츠"
+    type: BOOTS
+    rarity: RARE
+    defense: 6
+    base-stats:
+      defense: 6.0
+    description: "강철로 만든 부츠입니다."
+
+  winged_boots:
+    name: "날개 부츠"
+    type: BOOTS
+    rarity: LEGENDARY
+    defense: 10
+    base-stats:
+      defense: 10.0
+      speed: 50.0
+    description: "날아다닐 수 있는 부츠입니다."

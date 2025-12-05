@@ -1,0 +1,36 @@
+accessories:
+  basic_ring:
+    name: "기본 반지"
+    type: RING
+    rarity: COMMON
+    base-stats:
+      health: 10. 0
+    description: "기본적인 반지입니다."
+
+  power_ring:
+    name: "힘의 반지"
+    type: RING
+    rarity: UNCOMMON
+    base-stats:
+      attack: 5.0
+      health: 20.0
+    description: "힘을 주는 반지입니다."
+
+  wisdom_ring:
+    name: "지혜의 반지"
+    type: RING
+    rarity: RARE
+    base-stats:
+      intelligence: 10.0
+      mana: 50.0
+    description: "지혜를 주는 반지입니다."
+
+  legendary_ring:
+    name: "전설의 반지"
+    type: RING
+    rarity: LEGENDARY
+    base-stats:
+      attack: 15.0
+      defense: 15.0
+      health: 100.0
+    description: "전설의 반지입니다."

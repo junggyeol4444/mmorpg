@@ -1,0 +1,36 @@
+templates:
+  basic_weapon:
+    name: "기본 무기"
+    type: WEAPON
+    rarity: COMMON
+    base-damage: 5
+    base-stats:
+      attack: 5. 0
+    socket-count: 1
+
+  common_weapon:
+    name: "일반 무기"
+    type: WEAPON
+    rarity: UNCOMMON
+    base-damage: 10
+    base-stats:
+      attack: 10.0
+    socket-count: 2
+
+  rare_weapon:
+    name: "희귀 무기"
+    type: WEAPON
+    rarity: RARE
+    base-damage: 15
+    base-stats:
+      attack: 15. 0
+    socket-count: 2
+
+  legendary_weapon:
+    name: "전설의 무기"
+    type: WEAPON
+    rarity: LEGENDARY
+    base-damage: 30
+    base-stats:
+      attack: 30.0
+    socket-count: 3

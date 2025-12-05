@@ -1,0 +1,23 @@
+sets:
+  rogue_set:
+    name: "도적의 세트"
+    id: "rogue_set"
+    description: "도적을 위한 완벽한 세트"
+    items:
+      - dual_daggers
+      - rogue_leather
+      - swift_ring
+      - stealth_boots
+    bonuses:
+      2-piece:
+        - "회피율 +10%"
+      3-piece:
+        - "회피율 +15%"
+        - "뒷공격 피해 +20%"
+      4-piece:
+        - "회피율 +20%"
+        - "뒷공격 피해 +30%"
+        - "은신 시간 +50%"
+    effects:
+      - "치명타 피해 증가"
+      - "은신 효율 증가"

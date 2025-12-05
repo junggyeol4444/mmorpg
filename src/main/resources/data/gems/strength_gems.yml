@@ -1,0 +1,24 @@
+gems:
+  basic_strength_gem:
+    name: "기본 힘의 보석"
+    type: STRENGTH
+    rarity: COMMON
+    color: RED
+    effect: "공격력 +5"
+    description: "공격력을 높이는 보석입니다."
+
+  strength_gem:
+    name: "힘의 보석"
+    type: STRENGTH
+    rarity: UNCOMMON
+    color: RED
+    effect: "공격력 +10"
+    description: "공격력을 크게 높이는 보석입니다."
+
+  legendary_strength_gem:
+    name: "전설의 힘의 보석"
+    type: STRENGTH
+    rarity: LEGENDARY
+    color: RED
+    effect: "공격력 +25"
+    description: "강력한 공격력을 제공하는 전설의 보석입니다."
