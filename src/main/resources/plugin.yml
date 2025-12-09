@@ -1,0 +1,24 @@
+name: MultiverseParty
+main: com.multiverse.party.PartyCore
+version: 1.0.0
+api-version: 1.16
+author: junggyeol4444
+description: "멀티버스 파티 시스템 플러그인"
+depend:
+  - Vault
+  - PlaceholderAPI
+  - MythicMobs
+commands:
+  party:
+    description: "파티 명령어"
+    usage: /party
+  partychat:
+    description: "파티 채팅"
+    usage: /partychat <message>
+permissions:
+  multiverseparty.use:
+    description: "파티 관련 모든 기능 사용"
+    default: true
+  multiverseparty.admin:
+    description: "관리자용 명령 및 전체 권한"
+    default: op

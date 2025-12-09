@@ -1,0 +1,29 @@
+# 파티 버프 설정
+party-buffs:
+  default:
+    name: "기본 파티 버프"
+    type: PARTY_LEVEL
+    requiredMembers: 2
+    requiredPartyLevel: 1
+    duration: 600    # 초 단위
+    effects:
+      damage_bonus: 0.05      # 5% 추가 피해
+      exp_bonus: 0.05         # 5% 추가 경험치
+  advanced:
+    name: "상급 파티 버프"
+    type: MEMBER_COUNT
+    requiredMembers: 4
+    requiredPartyLevel: 5
+    duration: 1200
+    effects:
+      damage_bonus: 0.10      # 10% 추가 피해
+      exp_bonus: 0.08         # 8% 추가 경험치
+  farming:
+    name: "파밍 증폭 버프"
+    type: CUSTOM
+    requiredMembers: 3
+    requiredPartyLevel: 3
+    duration: 1800
+    effects:
+      drop_rate: 0.15         # 15% 드랍률 증가
+      exp_bonus: 0.10

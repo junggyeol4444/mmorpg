@@ -1,0 +1,34 @@
+# 파티 GUI 설정
+menus:
+  main:
+    title: "&b파티 메뉴"
+    rows: 3
+    buttons:
+      members:
+        slot: 10
+        label: "&a멤버"
+        icon: PLAYER_HEAD
+      buffs:
+        slot: 12
+        label: "&d버프"
+        icon: BLAZE_POWDER
+      skills:
+        slot: 14
+        label: "&b스킬"
+        icon: ENCHANTED_BOOK
+      finder:
+        slot: 16
+        label: "&e파티 찾기"
+        icon: COMPASS
+  invite:
+    title: "&e파티 초대"
+    rows: 1
+    buttons:
+      accept:
+        slot: 3
+        label: "&a수락"
+        icon: GREEN_WOOL
+      decline:
+        slot: 5
+        label: "&c거절"
+        icon: RED_WOOL

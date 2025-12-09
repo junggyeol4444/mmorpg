@@ -1,0 +1,28 @@
+settings:
+  max-party-size: 8
+  invite-expire-seconds: 120
+  party-chat-format: "&b[파티] &f%player%: &r%msg%"
+  party-disband-timeout-minutes: 60
+  party-buff-update-interval: 60
+  party-autosave-interval: 600
+  party-matching-interval: 30
+  party-level-max: 20
+  auto-decline-invites: false
+
+loot:
+  default-distribution: "VOTE"
+  master-loot-announce: true
+
+exp:
+  default-distribution: "CONTRIBUTION"
+  share-radius: 30
+
+db:
+  type: "yaml" # 또는 "mysql"
+  yaml-path: "data/party/"
+  mysql:
+    host: "localhost"
+    port: 3306
+    dbname: "party"
+    user: "root"
+    password: "password"
