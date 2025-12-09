@@ -1,0 +1,102 @@
+name: TradeCore
+version: 1.0.0
+main: com.multiverse.trade.TradeCore
+api-version: 1.20
+description: 멀티버스 서버를 위한 통합 거래 시스템 플러그인
+author:  Multiverse Team
+website: https://multiverse.com
+
+depend:
+  - Vault
+
+softdepend:
+  - PlaceholderAPI
+  - LuckPerms
+
+commands:
+  trade: 
+    description: 거래 관련 명령어
+    usage: /<command> <플레이어>
+    aliases: [거래, t]
+  
+  shop:
+    description: 개인 상점 명령어
+    usage: /<command> [하위명령어]
+    aliases: [상점, s]
+  
+  auction:
+    description: 경매장 명령어
+    usage: /<command> [하위명령어]
+    aliases: [경매, auc]
+  
+  market:
+    description: 거래소 명령어
+    usage: /<command> [하위명령어]
+    aliases: [거래소, m]
+  
+  mail:
+    description: 우편 명령어
+    usage: /<command> [하위명령어]
+    aliases: [우편, 메일]
+
+permissions:
+  trade.use:
+    description: 거래 시스템 기본 사용 권한
+    default: true
+  
+  trade.shop: 
+    description: 개인 상점 기본 사용 권한
+    default: true
+  
+  trade. shop.create:
+    description:  상점 생성 권한
+    default: true
+  
+  trade.auction:
+    description:  경매장 기본 사용 권한
+    default: true
+  
+  trade.auction.create:
+    description: 경매 등록 권한
+    default: true
+  
+  trade. market:
+    description:  거래소 기본 사용 권한
+    default: true
+  
+  trade.market.order:
+    description:  거래소 주문 등록 권한
+    default: true
+  
+  trade. mail:
+    description:  우편 기본 사용 권한
+    default: true
+  
+  trade.mail. send:
+    description: 우편 발송 권한
+    default: true
+  
+  trade. admin:
+    description:  관리자 권한
+    default:  op
+    children:
+      trade.admin.bypass:  true
+      trade.admin.reload: true
+      trade.admin.delete: true
+      trade. admin.broadcast: true
+  
+  trade.admin.bypass:
+    description: 모든 제한 우회
+    default: op
+  
+  trade.admin.reload:
+    description: 설정 리로드 권한
+    default: op
+  
+  trade.admin. delete:
+    description: 다른 플레이어 데이터 삭제 권한
+    default: op
+  
+  trade. admin.broadcast:
+    description: 전체 공지 우편 발송 권한
+    default: op

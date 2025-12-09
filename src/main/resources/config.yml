@@ -1,0 +1,126 @@
+# ================================================
+# TradeCore 설정 파일
+# 멀티버스 서버 통합 거래 시스템
+# ================================================
+
+# 저장소 설정
+storage:
+  type: yaml  # yaml 또는 mysql
+  auto-save-interval: 5  # 분 단위
+  backup: 
+    enabled: true
+    interval: 60  # 분 단위
+    keep-count: 5
+
+# 직거래 설정
+direct-trade:
+  enabled: true
+  request-timeout: 60  # 초
+  confirm-delay: 3  # 초 (양쪽 확인 후 대기 시간)
+  
+  restrictions:
+    max-distance: 50  # 블록
+    min-level: 5  # 최소 레벨
+    cooldown: 10  # 초
+    same-world-only: false
+  
+  tax: 
+    enabled: true
+    rate: 1.0  # 퍼센트
+
+# 개인 상점 설정
+player-shops:
+  enabled:  true
+  
+  limits:
+    max-shops-per-player: 3
+    max-items-per-shop:  27
+  
+  fees:
+    creation-cost: 10000. 0
+    daily-tax: 100.0
+    sale-fee: 3.0  # 퍼센트
+
+# 경매장 설정
+auction: 
+  enabled: true
+  check-interval: 60  # 초
+  
+  durations:
+    available: [12, 24, 48]
+    default: 24
+  
+  fees: 
+    listing-fee: 100.0
+    seller-fee: 5.0  # 퍼센트
+  
+  bidding: 
+    min-increment: 100. 0
+    increment-percent: 5.0
+    anti-snipe: 
+      enabled: true
+      threshold: 300  # 초 (5분)
+      extension:  60  # 초
+
+# 거래소 설정
+market:
+  enabled: true
+  order-expiry: 7  # 일
+  
+  fees: 
+    sell-order:  2.0  # 퍼센트
+    buy-order: 0.0
+    instant-trade: 3.0  # 퍼센트
+  
+  matching:
+    auto-match: true
+    interval: 30  # 초
+
+# 가격 추적 설정
+price-tracking: 
+  enabled: true
+  history-days: 30
+  update-interval: 5  # 분
+
+# 우편 시스템 설정
+mail:
+  enabled: true
+  
+  expiry:
+    days: 30
+    return-on-expire: true
+  
+  cost:
+    postage: 10.0
+    per-attachment: 5.0
+  
+  limits:
+    max-attachments: 5
+    max-money: 1000000. 0
+
+# 수수료 분배 설정
+fee-distribution:
+  burn:  50. 0  # 퍼센트 - 소각
+  event:  30.0  # 퍼센트 - 이벤트 기금
+  server: 20.0  # 퍼센트 - 서버 운영
+
+# 보안 설정
+security:
+  trade-logging: true
+  blacklist:  true
+  trade-delay-new-players: 3600  # 초 (1시간)
+
+# GUI 설정
+gui:
+  trade: 
+    title: "&8안전 거래"
+  shop:
+    title:  "&8개인 상점"
+  auction:
+    title: "&8경매장"
+  market:
+    title:  "&8거래소"
+  mail: 
+    title: "&8우편함"
+
+# 메시지 설정은 messages.yml 파일을 참조하세요
