@@ -1,0 +1,38 @@
+recipes:
+  ruby_gem:
+    name: "Ruby Gem"
+    type: JEWELCRAFTING
+    category: JEWEL
+    description: "가공된 루비 보석"
+    lore: []
+    materials:
+      ruby_ore:
+        item:
+          material: REDSTONE
+          amount: 1
+        amount: 8
+        consume-on-fail: true
+      gold_nugget:
+        item:
+          material: GOLD_NUGGET
+          amount: 1
+        amount: 2
+        consume-on-fail: true
+    result:
+      material: RED_DYE
+      amount: 1
+    min-amount: 1
+    max-amount: 2
+    requirements:
+      level: 8
+      skill-level: 3
+      required-quest:
+      required-recipes: []
+    crafting-time: 6
+    success-rate: 85.0
+    experience: 24
+    required-station:
+      type: JEWELCRAFTING_TABLE
+      tier: 1
+    mass-craftable: true
+    max-mass-amount: 24

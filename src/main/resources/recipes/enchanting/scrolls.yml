@@ -1,0 +1,44 @@
+recipes:
+  protection_scroll:
+    name: "Protection Scroll"
+    type: ENCHANTING
+    category: SCROLL
+    description: "방어력 강화 스크롤"
+    lore: []
+    materials:
+      paper:
+        item:
+          material: PAPER
+          amount: 1
+        amount: 3
+        consume-on-fail: true
+      lapis:
+        item:
+          material: LAPIS_LAZULI
+          amount: 1
+        amount: 2
+        consume-on-fail: true
+      feather:
+        item:
+          material: FEATHER
+          amount: 1
+        amount: 1
+        consume-on-fail: true
+    result:
+      material: PAPER
+      amount: 1
+    min-amount: 1
+    max-amount: 1
+    requirements:
+      level: 4
+      skill-level: 2
+      required-quest:
+      required-recipes: []
+    crafting-time: 4
+    success-rate: 88.0
+    experience: 14
+    required-station:
+      type: ENCHANTING_TABLE
+      tier: 1
+    mass-craftable: true
+    max-mass-amount: 32

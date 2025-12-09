@@ -1,0 +1,16 @@
+name: MultiverseCrafting
+main: com.multiverse.crafting.CraftingCore
+version: 1.0.0
+api-version: 1.20
+authors: [ "multiverse" ]
+commands:
+  craft:
+    description: Crafting commands
+    usage: /craft
+    aliases: [crafting]
+    permission: crafting.use
+permissions:
+  crafting.use:
+    default: true
+  crafting.admin:
+    default: op

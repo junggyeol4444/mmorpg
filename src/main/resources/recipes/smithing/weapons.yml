@@ -1,0 +1,38 @@
+recipes:
+  iron_sword:
+    name: "Iron Sword"
+    type: SMITHING
+    category: WEAPON
+    description: "기본 철 검"
+    lore: []
+    materials:
+      iron_ingot:
+        item:
+          material: IRON_INGOT
+          amount: 1
+        amount: 2
+        consume-on-fail: true
+      stick:
+        item:
+          material: STICK
+          amount: 1
+        amount: 1
+        consume-on-fail: true
+    result:
+      material: IRON_SWORD
+      amount: 1
+    min-amount: 1
+    max-amount: 1
+    requirements:
+      level: 0
+      skill-level: 1
+      required-quest:
+      required-recipes: []
+    crafting-time: 3
+    success-rate: 90.0
+    experience: 10
+    required-station:
+      type: SMITHING_TABLE
+      tier: 1
+    mass-craftable: true
+    max-mass-amount: 64

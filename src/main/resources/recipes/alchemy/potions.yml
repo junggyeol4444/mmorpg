@@ -1,0 +1,44 @@
+recipes:
+  healing_potion:
+    name: "Healing Potion"
+    type: ALCHEMY
+    category: POTION
+    description: "체력을 회복시켜 주는 기본 물약"
+    lore: []
+    materials:
+      nether_wart:
+        item:
+          material: NETHER_WART
+          amount: 1
+        amount: 1
+        consume-on-fail: true
+      glistering_melon:
+        item:
+          material: GLISTERING_MELON_SLICE
+          amount: 1
+        amount: 1
+        consume-on-fail: true
+      bottle:
+        item:
+          material: GLASS_BOTTLE
+          amount: 1
+        amount: 1
+        consume-on-fail: true
+    result:
+      material: POTION
+      amount: 1
+    min-amount: 1
+    max-amount: 1
+    requirements:
+      level: 0
+      skill-level: 1
+      required-quest:
+      required-recipes: []
+    crafting-time: 5
+    success-rate: 90.0
+    experience: 12
+    required-station:
+      type: ALCHEMY_TABLE
+      tier: 1
+    mass-craftable: true
+    max-mass-amount: 32

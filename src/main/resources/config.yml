@@ -1,0 +1,21 @@
+# 기본 설정
+data:
+  auto-save-interval: 300  # 초 단위
+
+crafting:
+  success-rate:
+    max-rate: 95.0
+
+skills:
+  exp:
+    base: 100
+    scale: 1.2
+  bonuses:
+    success-rate-per-level: 1.0
+
+stations:
+  use-radius: 5.0
+  default:
+    success-rate-bonus: 0.0
+    speed-bonus: 0.0
+    max-mass-craft: 0

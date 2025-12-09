@@ -1,0 +1,32 @@
+recipes:
+  iron_chestplate:
+    name: "Iron Chestplate"
+    type: SMITHING
+    category: ARMOR
+    description: "기본 철 흉갑"
+    lore: []
+    materials:
+      iron_ingot:
+        item:
+          material: IRON_INGOT
+          amount: 1
+        amount: 8
+        consume-on-fail: true
+    result:
+      material: IRON_CHESTPLATE
+      amount: 1
+    min-amount: 1
+    max-amount: 1
+    requirements:
+      level: 0
+      skill-level: 1
+      required-quest:
+      required-recipes: []
+    crafting-time: 4
+    success-rate: 88.0
+    experience: 15
+    required-station:
+      type: SMITHING_TABLE
+      tier: 1
+    mass-craftable: true
+    max-mass-amount: 64

@@ -1,0 +1,38 @@
+recipes:
+  ruby_ring:
+    name: "Ruby Ring"
+    type: JEWELCRAFTING
+    category: ACCESSORY
+    description: "루비가 박힌 반지"
+    lore: []
+    materials:
+      ruby_gem:
+        item:
+          material: RED_DYE
+          amount: 1
+        amount: 1
+        consume-on-fail: true
+      gold_ingot:
+        item:
+          material: GOLD_INGOT
+          amount: 1
+        amount: 2
+        consume-on-fail: true
+    result:
+      material: GOLD_NUGGET
+      amount: 1
+    min-amount: 1
+    max-amount: 1
+    requirements:
+      level: 10
+      skill-level: 4
+      required-quest:
+      required-recipes: [ruby_gem]
+    crafting-time: 7
+    success-rate: 83.0
+    experience: 28
+    required-station:
+      type: JEWELCRAFTING_TABLE
+      tier: 1
+    mass-craftable: true
+    max-mass-amount: 16

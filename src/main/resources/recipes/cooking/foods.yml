@@ -1,0 +1,32 @@
+recipes:
+  cooked_beef:
+    name: "Cooked Beef"
+    type: COOKING
+    category: FOOD
+    description: "구운 소고기"
+    lore: []
+    materials:
+      raw_beef:
+        item:
+          material: BEEF
+          amount: 1
+        amount: 1
+        consume-on-fail: true
+    result:
+      material: COOKED_BEEF
+      amount: 1
+    min-amount: 1
+    max-amount: 1
+    requirements:
+      level: 0
+      skill-level: 1
+      required-quest:
+      required-recipes: []
+    crafting-time: 2
+    success-rate: 96.0
+    experience: 4
+    required-station:
+      type: COOKING_TABLE
+      tier: 1
+    mass-craftable: true
+    max-mass-amount: 64

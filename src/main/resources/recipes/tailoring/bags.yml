@@ -1,0 +1,38 @@
+recipes:
+  small_bag:
+    name: "Small Bag"
+    type: TAILORING
+    category: BAG
+    description: "간단한 소형 가방"
+    lore: []
+    materials:
+      leather:
+        item:
+          material: LEATHER
+          amount: 1
+        amount: 4
+        consume-on-fail: true
+      thread:
+        item:
+          material: STRING
+          amount: 1
+        amount: 2
+        consume-on-fail: true
+    result:
+      material: RABBIT_HIDE
+      amount: 1
+    min-amount: 1
+    max-amount: 1
+    requirements:
+      level: 0
+      skill-level: 1
+      required-quest:
+      required-recipes: []
+    crafting-time: 3
+    success-rate: 94.0
+    experience: 8
+    required-station:
+      type: TAILORING_TABLE
+      tier: 1
+    mass-craftable: true
+    max-mass-amount: 64

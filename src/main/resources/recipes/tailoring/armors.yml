@@ -1,0 +1,38 @@
+recipes:
+  leather_tunic:
+    name: "Leather Tunic"
+    type: TAILORING
+    category: ARMOR
+    description: "가볍고 유연한 가죽 상의"
+    lore: []
+    materials:
+      leather:
+        item:
+          material: LEATHER
+          amount: 1
+        amount: 8
+        consume-on-fail: true
+      thread:
+        item:
+          material: STRING
+          amount: 1
+        amount: 2
+        consume-on-fail: true
+    result:
+      material: LEATHER_CHESTPLATE
+      amount: 1
+    min-amount: 1
+    max-amount: 1
+    requirements:
+      level: 0
+      skill-level: 1
+      required-quest:
+      required-recipes: []
+    crafting-time: 4
+    success-rate: 92.0
+    experience: 10
+    required-station:
+      type: TAILORING_TABLE
+      tier: 1
+    mass-craftable: true
+    max-mass-amount: 64
