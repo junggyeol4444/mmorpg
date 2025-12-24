@@ -1,0 +1,167 @@
+name: PvPCore
+version: 1.0.0
+main: com.multiverse.pvp.PvPCore
+api-version: 1.19
+author:  Multiverse
+description:  종합 PvP 시스템 플러그인
+
+depend:
+  - PlayerDataCore
+  - CombatCore
+
+softdepend:
+  - EconomyCore
+  - GuildCore
+  - PlaceholderAPI
+
+commands:
+  pvp:
+    description:  PvP 메인 명령어
+    usage: /<command> [하위명령어]
+    aliases: [피빕, 전투]
+  
+  pvpadmin:
+    description: PvP 관리자 명령어
+    usage: /<command> [하위명령어]
+    aliases: [pvpa, 피빕관리]
+    permission: pvp.admin
+
+permissions:
+  # 기본 권한
+  pvp.use: 
+    description: 기본 PvP 명령어 사용
+    default: true
+  
+  pvp.toggle:
+    description:  PvP 모드 토글
+    default: true
+  
+  pvp.stats:
+    description: 통계 확인
+    default:  true
+  
+  pvp.ranking:
+    description:  랭킹 확인
+    default: true
+  
+  pvp. title:
+    description:  칭호 관리
+    default:  true
+
+  # 듀얼 권한
+  pvp. duel:
+    description: 듀얼 신청
+    default:  true
+  
+  pvp.duel.bet:
+    description:  듀얼 베팅
+    default: true
+
+  # 아레나 권한
+  pvp.arena:
+    description: 아레나 참가
+    default:  true
+  
+  pvp.arena. spectate:
+    description: 아레나 관전
+    default: true
+  
+  pvp. arena.queue:
+    description:  매칭 대기열 사용
+    default:  true
+
+  # 관리자 권한
+  pvp. admin:
+    description: 모든 관리자 권한
+    default: op
+    children:
+      pvp.admin.arena:  true
+      pvp. admin.zone: true
+      pvp.admin.ranking: true
+      pvp.admin.reload: true
+      pvp.admin.season: true
+      pvp.admin.bypass: true
+  
+  pvp.admin.arena: 
+    description: 아레나 관리
+    default: op
+  
+  pvp. admin.arena.create:
+    description:  아레나 생성
+    default: op
+  
+  pvp.admin.arena.delete:
+    description: 아레나 삭제
+    default: op
+  
+  pvp.admin.arena.setspawn:
+    description:  아레나 스폰 설정
+    default: op
+  
+  pvp.admin.arena.start:
+    description:  아레나 강제 시작
+    default: op
+  
+  pvp.admin.arena. end:
+    description:  아레나 강제 종료
+    default: op
+
+  pvp.admin.zone:
+    description:  지역 관리
+    default: op
+  
+  pvp.admin.zone. create:
+    description: 지역 생성
+    default: op
+  
+  pvp.admin.zone.delete:
+    description: 지역 삭제
+    default:  op
+  
+  pvp.admin. zone.set: 
+    description: 지역 설정 변경
+    default: op
+
+  pvp.admin.ranking:
+    description: 랭킹 관리
+    default: op
+  
+  pvp.admin.ranking.set:
+    description:  레이팅 설정
+    default: op
+  
+  pvp.admin.ranking.reset:
+    description:  랭킹 초기화
+    default: op
+
+  pvp.admin.reload:
+    description:  플러그인 리로드
+    default: op
+
+  pvp.admin.season:
+    description: 시즌 관리
+    default: op
+  
+  pvp.admin.season. start:
+    description:  새 시즌 시작
+    default: op
+  
+  pvp.admin.season.end:
+    description: 시즌 종료
+    default:  op
+
+  pvp.admin.bypass:
+    description: 제한 우회
+    default: op
+  
+  pvp.admin.bypass. protection:
+    description:  보호 우회
+    default:  op
+  
+  pvp.admin.bypass. level:
+    description:  레벨 제한 우회
+    default: op
+  
+  pvp.admin.bypass. zone:
+    description:  지역 제한 우회
+    default: op

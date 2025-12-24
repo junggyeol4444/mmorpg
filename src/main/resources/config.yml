@@ -1,0 +1,174 @@
+#==========================================
+#       PvPCore 설정 파일
+#       Version:  1.0.0
+#==========================================
+
+# 메시지 설정
+messages:
+  prefix: "&8[&cPvP&8]&r "
+  
+  # PvP 모드 메시지
+  pvp-mode: 
+    enabled: "&aPvP 모드가 활성화되었습니다."
+    disabled: "&cPvP 모드가 비활성화되었습니다."
+    combat-tag: "&c전투 중에는 PvP 모드를 변경할 수 없습니다."
+  
+  # 랭킹 메시지
+  ranking:
+    promoted: "&a&l티어 승급!  &f{tier}"
+    demoted:  "&c티어 강등! &f{tier}"
+  
+  # 듀얼 메시지
+  duel:
+    request-sent: "&a{player}님에게 듀얼을 신청했습니다."
+    request-received: "&e{player}님이 듀얼을 신청했습니다!"
+    accepted: "&a듀얼이 수락되었습니다!"
+    declined: "&c듀얼이 거절되었습니다."
+    expired: "&c듀얼 요청이 만료되었습니다."
+    start:  "&c&l전투 시작!"
+    win: "&a승리!  레이팅 +{rating}"
+    lose:  "&c패배! 레이팅 {rating}"
+
+# PvP 모드 설정
+pvp-mode: 
+  # 기본 PvP 타입 (ALWAYS_ON, CONSENSUAL, ZONE_BASED, GUILD_WAR)
+  default-mode: CONSENSUAL
+  
+  # 보호 설정
+  protection: 
+    # 신규 플레이어 보호 시간 (초)
+    new-player-duration: 86400
+    # 레벨 보호 (이 레벨 이하는 PvP 불가)
+    level-protection: 10
+  
+  # 레벨 차이 제한
+  level-difference: 
+    enabled: true
+    max-difference: 10
+  
+  # 전투 태그 지속시간 (초)
+  combat-tag-duration: 15
+
+# 랭킹/ELO 설정
+ranking:
+  elo: 
+    # 시작 레이팅
+    starting-rating: 1000
+    # K-Factor (레이팅 변동 폭)
+    k-factor: 32
+  
+  # 시즌 설정
+  season: 
+    # 시즌 기간 (일)
+    duration-days: 90
+    # 시즌 종료 시 레이팅 리셋 비율 (%)
+    rating-reset-percentage: 50
+    # 자동 새 시즌 시작
+    auto-start: true
+
+# 아레나 설정
+arenas:
+  # 기본 준비 시간 (초)
+  preparation-time: 10
+  
+  # 매칭 시스템
+  matchmaking:
+    enabled: true
+    # 매칭 타임아웃 (초)
+    timeout: 300
+    # 레이팅 범위 (이 범위 내 플레이어끼리 매칭)
+    rating-range: 200
+    # 매칭 체크 간격 (초)
+    check-interval: 5
+
+# 듀얼 설정
+duel: 
+  enabled: true
+  
+  # 듀얼 요청 만료 시간 (초)
+  request: 
+    expire-time: 60
+  
+  # 듀얼 지속시간 (초)
+  duration: 300
+  
+  # 베팅 설정
+  betting: 
+    enabled: true
+    max-money: 100000.0
+
+# 킬 스트릭 설정
+kill-streak:
+  enabled:  true
+  
+  # 스트릭 유지 시간 (초, 일반 PvP에서)
+  timeout: 60
+  
+  # 보상 설정
+  rewards:
+    enabled: true
+    # 배율 적용
+    multiplier: true
+  
+  # 알림 설정
+  announcements:
+    enabled: true
+    # 서버 전체 공지 (높은 스트릭만)
+    broadcast: true
+
+# 지역 설정
+zones: 
+  enabled: true
+  
+  # 안전 지역 설정
+  safe-zones: 
+    default-radius: 50
+  
+  # 전투 지역 설정
+  combat-zones:
+    reward-multiplier: 1.5
+    exp-multiplier: 1.5
+
+# 보상 설정
+rewards:
+  # 킬 보상
+  kill: 
+    experience: 100
+    money: 50. 0
+    pvp-points: 1
+  
+  # 승리 보상 배율
+  win: 
+    experience-multiplier: 2.0
+    money-multiplier: 2.0
+    pvp-points:  10
+  
+  # 패배 보상 배율
+  lose:
+    experience-multiplier:  0.5
+    money-multiplier: 0.5
+    pvp-points: 2
+
+# 칭호 설정
+titles: 
+  enabled: true
+  
+  # 칭호 보너스 활성화
+  bonuses:
+    enabled: true
+
+# 리더보드 설정
+leaderboard:
+  enabled: true
+  # 업데이트 간격 (분)
+  update-interval: 1
+
+# 자동 저장 설정
+auto-save:
+  # 저장 간격 (분)
+  interval: 5
+  # 저장 시 로그 출력
+  log:  true
+
+# 디버그 모드
+debug:  false
