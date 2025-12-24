@@ -1,0 +1,50 @@
+data:
+  auto-save-interval: 300   # seconds
+
+messages:
+  prefix: "&8[&6Guild&8]&r "
+
+guild-creation:
+  enabled: true
+  cost: 100000
+  name:
+    min-length: 3
+    max-length: 16
+  tag:
+    min-length: 2
+    max-length: 4
+
+treasury:
+  salary:
+    enabled: true
+    pay-interval: 86400  # seconds (24h)
+
+guild-level:
+  enabled: true
+  max-level: 100
+  bonuses-per-level:
+    max-members: 5
+    skill-points: 1
+
+territory:
+  enabled: true
+  cost:
+    claim: 500000
+
+guild-war:
+  declaration:
+    cost: 50000
+  target-score: 100
+  duration: 3600         # seconds
+  rewards:
+    winner-exp: 10000
+    winner-fame: 100
+    winner-gold: 100000
+    loser-fame: -50
+
+quests:
+  enabled: true
+  daily:
+    reset-time: "00:00:00"
+  weekly:
+    reset-day: "MONDAY"

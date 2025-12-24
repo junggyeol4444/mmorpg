@@ -1,0 +1,19 @@
+name: GuildCore
+main: com.multiverse.guild.GuildCore
+version: 1.0.0
+api-version: 1.19
+author: multiverse
+depend:
+  - Vault
+
+commands:
+  guild:
+    description: Guild commands
+    usage: /guild
+    aliases: [g]
+    permission: guild.use
+permissions:
+  guild.use:
+    default: true
+  guild.admin:
+    default: op
