@@ -1,0 +1,310 @@
+#=========================================
+#  드래곤 종족 설정
+#=========================================
+
+baby_dragon:
+  name: "아기 드래곤"
+  description:  "어린 드래곤. 성장하면 강력한 힘을 발휘할 것이다."
+  type: COMBAT
+  entity-type: ENDER_DRAGON
+  base-rarity:  EPIC
+  max-level: 100
+
+  base-stats: 
+    health: 150.0
+    attack: 25.0
+    defense: 15.0
+    speed: 20.0
+    critical_chance: 12.0
+    critical_damage: 160.0
+
+  stats-per-level: 
+    health: 8.0
+    attack: 2.0
+    defense: 1.0
+    speed: 0.4
+    critical_chance: 0.15
+    critical_damage: 1.3
+
+  learnable-skills:
+    - dragon_claw
+    - fire_breath
+    - wing_gust
+    - dragon_scales
+    - inferno
+
+  skill-unlock-levels:
+    dragon_claw: 1
+    fire_breath: 10
+    wing_gust: 20
+    dragon_scales:  35
+    inferno:  50
+
+  evolution-paths:
+    - fire_dragon
+    - ice_dragon
+    - lightning_dragon
+
+  preferred-foods: 
+    - COOKED_BEEF
+    - GOLDEN_APPLE
+    - BLAZE_POWDER
+
+  abilities:
+    - fire_resistance
+    - flight
+
+  obtain-methods: 
+    - egg
+    - boss_drop
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 100
+  scale: 0.3
+
+  sounds: 
+    ambient: ENTITY_ENDER_DRAGON_AMBIENT
+    hurt: ENTITY_ENDER_DRAGON_HURT
+    death: ENTITY_ENDER_DRAGON_DEATH
+
+  base-speed:  0.30
+  attack-range: 3.0
+
+#=========================================
+#  화염 드래곤 (진화형)
+#=========================================
+
+fire_dragon: 
+  name: "화염 드래곤"
+  description: "불꽃을 다루는 성룡. 모든 것을 태워버리는 화염을 뿜는다."
+  type: COMBAT
+  entity-type:  ENDER_DRAGON
+  base-rarity: LEGENDARY
+  max-level: 100
+
+  base-stats: 
+    health: 300.0
+    attack: 55.0
+    defense: 30.0
+    speed: 25.0
+    critical_chance: 18.0
+    critical_damage: 180.0
+
+  stats-per-level: 
+    health: 12.0
+    attack: 3.5
+    defense: 1.5
+    speed: 0.5
+    critical_chance: 0.18
+    critical_damage: 1.5
+
+  learnable-skills:
+    - dragon_claw
+    - fire_breath
+    - wing_gust
+    - dragon_scales
+    - inferno
+    - meteor_shower
+    - volcanic_rage
+    - phoenix_rebirth
+
+  skill-unlock-levels: 
+    dragon_claw: 1
+    fire_breath: 1
+    wing_gust: 10
+    dragon_scales: 20
+    inferno:  35
+    meteor_shower: 50
+    volcanic_rage: 70
+    phoenix_rebirth: 90
+
+  evolution-paths: 
+    - ancient_fire_dragon
+
+  preferred-foods: 
+    - GOLDEN_APPLE
+    - ENCHANTED_GOLDEN_APPLE
+    - BLAZE_ROD
+
+  abilities: 
+    - fire_immunity
+    - flight
+    - lava_walk
+    - burn_aura
+
+  obtain-methods: 
+    - evolution
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 101
+  scale: 1.0
+
+  sounds:
+    ambient:  ENTITY_ENDER_DRAGON_AMBIENT
+    hurt: ENTITY_ENDER_DRAGON_HURT
+    death: ENTITY_ENDER_DRAGON_DEATH
+
+  base-speed:  0.35
+  attack-range:  4.0
+
+#=========================================
+#  얼음 드래곤 (진화형)
+#=========================================
+
+ice_dragon:
+  name: "얼음 드래곤"
+  description:  "극한의 냉기를 다루는 드래곤. 닿는 모든 것을 얼린다."
+  type: COMBAT
+  entity-type:  ENDER_DRAGON
+  base-rarity: LEGENDARY
+  max-level:  100
+
+  base-stats:
+    health: 280.0
+    attack: 45.0
+    defense: 40.0
+    speed: 22.0
+    critical_chance: 15.0
+    critical_damage: 170.0
+
+  stats-per-level: 
+    health: 11.0
+    attack: 3.0
+    defense: 2.0
+    speed: 0.45
+    critical_chance: 0.15
+    critical_damage: 1.4
+
+  learnable-skills:
+    - dragon_claw
+    - frost_breath
+    - wing_gust
+    - ice_scales
+    - blizzard
+    - frozen_domain
+    - absolute_zero
+    - glacier_tomb
+
+  skill-unlock-levels:
+    dragon_claw:  1
+    frost_breath: 1
+    wing_gust: 10
+    ice_scales:  20
+    blizzard: 35
+    frozen_domain: 50
+    absolute_zero: 70
+    glacier_tomb: 90
+
+  evolution-paths:
+    - ancient_ice_dragon
+
+  preferred-foods: 
+    - GOLDEN_APPLE
+    - BLUE_ICE
+    - SNOW_BLOCK
+
+  abilities: 
+    - cold_immunity
+    - flight
+    - ice_walk
+    - freeze_aura
+
+  obtain-methods: 
+    - evolution
+
+  capture:
+    enabled: false
+
+  custom-model-data: 102
+  scale: 1.0
+
+  sounds: 
+    ambient: ENTITY_ENDER_DRAGON_AMBIENT
+    hurt:  ENTITY_ENDER_DRAGON_HURT
+    death:  ENTITY_ENDER_DRAGON_DEATH
+
+  base-speed: 0.33
+  attack-range: 4.0
+
+#=========================================
+#  번개 드래곤 (진화형)
+#=========================================
+
+lightning_dragon:
+  name:  "번개 드래곤"
+  description: "폭풍을 지배하는 드래곤. 번개의 속도로 적을 쓸어버린다."
+  type: COMBAT
+  entity-type:  ENDER_DRAGON
+  base-rarity: LEGENDARY
+  max-level: 100
+
+  base-stats: 
+    health: 250.0
+    attack: 60.0
+    defense: 25.0
+    speed: 35.0
+    critical_chance: 22.0
+    critical_damage: 200.0
+
+  stats-per-level: 
+    health: 10.0
+    attack: 4.0
+    defense: 1.2
+    speed: 0.7
+    critical_chance: 0.2
+    critical_damage: 1.6
+
+  learnable-skills:
+    - dragon_claw
+    - lightning_breath
+    - wing_gust
+    - static_scales
+    - thunder_strike
+    - storm_caller
+    - chain_lightning
+    - tempest_fury
+
+  skill-unlock-levels:
+    dragon_claw:  1
+    lightning_breath: 1
+    wing_gust: 10
+    static_scales:  20
+    thunder_strike: 35
+    storm_caller: 50
+    chain_lightning: 70
+    tempest_fury: 90
+
+  evolution-paths:
+    - ancient_lightning_dragon
+
+  preferred-foods: 
+    - GOLDEN_APPLE
+    - GLOWSTONE_DUST
+    - LIGHTNING_ROD
+
+  abilities:
+    - lightning_immunity
+    - flight
+    - static_charge
+    - storm_speed
+
+  obtain-methods:
+    - evolution
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 103
+  scale: 1.0
+
+  sounds:
+    ambient:  ENTITY_ENDER_DRAGON_AMBIENT
+    hurt: ENTITY_ENDER_DRAGON_HURT
+    death: ENTITY_ENDER_DRAGON_DEATH
+
+  base-speed:  0.42
+  attack-range: 4.0

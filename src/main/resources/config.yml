@@ -1,0 +1,470 @@
+#=========================================
+#  PetCore 설정 파일
+#  Multiverse Pet System
+#=========================================
+
+# 기본 설정
+settings:
+  # 언어 설정
+  language: ko_KR
+  # 디버그 모드
+  debug: false
+  # 플러그인 프리픽스
+  prefix: "&6[Pet] &f"
+
+# 데이터 설정
+data:
+  # 자동 저장 간격 (초)
+  auto-save-interval: 300
+  # 백업 활성화
+  backup-enabled: true
+  # 백업 간격 (시간)
+  backup-interval: 24
+  # 최대 백업 개수
+  max-backups: 7
+
+#=========================================
+# 펫 기본 설정
+#=========================================
+pet: 
+  # 최대 동시 소환 펫 수
+  max-active-pets: 1
+  # 기본 보관함 용량
+  default-storage-capacity: 20
+  # 최대 보관함 용량
+  max-storage-capacity: 100
+  # 로그인 시 자동 소환
+  auto-summon-on-join: true
+  # 월드 변경 시 텔레포트
+  teleport-on-world-change: true
+  # 펫 텔레포트 거리
+  teleport-distance: 30. 0
+  # 펫 따라가기 거리
+  follow-distance: 3.0
+  # 펫 공격 범위
+  attack-range: 2.0
+
+  # 이름 설정
+  name: 
+    min-length: 2
+    max-length: 20
+    allow-color-codes: true
+    banned-words:
+      - "운영자"
+      - "관리자"
+      - "admin"
+      - "gm"
+
+  # 소환 설정
+  summon:
+    cooldown: 5
+    effects:  true
+    sound: true
+
+  # 사망 설정
+  death:
+    permanent: false
+    exp-loss-percent: 10. 0
+    revive-cooldown: 60
+
+  # 허용 엔티티
+  allowed-entity-types:  []
+
+  # 엔티티 크기
+  entity-scales:
+    WOLF: 1.0
+    CAT: 1.0
+    PARROT: 1.0
+    FOX: 1.0
+
+#=========================================
+# 레벨 설정
+#=========================================
+level:
+  # 최대 레벨
+  max-level:  100
+  # 기본 경험치 (레벨 1 -> 2)
+  base-exp: 100
+  # 경험치 증가율
+  exp-growth-rate: 1.15
+  # 레벨당 스킬 포인트
+  skill-points-per-level: 1
+
+  # 경험치 배율
+  exp-multipliers:
+    mob-kill: 1.0
+    player-kill: 3.0
+    boss-kill: 5.0
+    battle:  2.0
+    training: 0.5
+    gathering: 0.3
+
+  # 경험치 보너스
+  exp-bonuses:
+    happiness: 0.1
+    rarity: 0.05
+    party:  0.2
+
+  # 레벨업 효과
+  level-up: 
+    effects: true
+    sound: true
+    title: true
+    broadcast: true
+    broadcast-min-level: 50
+
+  # 레벨 요구사항
+  requirements:
+    min-capture-level: 1
+    min-breeding-level: 10
+    min-battle-level: 5
+
+#=========================================
+# 스킬 설정
+#=========================================
+skill: 
+  # 최대 스킬 레벨
+  max-skill-level:  10
+  # 최대 활성 스킬 수
+  max-active-skills:  4
+  # 최대 패시브 스킬 수
+  max-passive-skills: 4
+  # 스킬 초기화 허용
+  allow-skill-reset: true
+  # 스킬 초기화 비용
+  skill-reset-cost: 1000
+
+  # 스킬 슬롯
+  slots:
+    base:  2
+    per-rarity: 1
+    per-evolution: 1
+
+  # 쿨다운
+  cooldown: 
+    global-reduction: 0
+    show-message: true
+    show-actionbar: true
+
+  # 강화
+  upgrade:
+    base-cost: 1
+    cost-multiplier: 1.5
+    refund-on-reset: true
+    refund-percent: 80
+
+  # 자동 스킬
+  auto-skill:
+    enabled:  false
+    interval: 5
+    priority: 
+      - attack
+      - buff
+      - heal
+
+  # 효과
+  effects:
+    particles: true
+    sounds: true
+    damage-multiplier: 1.0
+    heal-multiplier: 1.0
+
+#=========================================
+# 진화 설정
+#=========================================
+evolution:
+  # 최대 진화 단계
+  max-stage: 5
+  # 아이템 필요 여부
+  require-items: true
+  # 아이템 소모
+  consume-items: true
+  # 퇴화 허용
+  allow-downgrade: false
+
+  # 성공 확률
+  success-chance: 
+    base: 70. 0
+    per-level: 0.5
+    per-happiness: 0.1
+    min:  10.0
+    max: 95.0
+
+  # 실패 페널티
+  fail-penalty:
+    enabled: true
+    exp-loss-percent:  10.0
+    happiness-loss:  20.0
+    consume-items: true
+
+  # 보너스
+  bonuses:
+    stat-bonus-per-stage: 10.0
+    skill-slots-per-stage:  1
+    rarity-upgrade-chance: 10.0
+
+  # 효과
+  effects:
+    particles: true
+    sound: true
+    broadcast: true
+    broadcast-min-stage: 3
+
+  # 제한
+  cooldown:  3600
+  blocked-worlds: []
+
+#=========================================
+# 케어 설정
+#=========================================
+care: 
+  # 배고픔
+  hunger: 
+    decrease-rate: 1.0
+    active-multiplier: 2.0
+    starvation-damage: 1.0
+    starvation-enabled: true
+
+  # 행복도
+  happiness: 
+    decrease-rate:  0.5
+    active-multiplier: 0.5
+    unhappy-stat-penalty: 20.0
+    runaway-enabled: false
+    runaway-chance: 1.0
+
+  # 체력 재생
+  health-regen:
+    rate: 1.0
+    out-of-combat-multiplier: 2.0
+    low-health-multiplier: 1.5
+    happiness-bonus: 0.5
+    combat-cooldown: 10
+
+  # 치료
+  healing:
+    cost-per-hp: 2.0
+    revive-cost: 500. 0
+    revive-cooldown: 300
+    revive-health-percent: 50.0
+
+  # 음식
+  foods:
+    COOKED_BEEF: 
+      hunger:  30.0
+      health:  5.0
+      happiness: 5.0
+    COOKED_PORKCHOP:
+      hunger: 25.0
+      health:  5.0
+      happiness: 3.0
+    COOKED_CHICKEN:
+      hunger:  20.0
+      health: 3.0
+      happiness: 2.0
+    GOLDEN_APPLE: 
+      hunger: 50.0
+      health: 20.0
+      happiness: 10.0
+    GOLDEN_CARROT: 
+      hunger: 40.0
+      health: 10.0
+      happiness: 15.0
+
+  # 장난감
+  toys: 
+    STICK:
+      happiness: 10.0
+      durability: 100
+    BONE:
+      happiness:  20.0
+      durability: 50
+    FEATHER:
+      happiness: 15.0
+      durability:  30
+
+#=========================================
+# 교배 설정
+#=========================================
+breeding:
+  # 최대 동시 교배 수
+  max-concurrent:  3
+  # 최소 레벨
+  min-level:  10
+  # 최소 행복도
+  min-happiness: 50. 0
+  # 같은 종족만
+  same-species-only: false
+  # 변이 허용
+  allow-mutation: true
+
+  # 소요 시간
+  duration:
+    base: 3600000
+    per-level: 60000
+    per-rarity: 600000
+
+  # 비용
+  cost: 
+    base: 100. 0
+    per-level: 10.0
+    per-rarity: 50.0
+
+  # 성공률
+  success: 
+    base-chance: 80.0
+    per-happiness: 0.1
+    min-chance: 30.0
+
+  # 변이
+  mutation:
+    base-chance: 5.0
+    per-rarity: 1.5
+    stat-bonus:  20.0
+
+  # 유전
+  genetics:
+    stat-inheritance: 0.4
+    random-variance: 0.15
+    hybrid-vigor: 0.05
+
+  # 쿨다운
+  cooldown:
+    duration: 86400000
+    per-pet: true
+
+  # 제한
+  limits: 
+    max-per-day: 10
+    blocked-species: []
+    blocked-worlds: []
+
+#=========================================
+# 대결 설정
+#=========================================
+battle:
+  # 활성화
+  enabled: true
+  # 최소 레벨
+  min-level: 5
+  # 최대 턴
+  max-turns:  30
+  # 턴 제한 시간 (초)
+  turn-time-limit: 30
+  # 턴 경고 시간 (초)
+  turn-warning-time:  10
+
+  # AI 설정
+  ai: 
+    thinking-delay: 20
+    enabled: true
+    max-difficulty: 5
+
+  # 매칭
+  matchmaking:
+    timeout: 60
+    rating-range: 100
+    range-expansion: 50
+    max-difference: 500
+
+  # 레이팅
+  rating:
+    default: 1000
+    win-gain: 20
+    lose-loss: 15
+    draw-change: 0
+    min:  0
+    max: 9999
+
+  # 보상
+  rewards: 
+    win-exp: 100
+    lose-exp: 30
+    win-gold: 50.0
+    lose-gold: 10.0
+    challenge-entry-fee: 100.0
+    challenge-win-reward: 200.0
+
+  # 제한
+  limits: 
+    cooldown: 60
+    max-per-day: 20
+    min-health-percent: 50. 0
+    min-happiness:  30.0
+
+  # 타임아웃
+  timeout:
+    auto-defend: true
+    max-consecutive: 3
+
+  # 효과
+  effects: 
+    particles: true
+    sounds: true
+    damage-numbers: true
+
+  # 차단
+  blocked-worlds: []
+  blocked-species: []
+
+#=========================================
+# 보관함 설정
+#=========================================
+storage: 
+  # 기본 용량
+  default-capacity: 20
+  # 최대 용량
+  max-capacity:  200
+  # 페이지당 슬롯
+  slots-per-page:  45
+
+  # 확장
+  expansion:
+    enabled: true
+    slots:  5
+    base-cost: 1000.0
+    cost-multiplier: 1.5
+    max-expansions: 36
+
+  # VIP 보너스
+  vip-bonus:
+    vip:  10
+    vip+: 20
+    mvp: 30
+    mvp+: 50
+
+  # 정렬
+  sort: 
+    default-type:  LEVEL
+    remember:  true
+
+  # 필터
+  filter:
+    enabled:  true
+    remember: true
+
+  # 즐겨찾기
+  favorites:
+    enabled: true
+    max:  10
+    show-first:  true
+
+  # 검색
+  search: 
+    enabled: true
+    min-length: 2
+
+  # 방생
+  release:
+    enabled:  true
+    confirmation:  true
+    exp-return-percent: 50.0
+    blocked-rarities: 
+      - LEGENDARY
+      - MYTHIC
+
+  # GUI
+  gui: 
+    title: "&6펫 보관함"
+    rows: 6
+    show-preview: true

@@ -1,0 +1,453 @@
+#=========================================
+#  펫 진화 설정
+#=========================================
+
+# ===== 늑대 진화 =====
+
+wolf_to_dire_wolf:
+  from-species: wolf
+  to-species: dire_wolf
+  to-stage: 2
+  name: "다이어울프로 진화"
+  description: "거대하고 강력한 늑대로 진화합니다."
+
+  requirements:
+    level: 30
+    happiness: 70
+    stats:
+      attack: 50
+      health: 200
+
+  items:
+    - item:  BONE
+      amount: 64
+    - item: IRON_INGOT
+      amount:  32
+    - item:  WOLF_SPAWN_EGG
+      amount: 1
+
+  gold-cost: 5000
+  success-chance: 75. 0
+
+  stat-bonuses:
+    health: 80
+    attack: 13
+    defense: 8
+
+  new-skills:
+    - dire_fang
+    - primal_fury
+
+wolf_to_shadow_wolf:
+  from-species: wolf
+  to-species: shadow_wolf
+  to-stage:  2
+  name: "그림자 늑대로 진화"
+  description:  "어둠의 힘을 얻은 늑대로 진화합니다."
+
+  requirements:
+    level:  30
+    happiness: 60
+    time:  NIGHT
+
+  items: 
+    - item:  BONE
+      amount: 32
+    - item:  ENDER_PEARL
+      amount: 16
+    - item:  PHANTOM_MEMBRANE
+      amount: 8
+
+  gold-cost: 6000
+  success-chance: 70.0
+
+  stat-bonuses: 
+    attack: 20
+    speed: 10
+    critical_chance: 15
+
+  new-skills: 
+    - shadow_step
+    - darkness_cloak
+    - ambush
+
+wolf_to_frost_wolf:
+  from-species: wolf
+  to-species: frost_wolf
+  to-stage:  2
+  name: "서리 늑대로 진화"
+  description: "냉기를 다루는 늑대로 진화합니다."
+
+  requirements:
+    level: 30
+    happiness: 65
+    biome: SNOWY
+
+  items: 
+    - item:  BONE
+      amount: 32
+    - item: BLUE_ICE
+      amount: 16
+    - item:  SNOW_BLOCK
+      amount: 64
+
+  gold-cost: 5500
+  success-chance: 75.0
+
+  stat-bonuses:
+    health: 40
+    defense: 10
+    speed: 3
+
+  new-skills:
+    - frost_breath
+    - ice_armor
+    - blizzard_howl
+
+# ===== 드래곤 진화 =====
+
+baby_dragon_to_fire_dragon:
+  from-species: baby_dragon
+  to-species: fire_dragon
+  to-stage: 2
+  name: "화염 드래곤으로 진화"
+  description: "불꽃을 다루는 용으로 성장합니다."
+
+  requirements: 
+    level: 50
+    happiness: 80
+
+  items:
+    - item: BLAZE_ROD
+      amount:  64
+    - item: FIRE_CHARGE
+      amount: 32
+    - item: MAGMA_CREAM
+      amount: 16
+    - item:  NETHER_STAR
+      amount: 1
+
+  gold-cost: 50000
+  success-chance: 60.0
+
+  stat-bonuses: 
+    health: 150
+    attack: 30
+    defense: 15
+
+  new-skills: 
+    - meteor_shower
+    - volcanic_rage
+    - phoenix_rebirth
+
+baby_dragon_to_ice_dragon:
+  from-species: baby_dragon
+  to-species: ice_dragon
+  to-stage: 2
+  name: "얼음 드래곤으로 진화"
+  description: "냉기를 다루는 용으로 성장합니다."
+
+  requirements:
+    level: 50
+    happiness: 80
+    biome:  SNOWY
+
+  items: 
+    - item:  BLUE_ICE
+      amount: 64
+    - item:  PACKED_ICE
+      amount:  128
+    - item:  SNOW_BLOCK
+      amount: 256
+    - item:  NETHER_STAR
+      amount: 1
+
+  gold-cost: 50000
+  success-chance: 60.0
+
+  stat-bonuses:
+    health: 130
+    defense: 25
+    attack: 20
+
+  new-skills:
+    - blizzard
+    - frozen_domain
+    - glacier_tomb
+
+baby_dragon_to_lightning_dragon:
+  from-species: baby_dragon
+  to-species: lightning_dragon
+  to-stage: 2
+  name: "번개 드래곤으로 진화"
+  description: "번개를 다루는 용으로 성장합니다."
+
+  requirements:
+    level:  50
+    happiness: 80
+    weather: THUNDER
+
+  items: 
+    - item:  LIGHTNING_ROD
+      amount: 16
+    - item:  GLOWSTONE
+      amount:  64
+    - item: COPPER_BLOCK
+      amount: 32
+    - item: NETHER_STAR
+      amount: 1
+
+  gold-cost: 50000
+  success-chance:  60.0
+
+  stat-bonuses:
+    attack: 35
+    speed: 15
+    critical_chance: 10
+
+  new-skills:
+    - storm_caller
+    - chain_lightning
+    - tempest_fury
+
+# ===== 불사조 진화 =====
+
+baby_phoenix_to_phoenix:
+  from-species: baby_phoenix
+  to-species: phoenix
+  to-stage: 2
+  name: "불사조로 진화"
+  description: "진정한 불사조로 거듭납니다."
+
+  requirements:
+    level: 45
+    happiness: 85
+
+  items:
+    - item: BLAZE_POWDER
+      amount:  64
+    - item: FIRE_CHARGE
+      amount: 32
+    - item:  GOLDEN_APPLE
+      amount: 8
+    - item:  GHAST_TEAR
+      amount: 4
+
+  gold-cost: 40000
+  success-chance: 65.0
+
+  stat-bonuses: 
+    health: 80
+    attack: 15
+    defense: 13
+
+  new-skills:
+    - phoenix_tears
+    - immortal_flame
+    - resurrection
+
+baby_phoenix_to_dark_phoenix:
+  from-species: baby_phoenix
+  to-species: dark_phoenix
+  to-stage: 2
+  name: "흑염 불사조로 진화"
+  description: "어둠에 물든 불사조로 변화합니다."
+
+  requirements: 
+    level: 45
+    happiness: 70
+    time: NIGHT
+
+  items:
+    - item: WITHER_ROSE
+      amount: 32
+    - item:  SOUL_SAND
+      amount: 64
+    - item:  BLAZE_ROD
+      amount:  32
+    - item:  WITHER_SKELETON_SKULL
+      amount: 3
+
+  gold-cost: 45000
+  success-chance: 55.0
+
+  stat-bonuses: 
+    attack: 30
+    critical_chance: 10
+    critical_damage: 40
+
+  new-skills:
+    - shadow_flame
+    - soul_burn
+    - black_inferno
+
+phoenix_to_eternal_phoenix:
+  from-species: phoenix
+  to-species: eternal_phoenix
+  to-stage:  3
+  name: "영원의 불사조로 진화"
+  description: "시간을 초월한 불멸의 존재가 됩니다."
+
+  requirements:
+    level: 80
+    happiness: 95
+
+  items:
+    - item: NETHER_STAR
+      amount: 3
+    - item:  TOTEM_OF_UNDYING
+      amount:  2
+    - item:  ENCHANTED_GOLDEN_APPLE
+      amount: 4
+    - item:  BEACON
+      amount: 1
+
+  gold-cost: 200000
+  success-chance: 40.0
+
+  stat-bonuses: 
+    health: 150
+    attack: 10
+    defense: 15
+
+  new-skills: 
+    - eternal_blessing
+    - light_of_eternity
+    - divine_resurrection
+
+  rarity-upgrade: MYTHIC
+
+# ===== 골렘 진화 =====
+
+stone_golem_to_iron_golem: 
+  from-species:  stone_golem
+  to-species:  iron_golem
+  to-stage:  2
+  name: "아이언 골렘으로 진화"
+  description: "철로 강화된 골렘으로 진화합니다."
+
+  requirements:
+    level: 35
+    happiness: 65
+
+  items:
+    - item: IRON_BLOCK
+      amount: 16
+    - item:  IRON_INGOT
+      amount: 128
+    - item:  PUMPKIN
+      amount: 1
+
+  gold-cost: 15000
+  success-chance: 80.0
+
+  stat-bonuses: 
+    health: 150
+    defense: 20
+    attack: 15
+
+  new-skills: 
+    - iron_fist
+    - guardian_stance
+    - village_protector
+
+stone_golem_to_crystal_golem: 
+  from-species:  stone_golem
+  to-species:  crystal_golem
+  to-stage:  2
+  name: "크리스탈 골렘으로 진화"
+  description: "수정으로 이루어진 신비로운 골렘으로 진화합니다."
+
+  requirements:
+    level: 35
+    happiness: 70
+
+  items: 
+    - item:  AMETHYST_SHARD
+      amount:  64
+    - item: DIAMOND
+      amount: 16
+    - item:  PRISMARINE_CRYSTALS
+      amount:  32
+
+  gold-cost: 20000
+  success-chance: 70.0
+
+  stat-bonuses: 
+    health: 80
+    defense: 10
+    attack: 5
+
+  new-skills:
+    - prismatic_wall
+    - mana_shield
+    - arcane_reflection
+
+stone_golem_to_obsidian_golem: 
+  from-species: stone_golem
+  to-species: obsidian_golem
+  to-stage: 2
+  name: "흑요석 골렘으로 진화"
+  description: "거의 파괴 불가능한 골렘으로 진화합니다."
+
+  requirements:
+    level: 40
+    happiness: 60
+
+  items:
+    - item: OBSIDIAN
+      amount: 128
+    - item:  CRYING_OBSIDIAN
+      amount: 32
+    - item: NETHERITE_INGOT
+      amount:  4
+
+  gold-cost: 35000
+  success-chance: 60.0
+
+  stat-bonuses: 
+    health: 300
+    defense: 35
+    attack: 20
+
+  new-skills:
+    - unbreakable
+    - meteor_slam
+    - nether_rage
+
+iron_golem_to_diamond_golem: 
+  from-species:  iron_golem
+  to-species:  diamond_golem
+  to-stage:  3
+  name: "다이아몬드 골렘으로 진화"
+  description: "최고급 보석으로 이루어진 전설의 골렘이 됩니다."
+
+  requirements:
+    level: 70
+    happiness: 90
+
+  items: 
+    - item:  DIAMOND_BLOCK
+      amount: 32
+    - item: NETHERITE_BLOCK
+      amount: 4
+    - item:  ENCHANTED_GOLDEN_APPLE
+      amount: 2
+    - item:  NETHER_STAR
+      amount:  1
+
+  gold-cost: 150000
+  success-chance: 45.0
+
+  stat-bonuses: 
+    health: 250
+    defense: 25
+    attack: 20
+
+  new-skills:
+    - diamond_fist
+    - perfect_defense
+    - titan_smash
+    - invincible
+
+  rarity-upgrade:  LEGENDARY

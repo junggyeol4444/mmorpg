@@ -1,0 +1,254 @@
+#=========================================
+#  메인 메뉴 GUI 설정
+#=========================================
+
+title: "&6&l펫 메뉴"
+rows:  6
+
+# 배경 아이템
+background: 
+  enabled: true
+  material: BLACK_STAINED_GLASS_PANE
+  name: " "
+
+# 아이템 배치
+items: 
+  # 펫 정보 (현재 활성 펫)
+  pet-info:
+    slot: 4
+    material: PLAYER_HEAD
+    name: "&a&l내 펫"
+    lore: 
+      - ""
+      - "&7현재 펫:  &f{pet_name}"
+      - "&7레벨: &e{pet_level}"
+      - "&7희귀도:  {pet_rarity}"
+      - ""
+      - "&7체력: &c{pet_health}/{pet_max_health}"
+      - "&7배고픔: &6{pet_hunger}%"
+      - "&7행복도: &d{pet_happiness}%"
+      - ""
+      - "&e클릭하여 상세 정보 보기"
+    action: "open_pet_info"
+
+  # 소환/해제
+  summon: 
+    slot: 19
+    material:  ENDER_EYE
+    name:  "&b&l소환/해제"
+    lore:
+      - ""
+      - "&7펫을 소환하거나 보관합니다."
+      - ""
+      - "&a현재 상태: {summon_status}"
+      - ""
+      - "&e좌클릭:  펫 소환"
+      - "&e우클릭:  펫 보관"
+    action: "toggle_summon"
+
+  # 보관함
+  storage:
+    slot: 21
+    material:  CHEST
+    name: "&e&l펫 보관함"
+    lore:
+      - ""
+      - "&7보유한 펫을 관리합니다."
+      - ""
+      - "&7보유 펫: &f{pet_count}/{storage_capacity}"
+      - ""
+      - "&e클릭하여 보관함 열기"
+    action: "open_storage"
+
+  # 스킬
+  skills:
+    slot:  23
+    material:  ENCHANTED_BOOK
+    name: "&d&l스킬"
+    lore: 
+      - ""
+      - "&7펫의 스킬을 관리합니다."
+      - ""
+      - "&7스킬 포인트: &a{skill_points}"
+      - "&7배운 스킬:  &f{learned_skills}"
+      - ""
+      - "&e클릭하여 스킬 메뉴 열기"
+    action: "open_skills"
+
+  # 장비
+  equipment: 
+    slot: 25
+    material:  DIAMOND_HORSE_ARMOR
+    name: "&9&l장비"
+    lore: 
+      - ""
+      - "&7펫의 장비를 관리합니다."
+      - ""
+      - "&7장착 장비: &f{equipped_count}/4"
+      - ""
+      - "&e클릭하여 장비 메뉴 열기"
+    action: "open_equipment"
+
+  # 진화
+  evolution: 
+    slot: 29
+    material:  NETHER_STAR
+    name: "&5&l진화"
+    lore: 
+      - ""
+      - "&7펫을 더 강하게 진화시킵니다."
+      - ""
+      - "&7현재 단계: &f{evolution_stage}"
+      - "&7진화 가능:  {can_evolve}"
+      - ""
+      - "&e클릭하여 진화 메뉴 열기"
+    action: "open_evolution"
+
+  # 교배
+  breeding:
+    slot:  31
+    material: EGG
+    name:  "&c&l교배"
+    lore: 
+      - ""
+      - "&7펫을 교배하여 새로운 펫을 얻습니다."
+      - ""
+      - "&7진행 중: &f{breeding_count}"
+      - ""
+      - "&e클릭하여 교배 메뉴 열기"
+    action: "open_breeding"
+
+  # 대결
+  battle: 
+    slot: 33
+    material:  IRON_SWORD
+    name: "&c&l펫 대결"
+    lore: 
+      - ""
+      - "&7다른 플레이어와 펫 대결을 합니다."
+      - ""
+      - "&7레이팅:  &e{battle_rating}"
+      - "&7승률: &a{win_rate}%"
+      - "&7전적: &f{wins}승 {losses}패"
+      - ""
+      - "&e클릭하여 대결 메뉴 열기"
+    action: "open_battle"
+
+  # 케어
+  care: 
+    slot: 37
+    material:  GOLDEN_APPLE
+    name: "&a&l케어"
+    lore: 
+      - ""
+      - "&7펫에게 먹이를 주거나 놀아줍니다."
+      - ""
+      - "&e클릭하여 케어 메뉴 열기"
+    action: "open_care"
+
+  # 도감
+  pokedex:
+    slot: 39
+    material: BOOK
+    name: "&6&l펫 도감"
+    lore: 
+      - ""
+      - "&7발견한 펫을 확인합니다."
+      - ""
+      - "&7발견:  &f{discovered}/{total_species}"
+      - "&7완료율: &e{completion_rate}%"
+      - ""
+      - "&e클릭하여 도감 열기"
+    action: "open_pokedex"
+
+  # 랭킹
+  ranking: 
+    slot: 41
+    material:  GOLD_BLOCK
+    name: "&e&l랭킹"
+    lore:
+      - ""
+      - "&7펫 대결 랭킹을 확인합니다."
+      - ""
+      - "&7내 순위: &f{my_rank}위"
+      - ""
+      - "&e클릭하여 랭킹 보기"
+    action: "open_ranking"
+
+  # 알
+  eggs:
+    slot:  43
+    material: TURTLE_EGG
+    name: "&b&l알 관리"
+    lore:
+      - ""
+      - "&7보유 중인 알을 관리합니다."
+      - ""
+      - "&7보유 알: &f{egg_count}"
+      - "&7부화 중: &f{hatching_count}"
+      - ""
+      - "&e클릭하여 알 메뉴 열기"
+    action: "open_eggs"
+
+  # 설정
+  settings: 
+    slot: 49
+    material:  COMPARATOR
+    name:  "&7&l설정"
+    lore: 
+      - ""
+      - "&7펫 관련 설정을 변경합니다."
+      - ""
+      - "&e클릭하여 설정 열기"
+    action: "open_settings"
+
+  # 도움말
+  help:
+    slot:  53
+    material: OAK_SIGN
+    name: "&f&l도움말"
+    lore:
+      - ""
+      - "&7펫 시스템에 대한 도움말을 봅니다."
+      - ""
+      - "&e클릭하여 도움말 보기"
+    action: "open_help"
+
+  # 닫기
+  close:
+    slot:  45
+    material:  BARRIER
+    name: "&c&l닫기"
+    lore:
+      - ""
+      - "&7메뉴를 닫습니다."
+    action: "close"
+
+# 플레이스홀더 기본값
+placeholders:
+  pet_name: "없음"
+  pet_level: "0"
+  pet_rarity: "&7없음"
+  pet_health: "0"
+  pet_max_health: "0"
+  pet_hunger: "0"
+  pet_happiness: "0"
+  summon_status: "&c소환되지 않음"
+  pet_count: "0"
+  storage_capacity: "20"
+  skill_points: "0"
+  learned_skills: "0"
+  equipped_count: "0"
+  evolution_stage: "1"
+  can_evolve: "&c불가능"
+  breeding_count: "0"
+  battle_rating: "1000"
+  win_rate: "0"
+  wins:  "0"
+  losses: "0"
+  discovered: "0"
+  total_species: "0"
+  completion_rate: "0"
+  my_rank: "-"
+  egg_count: "0"
+  hatching_count: "0"

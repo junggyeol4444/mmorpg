@@ -1,0 +1,401 @@
+#=========================================
+#  골렘 종족 설정
+#=========================================
+
+stone_golem: 
+  name: "스톤 골렘"
+  description: "돌로 만들어진 수호자. 느리지만 단단하고 강력하다."
+  type:  COMBAT
+  entity-type: IRON_GOLEM
+  base-rarity: UNCOMMON
+  max-level: 100
+
+  base-stats: 
+    health: 200.0
+    attack: 20.0
+    defense: 25.0
+    speed: 10.0
+    critical_chance: 5.0
+    critical_damage: 140.0
+
+  stats-per-level: 
+    health: 10.0
+    attack: 1.5
+    defense: 1.8
+    speed: 0.2
+    critical_chance: 0.05
+    critical_damage: 0.8
+
+  learnable-skills:
+    - rock_punch
+    - stone_wall
+    - earthquake
+    - fortify
+    - ground_slam
+
+  skill-unlock-levels:
+    rock_punch: 1
+    stone_wall: 10
+    earthquake: 25
+    fortify:  40
+    ground_slam: 55
+
+  evolution-paths:
+    - iron_golem
+    - crystal_golem
+    - obsidian_golem
+
+  preferred-foods:
+    - IRON_INGOT
+    - COBBLESTONE
+    - STONE
+
+  abilities:
+    - knockback_resistance
+    - fall_damage_immunity
+
+  obtain-methods: 
+    - crafting
+    - capture
+    - egg
+
+  capture: 
+    enabled: true
+    base-chance: 10. 0
+    min-level: 1
+
+  custom-model-data: 300
+  scale: 0.8
+
+  sounds:
+    ambient:  ENTITY_IRON_GOLEM_STEP
+    hurt:  ENTITY_IRON_GOLEM_HURT
+    death:  ENTITY_IRON_GOLEM_DEATH
+
+  base-speed: 0.20
+  attack-range: 2.5
+
+#=========================================
+#  아이언 골렘 (진화형)
+#=========================================
+
+iron_golem:
+  name:  "아이언 골렘"
+  description: "철로 강화된 골렘. 마을의 수호자로 알려져 있다."
+  type: COMBAT
+  entity-type: IRON_GOLEM
+  base-rarity: RARE
+  max-level: 100
+
+  base-stats:
+    health: 350.0
+    attack: 35.0
+    defense: 45.0
+    speed: 12.0
+    critical_chance: 8.0
+    critical_damage: 150.0
+
+  stats-per-level: 
+    health: 15.0
+    attack: 2.5
+    defense: 2.5
+    speed: 0.25
+    critical_chance: 0.08
+    critical_damage: 1.0
+
+  learnable-skills:
+    - rock_punch
+    - stone_wall
+    - earthquake
+    - fortify
+    - ground_slam
+    - iron_fist
+    - guardian_stance
+    - village_protector
+
+  skill-unlock-levels: 
+    rock_punch:  1
+    stone_wall: 1
+    earthquake: 15
+    fortify:  25
+    ground_slam: 35
+    iron_fist: 50
+    guardian_stance: 65
+    village_protector: 80
+
+  evolution-paths: 
+    - diamond_golem
+
+  preferred-foods: 
+    - IRON_BLOCK
+    - POPPY
+    - GOLDEN_APPLE
+
+  abilities: 
+    - knockback_resistance
+    - fall_damage_immunity
+    - thorns
+    - village_hero
+
+  obtain-methods:
+    - evolution
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 301
+  scale: 1.0
+
+  sounds: 
+    ambient: ENTITY_IRON_GOLEM_STEP
+    hurt:  ENTITY_IRON_GOLEM_HURT
+    death:  ENTITY_IRON_GOLEM_DEATH
+
+  base-speed: 0.22
+  attack-range: 3.0
+
+#=========================================
+#  크리스탈 골렘 (진화형)
+#=========================================
+
+crystal_golem:
+  name:  "크리스탈 골렘"
+  description:  "수정으로 이루어진 신비로운 골렘. 마법 방어에 특화."
+  type:  SUPPORT
+  entity-type: IRON_GOLEM
+  base-rarity: RARE
+  max-level: 100
+
+  base-stats:
+    health: 280.0
+    attack: 25.0
+    defense: 35.0
+    speed: 15.0
+    critical_chance: 10.0
+    critical_damage: 155.0
+
+  stats-per-level: 
+    health: 12.0
+    attack: 1.8
+    defense: 2.2
+    speed: 0.3
+    critical_chance: 0.1
+    critical_damage: 1.1
+
+  learnable-skills:
+    - crystal_punch
+    - prismatic_wall
+    - refraction
+    - crystal_resonance
+    - shatter
+    - mana_shield
+    - arcane_reflection
+
+  skill-unlock-levels:
+    crystal_punch: 1
+    prismatic_wall: 10
+    refraction:  20
+    crystal_resonance: 35
+    shatter:  50
+    mana_shield: 65
+    arcane_reflection: 80
+
+  evolution-paths:
+    - prism_golem
+
+  preferred-foods: 
+    - DIAMOND
+    - AMETHYST_SHARD
+    - PRISMARINE_CRYSTALS
+
+  abilities: 
+    - knockback_resistance
+    - magic_resistance
+    - light_refraction
+    - mana_regen_aura
+
+  obtain-methods:
+    - evolution
+
+  capture:
+    enabled:  false
+
+  custom-model-data: 302
+  scale:  1.0
+
+  sounds: 
+    ambient: BLOCK_AMETHYST_BLOCK_CHIME
+    hurt:  BLOCK_AMETHYST_BLOCK_BREAK
+    death:  BLOCK_GLASS_BREAK
+
+  base-speed: 0.25
+  attack-range: 2.5
+
+#=========================================
+#  흑요석 골렘 (진화형)
+#=========================================
+
+obsidian_golem: 
+  name: "흑요석 골렘"
+  description: "지옥의 암석으로 만들어진 골렘. 거의 파괴 불가능."
+  type:  COMBAT
+  entity-type: IRON_GOLEM
+  base-rarity:  EPIC
+  max-level: 100
+
+  base-stats: 
+    health: 500.0
+    attack: 40.0
+    defense: 60.0
+    speed: 8.0
+    critical_chance: 6.0
+    critical_damage: 145.0
+
+  stats-per-level: 
+    health: 20.0
+    attack: 2.8
+    defense: 3.5
+    speed: 0.15
+    critical_chance: 0.06
+    critical_damage: 0.9
+
+  learnable-skills:
+    - obsidian_punch
+    - void_wall
+    - earthquake
+    - unbreakable
+    - meteor_slam
+    - nether_rage
+    - indestructible
+    - extinction_fist
+
+  skill-unlock-levels:
+    obsidian_punch: 1
+    void_wall: 10
+    earthquake:  20
+    unbreakable: 35
+    meteor_slam:  50
+    nether_rage: 65
+    indestructible: 80
+    extinction_fist: 95
+
+  evolution-paths: 
+    - void_golem
+
+  preferred-foods: 
+    - OBSIDIAN
+    - CRYING_OBSIDIAN
+    - NETHERITE_INGOT
+
+  abilities: 
+    - knockback_resistance
+    - fall_damage_immunity
+    - fire_resistance
+    - explosion_resistance
+    - slow_immunity
+
+  obtain-methods:
+    - evolution
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 303
+  scale: 1.2
+
+  sounds: 
+    ambient: ENTITY_IRON_GOLEM_STEP
+    hurt: BLOCK_ANVIL_LAND
+    death: BLOCK_ANVIL_DESTROY
+
+  base-speed: 0.15
+  attack-range: 3.0
+
+#=========================================
+#  다이아몬드 골렘 (최종 진화)
+#=========================================
+
+diamond_golem: 
+  name: "다이아몬드 골렘"
+  description:  "최고급 보석으로 이루어진 전설의 골렘.  완벽한 수호자."
+  type: COMBAT
+  entity-type: IRON_GOLEM
+  base-rarity:  LEGENDARY
+  max-level: 100
+
+  base-stats: 
+    health: 600.0
+    attack: 55.0
+    defense: 70.0
+    speed: 14.0
+    critical_chance: 12.0
+    critical_damage: 165.0
+
+  stats-per-level: 
+    health: 25.0
+    attack: 3.5
+    defense: 4.0
+    speed: 0.3
+    critical_chance: 0.12
+    critical_damage: 1.2
+
+  learnable-skills: 
+    - rock_punch
+    - stone_wall
+    - earthquake
+    - fortify
+    - ground_slam
+    - iron_fist
+    - guardian_stance
+    - village_protector
+    - diamond_fist
+    - perfect_defense
+    - titan_smash
+    - invincible
+
+  skill-unlock-levels:
+    rock_punch: 1
+    stone_wall: 1
+    earthquake: 1
+    fortify:  15
+    ground_slam: 25
+    iron_fist:  35
+    guardian_stance: 45
+    village_protector: 55
+    diamond_fist: 65
+    perfect_defense: 75
+    titan_smash: 85
+    invincible:  100
+
+  evolution-paths:  []
+
+  preferred-foods:
+    - DIAMOND_BLOCK
+    - NETHERITE_BLOCK
+    - ENCHANTED_GOLDEN_APPLE
+
+  abilities:
+    - knockback_resistance
+    - fall_damage_immunity
+    - fire_resistance
+    - explosion_resistance
+    - thorns
+    - damage_reflection
+    - unbreakable_will
+
+  obtain-methods:
+    - evolution
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 304
+  scale: 1.3
+
+  sounds: 
+    ambient: ENTITY_IRON_GOLEM_STEP
+    hurt:  ENTITY_IRON_GOLEM_HURT
+    death:  ENTITY_IRON_GOLEM_DEATH
+
+  base-speed: 0.25
+  attack-range: 3.5

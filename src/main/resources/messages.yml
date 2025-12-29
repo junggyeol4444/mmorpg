@@ -1,0 +1,208 @@
+#=========================================
+#  PetCore 메시지 설정
+#=========================================
+
+# 프리픽스
+prefix:  "&6[Pet] &f"
+
+# 일반 메시지
+general:
+  reload: "&a설정을 리로드했습니다."
+  no-permission: "&c권한이 없습니다."
+  player-only: "&c플레이어만 사용할 수 있습니다."
+  invalid-args: "&c잘못된 명령어입니다.  &e/pet help"
+  player-not-found:  "&c플레이어를 찾을 수 없습니다:  &e{player}"
+  cooldown:  "&c쿨다운 중입니다.  &e{time}&c 후에 다시 시도하세요."
+
+# 펫 관련
+pet:
+  # 소환
+  summon-success: "&a{name}&a을(를) 소환했습니다!"
+  summon-fail: "&c펫을 소환할 수 없습니다."
+  summon-already:  "&e{name}&e이(가) 이미 소환되어 있습니다."
+  unsummon-success:  "&e{name}&e을(를) 보관함에 넣었습니다."
+  unsummon-fail: "&c펫을 보관할 수 없습니다."
+
+  # 펫 정보
+  no-pets: "&c보유한 펫이 없습니다."
+  no-active-pet: "&c활성화된 펫이 없습니다."
+  pet-not-found:  "&c펫을 찾을 수 없습니다."
+
+  # 이름
+  rename-success: "&a펫 이름을 &e{name}&a으로 변경했습니다."
+  rename-fail:  "&c이름을 변경할 수 없습니다."
+  rename-invalid: "&c유효하지 않은 이름입니다."
+  rename-locked: "&c이 펫의 이름은 변경할 수 없습니다."
+
+  # 보관함
+  storage-full: "&c보관함이 가득 찼습니다!"
+  storage-expanded: "&a보관함이 &e{slots}&a칸 확장되었습니다!"
+
+  # 방생
+  release-success: "&e{name}&e을(를) 방생했습니다."
+  release-fail: "&c이 펫은 방생할 수 없습니다."
+  release-confirm: "&c정말로 &e{name}&c을(를) 방생하시겠습니까?  &e/pet release confirm"
+
+# 레벨
+level:
+  level-up: "&a{name}&a이(가) 레벨 &e{level}&a이 되었습니다!"
+  level-up-title: "&a레벨 업!"
+  level-up-subtitle: "&e{name} &7Lv. {level}"
+  max-level: "&e{name}&e이(가) 최대 레벨에 도달했습니다!"
+  exp-gain: "&7+{exp} 경험치"
+
+# 스킬
+skill:
+  learn-success: "&a{skill}&a 스킬을 배웠습니다!"
+  learn-fail:  "&c스킬을 배울 수 없습니다."
+  already-learned: "&c이미 배운 스킬입니다."
+  not-learned: "&c배우지 않은 스킬입니다."
+  upgrade-success: "&a{skill}&a 스킬이 Lv.{level}이 되었습니다!"
+  upgrade-fail: "&c스킬을 강화할 수 없습니다."
+  max-level: "&c이미 최대 레벨입니다."
+  not-enough-points: "&c스킬 포인트가 부족합니다.  (필요: {required}, 보유: {current})"
+  cooldown:  "&c{skill}&c 쿨다운:  &e{time}초"
+  use-success: "&a{name}&a이(가) &e{skill}&a을(를) 사용했습니다!"
+  use-fail: "&c스킬을 사용할 수 없습니다."
+  reset-success: "&a스킬이 초기화되었습니다.  스킬 포인트 &e{points}&a 반환"
+  reset-fail: "&c스킬을 초기화할 수 없습니다."
+
+# 진화
+evolution:
+  available: "&e{name}&e이(가) 진화할 수 있습니다!"
+  success: "&d✦ {name}&d이(가) &e{species}&d(으)로 진화했습니다!"
+  fail: "&c진화에 실패했습니다..."
+  not-available: "&c진화 조건을 충족하지 못했습니다."
+  not-enough-gold: "&c골드가 부족합니다. (필요: {cost})"
+  not-enough-items: "&c필요 아이템이 부족합니다."
+  max-stage: "&c이미 최고 단계입니다."
+
+# 장비
+equipment:
+  equip-success: "&a{item}&a을(를) 장착했습니다."
+  equip-fail: "&c장착할 수 없습니다."
+  unequip-success:  "&e{item}&e을(를) 해제했습니다."
+  unequip-fail: "&c해제할 수 없습니다."
+  slot-occupied: "&c이미 장착된 슬롯입니다."
+  invalid-slot: "&c유효하지 않은 슬롯입니다."
+  broken:  "&c{item}&c이(가) 파손되었습니다!"
+
+# 케어
+care: 
+  feed-success:  "&a{name}&a에게 먹이를 주었습니다.  배고픔 +{hunger}"
+  feed-fail: "&c먹이를 줄 수 없습니다."
+  feed-full: "&e{name}&e은(는) 배가 부릅니다."
+  play-success: "&a{name}&a와(과) 놀아주었습니다. 행복도 +{happiness}"
+  play-fail: "&c놀아줄 수 없습니다."
+  heal-success: "&a{name}&a을(를) 치료했습니다. 체력 +{health}"
+  heal-fail: "&c치료할 수 없습니다."
+  heal-full: "&e{name}&e은(는) 이미 건강합니다."
+  hunger-warning: "&e{name}&e이(가) 배고파합니다!  (배고픔: {hunger}%)"
+  hunger-critical: "&c{name}&c이(가) 굶주리고 있습니다!"
+  happiness-warning: "&d{name}&d이(가) 우울해합니다.  (행복도: {happiness}%)"
+  happiness-critical: "&c{name}&c이(가) 매우 불행합니다!"
+  pet-fainted: "&c{name}&c이(가) 기절했습니다!"
+  pet-runaway: "&c{name}&c이(가) 도망갔습니다..."
+  revive-success: "&a{name}&a을(를) 부활시켰습니다!"
+  revive-fail: "&c부활시킬 수 없습니다."
+  revive-not-fainted: "&e{name}&e은(는) 기절 상태가 아닙니다."
+
+# 교배
+breeding: 
+  start:  "&d{parent1}&d와(과) &d{parent2}&d의 교배를 시작합니다!"
+  start-fail: "&c교배를 시작할 수 없습니다."
+  already-breeding: "&c이미 교배 중입니다."
+  cannot-breed: "&c이 펫은 교배할 수 없습니다.  {reason}"
+  complete: "&d✦ {parent1}&d와(과) &d{parent2}&d의 교배가 완료되었습니다!"
+  mutation-occurred: "&d✦ 변이가 발생했습니다!"
+  failed:  "&c{parent1}와(과) {parent2}의 교배에 실패했습니다..."
+  collect-success: "&a새로운 펫 &e{pet}&a을(를) 얻었습니다!"
+  collect-fail: "&c자손을 수령할 수 없습니다."
+  cancelled: "&e교배가 취소되었습니다."
+  max-concurrent: "&c동시 교배 수 제한에 도달했습니다."
+  on-cooldown: "&c교배 쿨다운 중입니다.  ({time} 남음)"
+  completed-waiting: "&e{count}건의 교배가 완료되어 수령을 기다리고 있습니다."
+  failed-summary: "&c{count}건의 교배가 실패했습니다."
+
+# 대결
+battle: 
+  start: "&c⚔ {player1}의 {pet1} vs {player2}의 {pet2}!"
+  start-ai: "&c⚔ {pet}의 AI 대결 시작!  (난이도: {difficulty})"
+  win:  "&a✦ {winner}의 {pet}이(가) 승리했습니다!"
+  lose:  "&c{loser}의 {pet}이(가) 패배했습니다."
+  draw: "&e무승부입니다!"
+  forfeit: "&c{player}이(가) 기권했습니다."
+  your-turn: "&e당신의 턴입니다!  ({time}초)"
+  opponent-turn: "&7상대의 턴입니다..."
+  turn-warning: "&c{seconds}초 남았습니다!"
+  turn-timeout: "&c시간 초과!  자동으로 방어합니다."
+  opponent-timeout: "&e상대가 시간 초과되었습니다."
+  attack:  "&c{attacker}&c이(가) 공격!  {target}에게 &e{damage}&c 데미지!"
+  skill-use: "&d{pet}&d이(가) &e{skill}&d을(를) 사용했습니다!"
+  defend: "&9{pet}&9이(가) 방어 자세를 취했습니다."
+  ai-action: "&7AI가 &e{action}&7을(를) 선택했습니다."
+  already-in-battle: "&c이미 대결 중입니다."
+  select-pet-first: "&c대결에 사용할 펫을 먼저 선택하세요."
+  returning: "&e대결로 돌아갑니다..."
+  rating-change: "&e레이팅:  {before} → {after} ({change})"
+  matchmaking-start: "&e매칭을 시작합니다..."
+  matchmaking-found: "&a상대를 찾았습니다!"
+  matchmaking-cancel: "&e매칭이 취소되었습니다."
+  matchmaking-timeout: "&c상대를 찾지 못했습니다."
+
+# 포획
+capture:
+  attempt: "&e{target}&e 포획 시도...  (확률: {chance}%)"
+  success: "&a✦ 포획 성공! &e{pet}&a을(를) 획득했습니다!"
+  fail:  "&c포획에 실패했습니다..."
+  escaped: "&c{target}이(가) 도망쳤습니다!"
+  cannot-capture: "&c이 대상은 포획할 수 없습니다."
+  ball-consumed: "&7포획구가 소모되었습니다."
+
+# 알
+egg:
+  obtained: "&a{egg}&a 알을 획득했습니다!"
+  hatching-start: "&e{name}&e 부화를 시작합니다..."
+  hatching-progress: "&e{name}&e 부화 진행률: {progress}%"
+  hatching-paused: "&e{name}&e 부화가 일시 중지되었습니다.  ({reason})"
+  hatching-resumed: "&e{name}&e 부화가 재개되었습니다."
+  hatched: "&d✦ {egg}&d에서 &e{pet}&d이(가) 태어났습니다!  ({rarity})"
+  mutation-hatched: "&d✦ 변이 펫이 탄생했습니다!"
+  hatch-failed: "&c{name} 부화에 실패했습니다."
+  storage-full: "&c{name} 부화 완료! 하지만 보관함이 가득 찼습니다."
+
+# 경제
+economy:
+  not-enough-gold: "&c골드가 부족합니다. (필요: {cost}, 보유: {balance})"
+  payment-success: "&7{cost} 골드가 차감되었습니다."
+  reward-received: "&a{amount} 골드를 획득했습니다!"
+
+# 관리자
+admin:
+  give-success: "&a{player}에게 {pet}을(를) 지급했습니다."
+  give-fail: "&c펫 지급에 실패했습니다."
+  remove-success: "&a{player}의 {pet}을(를) 제거했습니다."
+  remove-fail: "&c펫 제거에 실패했습니다."
+  setlevel-success: "&a{pet}의 레벨을 {level}(으)로 설정했습니다."
+  setlevel-fail: "&c레벨 설정에 실패했습니다."
+  debug-on: "&aDebug 모드 활성화"
+  debug-off:  "&eDebug 모드 비활성화"
+
+# 도움말
+help:
+  header: "&6&l===== 펫 명령어 도움말 ====="
+  footer: "&6================================"
+  commands:
+    - "&e/pet &7- 펫 메뉴 열기"
+    - "&e/pet summon [이름] &7- 펫 소환"
+    - "&e/pet unsummon &7- 펫 보관"
+    - "&e/pet list &7- 펫 목록"
+    - "&e/pet info [이름] &7- 펫 정보"
+    - "&e/pet rename <이름> &7- 펫 이름 변경"
+    - "&e/pet skills &7- 스킬 메뉴"
+    - "&e/pet evolve &7- 진화 메뉴"
+    - "&e/pet breed &7- 교배 메뉴"
+    - "&e/pet battle &7- 대결 메뉴"
+    - "&e/pet feed &7- 먹이주기"
+    - "&e/pet storage &7- 보관함"
+    - "&e/pet help &7- 도움말"

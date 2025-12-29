@@ -1,0 +1,470 @@
+#=========================================
+#  지원 스킬 설정
+#=========================================
+
+# ===== 치유 스킬 =====
+
+healing_touch:
+  name:  "치유의 손길"
+  description:  "주인의 체력을 회복시킨다."
+  type:  HEAL
+  passive: false
+  max-level: 10
+  cooldown:  20
+  mana-cost: 30
+  energy-cost:  0
+  required-level: 1
+  target-type: OWNER
+  range: 10. 0
+  aoe-radius: 0
+
+  effects: 
+    heal_amount:  20.0
+
+  scaling:
+    heal_amount: 8.0
+
+  upgrade-costs: [1, 1, 2, 2, 3, 3, 4, 4, 5]
+
+  particle:  HEART
+  sound: ENTITY_PLAYER_LEVELUP
+
+regeneration_aura:
+  name: "재생의 기운"
+  description: "주변 아군에게 지속적인 체력 재생 효과."
+  type:  BUFF
+  passive:  false
+  max-level: 5
+  cooldown: 60
+  mana-cost: 50
+  energy-cost: 0
+  required-level: 15
+  target-type: ALLY
+  range: 0
+  aoe-radius: 8. 0
+
+  effects: 
+    regen_per_second: 2.0
+    duration: 15
+
+  scaling: 
+    regen_per_second: 1.0
+    duration: 5
+
+  upgrade-costs: [3, 5, 7, 9, 12]
+
+  particle:  VILLAGER_HAPPY
+  sound:  BLOCK_BEACON_AMBIENT
+
+group_heal:
+  name: "단체 치유"
+  description: "주변 모든 아군의 체력을 회복."
+  type:  HEAL
+  passive:  false
+  max-level: 5
+  cooldown: 45
+  mana-cost: 70
+  energy-cost: 0
+  required-level: 30
+  target-type: ALLY
+  range: 0
+  aoe-radius: 10.0
+
+  effects:
+    heal_amount: 30.0
+
+  scaling: 
+    heal_amount: 15.0
+
+  upgrade-costs: [5, 8, 11, 14, 18]
+
+  particle:  HEART
+  sound:  ENTITY_PLAYER_LEVELUP
+
+cleanse: 
+  name: "정화"
+  description:  "주인의 부정적인 상태 효과를 제거."
+  type:  UTILITY
+  passive: false
+  max-level: 3
+  cooldown:  30
+  mana-cost: 40
+  energy-cost:  0
+  required-level: 20
+  target-type: OWNER
+  range: 10.0
+  aoe-radius: 0
+
+  effects: 
+    remove_effects: 
+      - POISON
+      - WITHER
+      - WEAKNESS
+      - SLOWNESS
+      - BLINDNESS
+
+  scaling:  {}
+
+  upgrade-costs: [4, 8, 12]
+
+  particle:  SPELL_INSTANT
+  sound: ENTITY_GENERIC_DRINK
+
+resurrection:
+  name:  "부활"
+  description: "주인을 죽음에서 부활시킨다."
+  type: UTILITY
+  passive: false
+  max-level: 3
+  cooldown:  600
+  mana-cost: 200
+  energy-cost: 0
+  required-level: 80
+  target-type: OWNER
+  range: 10.0
+  aoe-radius: 0
+
+  effects: 
+    revive_health_percent: 30.0
+    invulnerable_duration: 3
+
+  scaling:
+    revive_health_percent: 15.0
+    invulnerable_duration:  1
+
+  upgrade-costs: [20, 35, 50]
+
+  particle: TOTEM
+  sound: ITEM_TOTEM_USE
+
+# ===== 버프 스킬 =====
+
+attack_boost:
+  name: "공격력 증가"
+  description: "주인의 공격력을 일시적으로 증가."
+  type:  BUFF
+  passive:  false
+  max-level: 5
+  cooldown: 45
+  mana-cost: 35
+  energy-cost: 0
+  required-level: 5
+  target-type: OWNER
+  range: 10.0
+  aoe-radius: 0
+
+  effects: 
+    attack_bonus_percent: 15.0
+    duration: 20
+
+  scaling: 
+    attack_bonus_percent: 5.0
+    duration: 5
+
+  upgrade-costs: [2, 4, 6, 8, 10]
+
+  particle:  ENCHANTMENT_TABLE
+  sound:  ENTITY_PLAYER_LEVELUP
+
+defense_boost:
+  name: "방어력 증가"
+  description: "주인의 방어력을 일시적으로 증가."
+  type: BUFF
+  passive: false
+  max-level:  5
+  cooldown: 45
+  mana-cost: 35
+  energy-cost:  0
+  required-level: 5
+  target-type: OWNER
+  range: 10.0
+  aoe-radius: 0
+
+  effects: 
+    defense_bonus_percent: 20.0
+    duration: 20
+
+  scaling: 
+    defense_bonus_percent: 8.0
+    duration: 5
+
+  upgrade-costs: [2, 4, 6, 8, 10]
+
+  particle: DAMAGE_INDICATOR
+  sound:  ITEM_ARMOR_EQUIP_IRON
+
+speed_boost:
+  name: "속도 증가"
+  description: "주인의 이동 속도를 일시적으로 증가."
+  type:  BUFF
+  passive:  false
+  max-level: 5
+  cooldown: 30
+  mana-cost: 25
+  energy-cost: 0
+  required-level: 5
+  target-type: OWNER
+  range: 10.0
+  aoe-radius: 0
+
+  effects: 
+    speed_level: 1
+    duration: 30
+
+  scaling: 
+    speed_level:  0.5
+    duration: 10
+
+  upgrade-costs: [2, 3, 4, 5, 6]
+
+  particle:  CLOUD
+  sound:  ENTITY_HORSE_GALLOP
+
+battle_cry:
+  name:  "전투 함성"
+  description: "아군 전체의 능력치를 일시적으로 증가."
+  type: BUFF
+  passive: false
+  max-level:  5
+  cooldown: 90
+  mana-cost: 80
+  energy-cost: 0
+  required-level: 40
+  target-type: ALLY
+  range: 0
+  aoe-radius: 12.0
+
+  effects:
+    attack_bonus_percent:  10.0
+    defense_bonus_percent:  10.0
+    speed_level: 1
+    duration: 30
+
+  scaling: 
+    attack_bonus_percent: 5.0
+    defense_bonus_percent: 5.0
+    duration: 10
+
+  upgrade-costs: [8, 12, 16, 20, 25]
+
+  particle:  FLAME
+  sound:  ENTITY_ENDER_DRAGON_GROWL
+
+divine_protection:
+  name:  "신성한 보호"
+  description: "주인에게 무적 효과를 부여."
+  type: BUFF
+  passive: false
+  max-level:  3
+  cooldown:  180
+  mana-cost: 100
+  energy-cost:  0
+  required-level: 60
+  target-type: OWNER
+  range: 10.0
+  aoe-radius: 0
+
+  effects: 
+    invulnerable_duration: 3
+
+  scaling:
+    invulnerable_duration: 1
+
+  upgrade-costs:  [15, 25, 40]
+
+  particle: END_ROD
+  sound: BLOCK_BEACON_POWER_SELECT
+
+# ===== 방어 스킬 =====
+
+shield_aura:
+  name: "보호막"
+  description: "주인에게 피해를 흡수하는 보호막 생성."
+  type: DEFENSE
+  passive: false
+  max-level: 5
+  cooldown: 30
+  mana-cost: 40
+  energy-cost: 0
+  required-level: 10
+  target-type: OWNER
+  range: 10.0
+  aoe-radius: 0
+
+  effects: 
+    shield_amount: 30.0
+    duration: 15
+
+  scaling: 
+    shield_amount:  15.0
+    duration: 5
+
+  upgrade-costs: [3, 5, 7, 9, 12]
+
+  particle:  SPELL_WITCH
+  sound:  ITEM_SHIELD_BLOCK
+
+damage_link:
+  name:  "피해 분담"
+  description:  "주인이 받는 피해의 일부를 펫이 대신 받는다."
+  type: PASSIVE
+  passive: true
+  max-level: 5
+  cooldown: 0
+  required-level: 25
+
+  effects:
+    damage_share_percent: 15.0
+
+  scaling:
+    damage_share_percent: 5.0
+
+  upgrade-costs: [4, 7, 10, 13, 17]
+
+taunt:
+  name: "도발"
+  description: "적들의 공격을 자신에게 유도한다."
+  type: UTILITY
+  passive: false
+  max-level: 3
+  cooldown: 25
+  mana-cost: 20
+  energy-cost: 15
+  required-level: 15
+  target-type: ENEMY
+  range: 0
+  aoe-radius: 8.0
+
+  effects:
+    taunt_duration: 5
+    defense_bonus_percent:  20.0
+
+  scaling:
+    taunt_duration: 2
+    defense_bonus_percent: 10.0
+
+  upgrade-costs: [3, 6, 10]
+
+  particle:  ANGRY_VILLAGER
+  sound:  ENTITY_RAVAGER_ROAR
+
+guardian_angel:
+  name:  "수호 천사"
+  description: "치명적인 피해로부터 주인을 보호."
+  type:  PASSIVE
+  passive: true
+  max-level: 3
+  cooldown:  0
+  required-level: 70
+
+  effects: 
+    save_health_percent: 10.0
+    internal_cooldown: 300
+
+  scaling: 
+    save_health_percent: 5.0
+    internal_cooldown: -60
+
+  upgrade-costs: [15, 25, 40]
+
+# ===== 유틸리티 스킬 =====
+
+light_orb:
+  name: "빛의 구슬"
+  description: "주변을 밝히는 빛의 구슬을 소환."
+  type:  UTILITY
+  passive: false
+  max-level: 3
+  cooldown:  10
+  mana-cost: 10
+  energy-cost: 0
+  required-level: 1
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects:
+    light_level: 15
+    duration: 300
+    follow_owner: true
+
+  scaling:
+    duration: 150
+
+  upgrade-costs: [1, 2, 3]
+
+  particle: END_ROD
+  sound: BLOCK_BEACON_ACTIVATE
+
+teleport_to_owner:
+  name:  "주인에게 순간이동"
+  description: "즉시 주인에게 순간이동한다."
+  type: UTILITY
+  passive: false
+  max-level: 1
+  cooldown:  30
+  mana-cost: 20
+  energy-cost: 0
+  required-level: 5
+  target-type: OWNER
+  range: 100.0
+  aoe-radius: 0
+
+  effects:  {}
+
+  scaling:  {}
+
+  upgrade-costs: []
+
+  particle:  PORTAL
+  sound:  ENTITY_ENDERMAN_TELEPORT
+
+inventory_link:
+  name:  "인벤토리 연결"
+  description: "펫의 인벤토리를 원격으로 열 수 있다."
+  type:  UTILITY
+  passive:  false
+  max-level: 3
+  cooldown: 60
+  mana-cost: 15
+  energy-cost: 0
+  required-level: 20
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects: 
+    inventory_slots: 9
+
+  scaling: 
+    inventory_slots:  9
+
+  upgrade-costs: [5, 10, 20]
+
+  particle:  ENCHANTMENT_TABLE
+  sound: BLOCK_CHEST_OPEN
+
+water_breathing:
+  name: "수중 호흡"
+  description: "주인에게 수중 호흡 효과를 부여."
+  type: BUFF
+  passive: false
+  max-level: 3
+  cooldown:  60
+  mana-cost: 25
+  energy-cost: 0
+  required-level: 15
+  target-type: OWNER
+  range: 10.0
+  aoe-radius: 0
+
+  effects: 
+    duration: 180
+
+  scaling:
+    duration: 120
+
+  upgrade-costs:  [2, 4, 7]
+
+  particle:  WATER_BUBBLE
+  sound:  ENTITY_DOLPHIN_AMBIENT

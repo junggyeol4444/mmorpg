@@ -1,0 +1,328 @@
+#=========================================
+#  배틀 메뉴 GUI 설정
+#=========================================
+
+title: "&c&l펫 대결"
+rows: 6
+
+# 배경 아이템
+background:
+  enabled: true
+  material: RED_STAINED_GLASS_PANE
+  name:  " "
+
+# 아이템 배치
+items:
+  # 내 정보
+  my-info: 
+    slot: 4
+    material:  PLAYER_HEAD
+    name: "&a&l내 정보"
+    lore:
+      - ""
+      - "&7닉네임: &f{player_name}"
+      - "&7레이팅: &e{rating}"
+      - "&7순위: &6{rank}위"
+      - ""
+      - "&7===== 전적 ====="
+      - "&a승리:  &f{wins}"
+      - "&c패배: &f{losses}"
+      - "&7무승부: &f{draws}"
+      - "&7승률: &e{win_rate}%"
+      - ""
+      - "&7시즌 최고:  &b{season_best}"
+    action: "none"
+
+  # 매칭 대기
+  matchmaking:
+    slot: 20
+    material:  ENDER_EYE
+    name:  "&b&l랭크 매칭"
+    lore:
+      - ""
+      - "&7실력이 비슷한 상대와 대결합니다."
+      - ""
+      - "&7현재 레이팅: &e{rating}"
+      - "&7예상 대기 시간: &f{wait_time}"
+      - ""
+      - "&a● 랭크 점수가 변동됩니다."
+      - ""
+      - "&e클릭하여 매칭 시작"
+    action: "start_matchmaking"
+
+  # 친선 대결
+  friendly: 
+    slot: 22
+    material:  GOLDEN_SWORD
+    name: "&e&l친선 대결"
+    lore:
+      - ""
+      - "&7특정 플레이어에게 대결을 신청합니다."
+      - ""
+      - "&7● 랭크 점수가 변동되지 않습니다."
+      - ""
+      - "&e클릭하여 플레이어 선택"
+    action: "friendly_battle"
+
+  # 도전 대결
+  challenge:
+    slot: 24
+    material:  DIAMOND_SWORD
+    name: "&c&l도전 대결"
+    lore:
+      - ""
+      - "&7골드를 걸고 대결합니다."
+      - ""
+      - "&7입장료: &6{entry_fee}G"
+      - "&7승리 보상: &6{win_reward}G"
+      - ""
+      - "&c● 패배 시 입장료를 잃습니다."
+      - ""
+      - "&e클릭하여 도전 시작"
+    action: "challenge_battle"
+
+  # AI 대결
+  ai-battle: 
+    slot: 30
+    material:  ARMOR_STAND
+    name: "&7&lAI 대결"
+    lore: 
+      - ""
+      - "&7AI와 연습 대결을 합니다."
+      - ""
+      - "&7난이도: &f{ai_difficulty}"
+      - ""
+      - "&7● 랭크 점수가 변동되지 않습니다."
+      - "&7● 경험치를 획득합니다."
+      - ""
+      - "&e좌클릭:  AI 대결 시작"
+      - "&e우클릭: 난이도 변경"
+    action:  "ai_battle"
+
+  # 토너먼트
+  tournament:
+    slot: 32
+    material:  GOLD_BLOCK
+    name: "&6&l토너먼트"
+    lore:
+      - ""
+      - "&7진행 중인 토너먼트에 참가합니다."
+      - ""
+      - "&7상태: {tournament_status}"
+      - "&7참가자: &f{participants}/{max_participants}"
+      - ""
+      - "&e클릭하여 토너먼트 확인"
+    action:  "tournament"
+
+  # 대결 기록
+  history: 
+    slot: 38
+    material:  WRITABLE_BOOK
+    name: "&e&l대결 기록"
+    lore:
+      - ""
+      - "&7최근 대결 기록을 확인합니다."
+      - ""
+      - "&7최근 10경기:"
+      - "{recent_matches}"
+      - ""
+      - "&e클릭하여 전체 기록 보기"
+    action: "battle_history"
+
+  # 랭킹
+  ranking:
+    slot: 40
+    material: GOLDEN_HELMET
+    name: "&6&l랭킹"
+    lore:
+      - ""
+      - "&7===== TOP 5 ====="
+      - "&e1위: &f{rank_1}"
+      - "&72위: &f{rank_2}"
+      - "&63위: &f{rank_3}"
+      - "&74위: &f{rank_4}"
+      - "&75위: &f{rank_5}"
+      - ""
+      - "&7내 순위: &e{my_rank}위"
+      - ""
+      - "&e클릭하여 전체 랭킹 보기"
+    action: "ranking"
+
+  # 펫 선택
+  select-pet:
+    slot: 42
+    material: LEAD
+    name: "&a&l대결 펫 선택"
+    lore: 
+      - ""
+      - "&7대결에 사용할 펫을 선택합니다."
+      - ""
+      - "&7현재 선택:  &f{selected_pet}"
+      - "&7레벨: &e{selected_level}"
+      - "&7전투력: &c{selected_power}"
+      - ""
+      - "&e클릭하여 펫 변경"
+    action: "select_pet"
+
+  # 보상 수령
+  rewards:
+    slot:  48
+    material:  CHEST
+    name: "&d&l보상"
+    lore: 
+      - ""
+      - "&7대결 보상을 수령합니다."
+      - ""
+      - "&7미수령 보상: &a{pending_rewards}"
+      - ""
+      - "&e클릭하여 보상 수령"
+    action: "claim_rewards"
+
+  # 시즌 정보
+  season: 
+    slot: 50
+    material:  CLOCK
+    name: "&b&l시즌 정보"
+    lore: 
+      - ""
+      - "&7시즌:  &f{season_name}"
+      - "&7남은 기간: &e{season_remaining}"
+      - ""
+      - "&7시즌 보상 조건:"
+      - "&7● 브론즈:  1000점"
+      - "&7● 실버: 1200점"
+      - "&7● 골드: 1400점"
+      - "&7● 플래티넘: 1600점"
+      - "&7● 다이아:  1800점"
+      - "&7● 마스터: 2000점"
+      - ""
+      - "&7내 등급: {my_tier}"
+    action: "season_info"
+
+  # 뒤로가기
+  back:
+    slot: 45
+    material:  DARK_OAK_DOOR
+    name: "&c뒤로가기"
+    lore:
+      - ""
+      - "&7메인 메뉴로 돌아갑니다."
+    action: "back"
+
+  # 닫기
+  close:
+    slot:  53
+    material:  BARRIER
+    name:  "&c닫기"
+    lore:
+      - ""
+      - "&7메뉴를 닫습니다."
+    action: "close"
+
+# 대결 화면 설정
+battle-screen:
+  title:  "&c⚔ {player1} vs {player2}"
+  rows: 6
+
+  # 턴 표시
+  turn-indicator:
+    your-turn: "&a&l당신의 턴!"
+    opponent-turn: "&c&l상대의 턴..."
+
+  # 액션 버튼
+  actions:
+    attack: 
+      slot: 28
+      material:  IRON_SWORD
+      name: "&c&l공격"
+      lore:
+        - ""
+        - "&7기본 공격을 합니다."
+        - "&7예상 데미지: &c{attack_damage}"
+
+    skill:
+      slot:  30
+      material: ENCHANTED_BOOK
+      name: "&d&l스킬"
+      lore:
+        - ""
+        - "&7스킬을 사용합니다."
+
+    defend:
+      slot: 32
+      material:  SHIELD
+      name: "&9&l방어"
+      lore: 
+        - ""
+        - "&7방어 자세를 취합니다."
+        - "&7피해 &e50%&7 감소"
+
+    item:
+      slot:  34
+      material: POTION
+      name: "&a&l아이템"
+      lore:
+        - ""
+        - "&7아이템을 사용합니다."
+
+    forfeit:
+      slot: 49
+      material: WHITE_FLAG
+      name: "&7기권"
+      lore:
+        - ""
+        - "&7대결을 포기합니다."
+        - "&c패배 처리됩니다."
+
+# AI 난이도 설정
+ai-difficulties:
+  - name: "쉬움"
+    level: 1
+    color: "&a"
+  - name: "보통"
+    level: 2
+    color: "&e"
+  - name: "어려움"
+    level:  3
+    color: "&c"
+  - name: "매우 어려움"
+    level:  4
+    color: "&4"
+  - name: "불가능"
+    level: 5
+    color: "&5"
+
+# 티어 설정
+tiers:
+  BRONZE:
+    name:  "&8브론즈"
+    min-rating: 0
+    icon: BRICK
+  SILVER:
+    name: "&7실버"
+    min-rating: 1000
+    icon:  IRON_INGOT
+  GOLD:
+    name:  "&6골드"
+    min-rating: 1200
+    icon:  GOLD_INGOT
+  PLATINUM: 
+    name: "&b플래티넘"
+    min-rating: 1400
+    icon:  DIAMOND
+  DIAMOND: 
+    name: "&b&l다이아"
+    min-rating: 1600
+    icon:  DIAMOND_BLOCK
+  MASTER:
+    name:  "&d&l마스터"
+    min-rating: 1800
+    icon:  NETHERITE_INGOT
+  GRANDMASTER:
+    name: "&c&l그랜드마스터"
+    min-rating: 2000
+    icon: NETHER_STAR
+  CHALLENGER:
+    name:  "&e&l챌린저"
+    min-rating: 2500
+    icon:  DRAGON_EGG

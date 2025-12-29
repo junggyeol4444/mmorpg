@@ -1,0 +1,239 @@
+#=========================================
+#  보관함 메뉴 GUI 설정
+#=========================================
+
+title:  "&6&l펫 보관함 &8- &7{page}/{max_page}"
+rows: 6
+
+# 배경 아이템
+background:
+  enabled: true
+  material:  GRAY_STAINED_GLASS_PANE
+  name: " "
+
+# 펫 슬롯 범위 (0-44)
+pet-slots:
+  start: 0
+  end: 44
+
+# 펫 아이템 포맷
+pet-item:
+  # 펫 머리 또는 아이콘
+  material: PLAYER_HEAD
+  name: "{rarity_color}{pet_name} &7[Lv. {level}]"
+  lore:
+    - ""
+    - "&7종족:  &f{species_name}"
+    - "&7희귀도: {rarity}"
+    - "&7타입: &f{type}"
+    - ""
+    - "&c❤ 체력: &f{health}/{max_health}"
+    - "&6🍖 배고픔: &f{hunger}%"
+    - "&d💕 행복도:  &f{happiness}%"
+    - ""
+    - "&7⚔ 공격력: &c{attack}"
+    - "&7🛡 방어력: &9{defense}"
+    - "&7💨 속도: &b{speed}"
+    - ""
+    - "&7진화 단계: &e{evolution_stage}"
+    - "&7전투력: &e{combat_power}"
+    - ""
+    - "&e좌클릭: 소환"
+    - "&e우클릭:  상세 정보"
+    - "&eShift+좌클릭:  즐겨찾기"
+    - "&cShift+우클릭: 방생"
+
+# 즐겨찾기 표시
+favorite-indicator:
+  enabled:  true
+  prefix: "&e⭐ "
+
+# 활성 펫 표시
+active-indicator:
+  enabled:  true
+  glow: true
+  prefix: "&a✓ "
+
+# 네비게이션 아이템
+navigation: 
+  # 이전 페이지
+  previous-page:
+    slot: 45
+    material:  ARROW
+    name: "&a◀ 이전 페이지"
+    lore: 
+      - ""
+      - "&7이전 페이지로 이동합니다."
+    action: "previous_page"
+
+  # 다음 페이지
+  next-page: 
+    slot: 53
+    material:  ARROW
+    name:  "&a다음 페이지 ▶"
+    lore:
+      - ""
+      - "&7다음 페이지로 이동합니다."
+    action: "next_page"
+
+  # 뒤로가기
+  back: 
+    slot: 49
+    material:  DARK_OAK_DOOR
+    name: "&c뒤로가기"
+    lore:
+      - ""
+      - "&7메인 메뉴로 돌아갑니다."
+    action: "back"
+
+# 기능 아이템
+features:
+  # 정렬
+  sort: 
+    slot: 46
+    material:  HOPPER
+    name: "&e정렬"
+    lore: 
+      - ""
+      - "&7현재:  &f{sort_type}"
+      - ""
+      - "&e클릭하여 정렬 방식 변경"
+    action: "change_sort"
+
+  # 필터
+  filter: 
+    slot: 47
+    material:  PAPER
+    name: "&b필터"
+    lore:
+      - ""
+      - "&7현재: &f{filter_type}"
+      - ""
+      - "&e클릭하여 필터 변경"
+    action: "change_filter"
+
+  # 검색
+  search:
+    slot:  48
+    material: COMPASS
+    name: "&d검색"
+    lore:
+      - ""
+      - "&7펫 이름으로 검색합니다."
+      - ""
+      - "&e클릭하여 검색"
+    action: "search"
+
+  # 보관함 정보
+  storage-info:
+    slot: 50
+    material:  BOOK
+    name: "&6보관함 정보"
+    lore:
+      - ""
+      - "&7보유 펫:  &f{pet_count}/{capacity}"
+      - "&7즐겨찾기: &e{favorite_count}"
+      - "&7활성 펫: &a{active_count}"
+      - ""
+      - "&7확장 횟수: &f{expansion_count}"
+    action: "none"
+
+  # 확장
+  expand:
+    slot: 51
+    material: GOLD_INGOT
+    name:  "&a보관함 확장"
+    lore: 
+      - ""
+      - "&7보관함을 확장합니다."
+      - ""
+      - "&7현재 용량: &f{capacity}"
+      - "&7확장 비용: &e{expand_cost}G"
+      - "&7추가 슬롯: &a+{expand_slots}"
+      - ""
+      - "&e클릭하여 확장"
+    action: "expand_storage"
+
+  # 일괄 방생
+  mass-release:
+    slot:  52
+    material: TNT
+    name:  "&c일괄 방생"
+    lore:
+      - ""
+      - "&7선택한 펫들을 방생합니다."
+      - ""
+      - "&c주의: 되돌릴 수 없습니다!"
+      - ""
+      - "&e클릭하여 선택 모드 시작"
+    action: "mass_release"
+
+# 정렬 옵션
+sort-options:
+  - LEVEL_DESC
+  - LEVEL_ASC
+  - RARITY_DESC
+  - RARITY_ASC
+  - NAME_ASC
+  - NAME_DESC
+  - COMBAT_POWER_DESC
+  - RECENT
+
+# 정렬 표시 이름
+sort-names:
+  LEVEL_DESC: "레벨 (높은순)"
+  LEVEL_ASC: "레벨 (낮은순)"
+  RARITY_DESC: "희귀도 (높은순)"
+  RARITY_ASC: "희귀도 (낮은순)"
+  NAME_ASC: "이름 (가나다순)"
+  NAME_DESC: "이름 (역순)"
+  COMBAT_POWER_DESC: "전투력 (높은순)"
+  RECENT: "최근 획득순"
+
+# 필터 옵션
+filter-options: 
+  - ALL
+  - COMBAT
+  - GATHERING
+  - SUPPORT
+  - MOUNT
+  - COMMON
+  - UNCOMMON
+  - RARE
+  - EPIC
+  - LEGENDARY
+  - MYTHIC
+  - FAVORITES
+
+# 필터 표시 이름
+filter-names:
+  ALL: "전체"
+  COMBAT:  "전투형"
+  GATHERING: "채집형"
+  SUPPORT: "지원형"
+  MOUNT: "탑승형"
+  COMMON: "일반"
+  UNCOMMON: "고급"
+  RARE: "희귀"
+  EPIC: "영웅"
+  LEGENDARY: "전설"
+  MYTHIC: "신화"
+  FAVORITES: "즐겨찾기"
+
+# 빈 슬롯 표시
+empty-slot:
+  enabled: true
+  material: LIGHT_GRAY_STAINED_GLASS_PANE
+  name:  "&7빈 슬롯"
+  lore: 
+    - ""
+    - "&7펫을 획득하여 채우세요!"
+
+# 잠긴 슬롯 표시
+locked-slot: 
+  enabled: true
+  material: RED_STAINED_GLASS_PANE
+  name:  "&c잠긴 슬롯"
+  lore: 
+    - ""
+    - "&7보관함을 확장하여 잠금 해제하세요."

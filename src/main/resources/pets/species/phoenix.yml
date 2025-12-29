@@ -1,0 +1,324 @@
+#=========================================
+#  피닉스 종족 설정
+#=========================================
+
+baby_phoenix:
+  name: "아기 불사조"
+  description:  "불꽃에서 태어난 신비로운 새. 불사의 힘을 품고 있다."
+  type: SUPPORT
+  entity-type: PARROT
+  base-rarity: EPIC
+  max-level: 100
+
+  base-stats: 
+    health: 120.0
+    attack: 20.0
+    defense: 12.0
+    speed: 30.0
+    critical_chance: 10.0
+    critical_damage: 150.0
+
+  stats-per-level: 
+    health: 6.0
+    attack: 1.5
+    defense: 0.8
+    speed: 0.6
+    critical_chance: 0.12
+    critical_damage: 1.2
+
+  learnable-skills: 
+    - ember_peck
+    - healing_flame
+    - fire_shield
+    - warm_aura
+    - rebirth_spark
+
+  skill-unlock-levels:
+    ember_peck: 1
+    healing_flame: 10
+    fire_shield: 20
+    warm_aura:  35
+    rebirth_spark: 50
+
+  evolution-paths: 
+    - phoenix
+    - dark_phoenix
+
+  preferred-foods:
+    - BLAZE_POWDER
+    - GOLDEN_CARROT
+    - FIRE_CHARGE
+
+  abilities: 
+    - fire_resistance
+    - flight
+    - healing_presence
+
+  obtain-methods:
+    - egg
+    - boss_drop
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 200
+  scale: 0.5
+
+  sounds: 
+    ambient: ENTITY_PARROT_AMBIENT
+    hurt: ENTITY_PARROT_HURT
+    death:  ENTITY_PARROT_DEATH
+
+  base-speed: 0.35
+  attack-range: 2.0
+
+#=========================================
+#  불사조 (진화형)
+#=========================================
+
+phoenix:
+  name:  "불사조"
+  description: "영원히 타오르는 불꽃의 새. 죽어도 재에서 다시 태어난다."
+  type: SUPPORT
+  entity-type: PARROT
+  base-rarity: LEGENDARY
+  max-level: 100
+
+  base-stats:
+    health: 200.0
+    attack: 35.0
+    defense: 25.0
+    speed: 35.0
+    critical_chance: 15.0
+    critical_damage: 165.0
+
+  stats-per-level: 
+    health: 9.0
+    attack: 2.5
+    defense: 1.3
+    speed: 0.7
+    critical_chance: 0.15
+    critical_damage: 1.3
+
+  learnable-skills:
+    - ember_peck
+    - healing_flame
+    - fire_shield
+    - warm_aura
+    - rebirth_spark
+    - solar_flare
+    - phoenix_tears
+    - immortal_flame
+    - resurrection
+
+  skill-unlock-levels:
+    ember_peck: 1
+    healing_flame: 1
+    fire_shield: 10
+    warm_aura:  20
+    rebirth_spark: 30
+    solar_flare: 45
+    phoenix_tears: 60
+    immortal_flame:  75
+    resurrection: 90
+
+  evolution-paths: 
+    - eternal_phoenix
+
+  preferred-foods:
+    - ENCHANTED_GOLDEN_APPLE
+    - BLAZE_ROD
+    - MAGMA_CREAM
+
+  abilities:
+    - fire_immunity
+    - flight
+    - healing_presence
+    - auto_revive
+    - burn_aura
+
+  obtain-methods: 
+    - evolution
+
+  capture:
+    enabled: false
+
+  custom-model-data:  201
+  scale: 1.2
+
+  sounds: 
+    ambient: ENTITY_PARROT_AMBIENT
+    hurt: ENTITY_BLAZE_HURT
+    death: ENTITY_BLAZE_DEATH
+
+  base-speed:  0.40
+  attack-range: 3.0
+
+#=========================================
+#  흑염 불사조 (진화형)
+#=========================================
+
+dark_phoenix:
+  name: "흑염 불사조"
+  description:  "어둠에 물든 불사조. 파괴적인 검은 불꽃을 다룬다."
+  type: COMBAT
+  entity-type: PARROT
+  base-rarity: LEGENDARY
+  max-level: 100
+
+  base-stats:
+    health: 180.0
+    attack: 50.0
+    defense: 20.0
+    speed: 32.0
+    critical_chance: 20.0
+    critical_damage: 190.0
+
+  stats-per-level: 
+    health: 8.0
+    attack: 3.5
+    defense: 1.0
+    speed: 0.65
+    critical_chance: 0.18
+    critical_damage: 1.5
+
+  learnable-skills:
+    - dark_peck
+    - shadow_flame
+    - void_shield
+    - dark_aura
+    - soul_burn
+    - black_inferno
+    - death_rebirth
+    - apocalypse_flame
+
+  skill-unlock-levels:
+    dark_peck:  1
+    shadow_flame: 1
+    void_shield: 10
+    dark_aura:  20
+    soul_burn: 35
+    black_inferno: 50
+    death_rebirth: 70
+    apocalypse_flame: 90
+
+  evolution-paths: 
+    - chaos_phoenix
+
+  preferred-foods:
+    - WITHER_ROSE
+    - NETHER_STAR
+    - SOUL_SAND
+
+  abilities:
+    - fire_immunity
+    - flight
+    - wither_aura
+    - soul_drain
+    - dark_rebirth
+
+  obtain-methods:
+    - evolution
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 202
+  scale: 1.2
+
+  sounds: 
+    ambient: ENTITY_WITHER_AMBIENT
+    hurt:  ENTITY_WITHER_HURT
+    death: ENTITY_WITHER_DEATH
+
+  base-speed: 0.38
+  attack-range: 3.5
+
+#=========================================
+#  영원의 불사조 (최종 진화)
+#=========================================
+
+eternal_phoenix: 
+  name: "영원의 불사조"
+  description: "시간을 초월한 불멸의 존재. 생명과 빛의 화신."
+  type:  SUPPORT
+  entity-type: PARROT
+  base-rarity: MYTHIC
+  max-level: 100
+
+  base-stats: 
+    health: 350.0
+    attack: 45.0
+    defense: 40.0
+    speed: 40.0
+    critical_chance: 18.0
+    critical_damage: 175.0
+
+  stats-per-level: 
+    health: 12.0
+    attack: 3.0
+    defense: 2.0
+    speed: 0.8
+    critical_chance: 0.16
+    critical_damage: 1.4
+
+  learnable-skills:
+    - ember_peck
+    - healing_flame
+    - fire_shield
+    - warm_aura
+    - rebirth_spark
+    - solar_flare
+    - phoenix_tears
+    - immortal_flame
+    - resurrection
+    - eternal_blessing
+    - light_of_eternity
+    - divine_resurrection
+
+  skill-unlock-levels:
+    ember_peck:  1
+    healing_flame: 1
+    fire_shield: 1
+    warm_aura: 10
+    rebirth_spark: 20
+    solar_flare: 30
+    phoenix_tears: 40
+    immortal_flame: 50
+    resurrection: 60
+    eternal_blessing: 75
+    light_of_eternity: 85
+    divine_resurrection: 100
+
+  evolution-paths:  []
+
+  preferred-foods:
+    - ENCHANTED_GOLDEN_APPLE
+    - NETHER_STAR
+    - TOTEM_OF_UNDYING
+
+  abilities: 
+    - fire_immunity
+    - flight
+    - healing_presence
+    - auto_revive
+    - party_heal
+    - immortality
+    - blessing_aura
+
+  obtain-methods:
+    - evolution
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 203
+  scale: 1.5
+
+  sounds:
+    ambient: ENTITY_ALLAY_AMBIENT
+    hurt: ENTITY_ALLAY_HURT
+    death:  ENTITY_ALLAY_DEATH
+
+  base-speed:  0.45
+  attack-range: 4.0

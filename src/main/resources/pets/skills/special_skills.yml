@@ -1,0 +1,414 @@
+#=========================================
+#  특수 스킬 설정
+#=========================================
+
+# ===== 불사조 스킬 =====
+
+ember_peck:
+  name:  "불꽃 부리"
+  description:  "불타는 부리로 쪼아 데미지와 화상."
+  type:  ATTACK
+  passive:  false
+  max-level: 10
+  cooldown:  4
+  mana-cost: 0
+  energy-cost: 10
+  required-level: 1
+  target-type: ENEMY
+  range: 2.0
+  aoe-radius: 0
+
+  effects: 
+    damage:  15.0
+    burn_damage: 5.0
+    burn_duration: 3
+
+  scaling: 
+    damage: 5.0
+    burn_damage: 2.0
+
+  upgrade-costs: [1, 1, 2, 2, 3, 3, 4, 4, 5]
+
+  particle: FLAME
+  sound: ENTITY_PARROT_AMBIENT
+
+healing_flame:
+  name:  "치유의 불꽃"
+  description: "생명의 불꽃으로 아군을 치유."
+  type:  HEAL
+  passive:  false
+  max-level: 10
+  cooldown: 15
+  mana-cost: 35
+  energy-cost: 0
+  required-level: 10
+  target-type: ALLY
+  range: 8.0
+  aoe-radius: 5. 0
+
+  effects: 
+    heal_amount: 25.0
+    heal_over_time: 5.0
+    duration: 5
+
+  scaling: 
+    heal_amount:  10.0
+    heal_over_time:  2.0
+
+  upgrade-costs: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+  particle:  HEART
+  sound:  ENTITY_BLAZE_AMBIENT
+
+fire_shield:
+  name:  "화염 방패"
+  description:  "불꽃의 방패로 자신을 보호."
+  type: DEFENSE
+  passive: false
+  max-level: 5
+  cooldown:  30
+  mana-cost: 40
+  energy-cost: 0
+  required-level: 20
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects: 
+    damage_reduction: 30.0
+    reflect_damage: 10.0
+    duration: 10
+
+  scaling: 
+    damage_reduction:  10.0
+    reflect_damage: 5.0
+    duration: 2
+
+  upgrade-costs: [4, 6, 8, 10, 13]
+
+  particle:  FLAME
+  sound:  BLOCK_FIRE_AMBIENT
+
+warm_aura:
+  name: "따뜻한 기운"
+  description: "주변 아군에게 체력 재생과 냉기 저항."
+  type:  PASSIVE
+  passive: true
+  max-level: 5
+  cooldown: 0
+  required-level: 35
+
+  effects:
+    regen_per_second: 1.0
+    cold_resistance: 50.0
+    aura_range: 8.0
+
+  scaling:
+    regen_per_second:  0.5
+    cold_resistance:  10.0
+
+  upgrade-costs:  [5, 8, 11, 14, 18]
+
+rebirth_spark:
+  name:  "불사의 불꽃"
+  description: "사망 시 자동으로 부활."
+  type: PASSIVE
+  passive: true
+  max-level: 3
+  cooldown:  0
+  required-level: 50
+
+  effects: 
+    revive_health_percent: 25.0
+    internal_cooldown: 600
+
+  scaling: 
+    revive_health_percent: 15.0
+    internal_cooldown: -120
+
+  upgrade-costs: [10, 18, 30]
+
+phoenix_tears:
+  name:  "불사조의 눈물"
+  description:  "기적의 눈물로 모든 상태이상 치유."
+  type: UTILITY
+  passive: false
+  max-level: 3
+  cooldown:  120
+  mana-cost: 80
+  energy-cost: 0
+  required-level: 60
+  target-type: ALLY
+  range: 0
+  aoe-radius: 10.0
+
+  effects:
+    remove_all_debuffs: true
+    heal_percent: 30.0
+
+  scaling:
+    heal_percent: 15.0
+
+  upgrade-costs: [12, 20, 35]
+
+  particle:  DRIPPING_HONEY
+  sound:  ENTITY_GENERIC_DRINK
+
+immortal_flame: 
+  name: "불멸의 불꽃"
+  description: "죽음을 무시하는 영원한 불꽃."
+  type: BUFF
+  passive: false
+  max-level: 3
+  cooldown:  300
+  mana-cost: 150
+  energy-cost: 0
+  required-level: 75
+  target-type: OWNER
+  range: 10.0
+  aoe-radius: 0
+
+  effects: 
+    immortality_duration: 5
+    heal_on_end_percent: 50.0
+
+  scaling:
+    immortality_duration: 2
+    heal_on_end_percent:  15.0
+
+  upgrade-costs: [20, 35, 55]
+
+  particle:  SOUL_FIRE_FLAME
+  sound:  BLOCK_BEACON_POWER_SELECT
+
+divine_resurrection:
+  name:  "신성한 부활"
+  description:  "사망한 아군을 되살린다."
+  type: UTILITY
+  passive: false
+  max-level: 1
+  cooldown:  900
+  mana-cost: 300
+  energy-cost: 0
+  required-level: 100
+  target-type: ALLY
+  range: 15.0
+  aoe-radius: 0
+
+  effects: 
+    revive_health_percent: 100.0
+    invulnerable_duration: 5
+    buff_duration: 30
+
+  scaling:  {}
+
+  upgrade-costs: []
+
+  particle: TOTEM
+  sound:  ITEM_TOTEM_USE
+
+# ===== 궁극기 스킬 =====
+
+apocalypse:
+  name: "종말"
+  description: "모든 것을 파괴하는 궁극의 공격."
+  type: ATTACK
+  passive: false
+  max-level: 3
+  cooldown:  300
+  mana-cost: 200
+  energy-cost: 100
+  required-level: 90
+  target-type: ENEMY
+  range: 0
+  aoe-radius: 15. 0
+
+  effects: 
+    damage: 500.0
+    burn_damage: 50.0
+    burn_duration: 10
+    stun_duration: 3
+
+  scaling: 
+    damage: 150.0
+    burn_damage: 25.0
+
+  upgrade-costs:  [30, 50, 80]
+
+  particle:  EXPLOSION_HUGE
+  sound:  ENTITY_GENERIC_EXPLODE
+
+world_freeze:
+  name:  "세계 동결"
+  description: "모든 적을 얼려버린다."
+  type: ATTACK
+  passive: false
+  max-level: 3
+  cooldown: 300
+  mana-cost: 200
+  energy-cost: 100
+  required-level: 90
+  target-type: ENEMY
+  range: 0
+  aoe-radius: 15.0
+
+  effects: 
+    damage: 300.0
+    freeze_duration: 8
+    slow_percent: 80. 0
+    slow_duration: 15
+
+  scaling: 
+    damage: 100.0
+    freeze_duration: 2
+
+  upgrade-costs:  [30, 50, 80]
+
+  particle: SNOWFLAKE
+  sound:  BLOCK_GLASS_BREAK
+
+lightning_storm:
+  name:  "번개 폭풍"
+  description: "하늘에서 번개가 쏟아진다."
+  type: ATTACK
+  passive: false
+  max-level: 3
+  cooldown: 300
+  mana-cost: 200
+  energy-cost:  100
+  required-level: 90
+  target-type: ENEMY
+  range: 0
+  aoe-radius: 15.0
+
+  effects: 
+    damage: 400.0
+    lightning_strikes: 10
+    paralysis_chance: 30.0
+    paralysis_duration: 2
+
+  scaling: 
+    damage: 120.0
+    lightning_strikes: 3
+
+  upgrade-costs:  [30, 50, 80]
+
+  particle: FLASH
+  sound:  ENTITY_LIGHTNING_BOLT_THUNDER
+
+life_bloom:
+  name:  "생명의 꽃"
+  description: "모든 아군을 완전 회복시킨다."
+  type: HEAL
+  passive: false
+  max-level: 3
+  cooldown: 300
+  mana-cost: 250
+  energy-cost: 0
+  required-level: 90
+  target-type: ALLY
+  range: 0
+  aoe-radius: 20.0
+
+  effects:
+    heal_percent: 100.0
+    remove_debuffs: true
+    buff_duration:  30
+    regen_per_second: 5. 0
+
+  scaling: 
+    buff_duration: 15
+    regen_per_second: 2.0
+
+  upgrade-costs: [30, 50, 80]
+
+  particle: HEART
+  sound:  ENTITY_PLAYER_LEVELUP
+
+# ===== 변환 스킬 =====
+
+berserk_mode:
+  name:  "광폭화"
+  description:  "미친 듯이 공격력이 증가하지만 방어력 감소."
+  type: BUFF
+  passive: false
+  max-level: 5
+  cooldown:  120
+  mana-cost: 60
+  energy-cost: 40
+  required-level: 50
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects: 
+    attack_bonus_percent: 50.0
+    speed_bonus_percent: 30.0
+    defense_penalty_percent: 30.0
+    duration: 20
+
+  scaling: 
+    attack_bonus_percent: 15.0
+    speed_bonus_percent:  10.0
+    duration: 5
+
+  upgrade-costs: [8, 12, 16, 20, 25]
+
+  particle: ANGRY_VILLAGER
+  sound: ENTITY_RAVAGER_ROAR
+
+stealth_mode: 
+  name: "은신"
+  description:  "투명해져서 적에게 발각되지 않는다."
+  type: BUFF
+  passive: false
+  max-level: 3
+  cooldown:  60
+  mana-cost: 50
+  energy-cost: 0
+  required-level: 30
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects:
+    invisibility:  true
+    backstab_bonus:  50.0
+    duration: 15
+
+  scaling: 
+    backstab_bonus: 25.0
+    duration: 5
+
+  upgrade-costs: [6, 12, 20]
+
+  particle:  SPELL_MOB
+  sound: ENTITY_PHANTOM_AMBIENT
+
+elemental_shift:
+  name:  "원소 변환"
+  description: "속성을 변환하여 다른 원소 스킬 사용."
+  type:  UTILITY
+  passive:  false
+  max-level: 1
+  cooldown:  10
+  mana-cost: 10
+  energy-cost: 0
+  required-level: 40
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects:
+    available_elements: 
+      - FIRE
+      - ICE
+      - LIGHTNING
+      - EARTH
+
+  scaling:  {}
+
+  upgrade-costs: []
+
+  particle: ENCHANTMENT_TABLE
+  sound: BLOCK_ENCHANTMENT_TABLE_USE

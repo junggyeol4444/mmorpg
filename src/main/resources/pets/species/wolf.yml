@@ -1,0 +1,317 @@
+#=========================================
+#  늑대 종족 설정
+#=========================================
+
+wolf:
+  # 기본 정보
+  name:  "늑대"
+  description: "충성스러운 동반자.  균형 잡힌 스탯과 빠른 공격이 특징."
+  type:  COMBAT
+  entity-type: WOLF
+  base-rarity: COMMON
+  max-level: 100
+
+  # 기본 스탯
+  base-stats:
+    health: 100.0
+    attack:  15.0
+    defense: 10.0
+    speed: 25.0
+    critical_chance: 10.0
+    critical_damage: 150.0
+
+  # 레벨당 스탯 증가
+  stats-per-level:
+    health: 5.0
+    attack: 1.2
+    defense: 0.8
+    speed: 0.5
+    critical_chance: 0.1
+    critical_damage: 1.0
+
+  # 배울 수 있는 스킬
+  learnable-skills: 
+    - wolf_bite
+    - wolf_howl
+    - pack_tactics
+    - wild_charge
+    - alpha_roar
+    - feral_instinct
+
+  # 스킬 해금 레벨
+  skill-unlock-levels:
+    wolf_bite: 1
+    wolf_howl: 5
+    pack_tactics: 15
+    wild_charge: 25
+    alpha_roar:  40
+    feral_instinct: 60
+
+  # 진화 경로
+  evolution-paths:
+    - dire_wolf
+    - shadow_wolf
+    - frost_wolf
+
+  # 선호 음식
+  preferred-foods:
+    - COOKED_BEEF
+    - COOKED_PORKCHOP
+    - BONE
+
+  # 특수 능력
+  abilities:
+    - night_vision
+    - tracking
+
+  # 획득 방법
+  obtain-methods:
+    - taming
+    - egg
+    - capture
+
+  # 포획 설정
+  capture: 
+    enabled: true
+    base-chance: 15. 0
+    min-level: 1
+
+  # 외형
+  custom-model-data:  0
+  scale: 1.0
+
+  # 사운드
+  sounds:
+    ambient:  ENTITY_WOLF_AMBIENT
+    hurt: ENTITY_WOLF_HURT
+    death: ENTITY_WOLF_DEATH
+
+  # 이동 속도
+  base-speed: 0.35
+
+  # 공격 범위
+  attack-range: 2.0
+
+#=========================================
+#  다이어울프 (진화형)
+#=========================================
+
+dire_wolf: 
+  name: "다이어울프"
+  description: "고대의 거대 늑대. 압도적인 힘과 체력을 자랑한다."
+  type: COMBAT
+  entity-type:  WOLF
+  base-rarity: RARE
+  max-level:  100
+
+  base-stats:
+    health: 180.0
+    attack: 28.0
+    defense: 18.0
+    speed: 22.0
+    critical_chance: 15.0
+    critical_damage: 170.0
+
+  stats-per-level: 
+    health: 8.0
+    attack: 2.0
+    defense: 1.2
+    speed: 0.4
+    critical_chance: 0.12
+    critical_damage: 1.2
+
+  learnable-skills:
+    - wolf_bite
+    - wolf_howl
+    - pack_tactics
+    - wild_charge
+    - alpha_roar
+    - feral_instinct
+    - dire_fang
+    - primal_fury
+
+  skill-unlock-levels:
+    wolf_bite: 1
+    wolf_howl: 1
+    pack_tactics: 10
+    wild_charge: 20
+    alpha_roar: 30
+    feral_instinct: 45
+    dire_fang: 60
+    primal_fury: 80
+
+  evolution-paths:
+    - alpha_dire_wolf
+
+  preferred-foods:
+    - COOKED_BEEF
+    - GOLDEN_APPLE
+
+  abilities:
+    - night_vision
+    - tracking
+    - intimidate
+
+  obtain-methods:
+    - evolution
+
+  capture:
+    enabled:  false
+
+  custom-model-data:  1
+  scale: 1.5
+
+  sounds:
+    ambient: ENTITY_WOLF_AMBIENT
+    hurt: ENTITY_WOLF_HURT
+    death:  ENTITY_WOLF_DEATH
+
+  base-speed: 0.32
+  attack-range:  2.5
+
+#=========================================
+#  그림자 늑대 (진화형)
+#=========================================
+
+shadow_wolf:
+  name: "그림자 늑대"
+  description: "어둠에서 태어난 늑대. 은신과 급습에 특화되어 있다."
+  type:  COMBAT
+  entity-type: WOLF
+  base-rarity: RARE
+  max-level: 100
+
+  base-stats:
+    health: 120.0
+    attack: 35.0
+    defense: 12.0
+    speed: 35.0
+    critical_chance: 25.0
+    critical_damage: 200.0
+
+  stats-per-level: 
+    health: 5.5
+    attack: 2.5
+    defense: 0.7
+    speed: 0.8
+    critical_chance: 0.2
+    critical_damage: 1.5
+
+  learnable-skills:
+    - wolf_bite
+    - shadow_step
+    - darkness_cloak
+    - ambush
+    - shadow_fang
+    - phantom_strike
+
+  skill-unlock-levels:
+    wolf_bite: 1
+    shadow_step: 5
+    darkness_cloak:  15
+    ambush: 25
+    shadow_fang: 45
+    phantom_strike: 70
+
+  evolution-paths:
+    - void_wolf
+
+  preferred-foods:
+    - COOKED_BEEF
+    - SPIDER_EYE
+
+  abilities: 
+    - night_vision
+    - stealth
+    - shadow_walk
+
+  obtain-methods:
+    - evolution
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 2
+  scale: 1.1
+
+  sounds: 
+    ambient: ENTITY_WOLF_AMBIENT
+    hurt:  ENTITY_WOLF_HURT
+    death: ENTITY_WOLF_DEATH
+
+  base-speed: 0.42
+  attack-range: 2.0
+
+#=========================================
+#  서리 늑대 (진화형)
+#=========================================
+
+frost_wolf: 
+  name: "서리 늑대"
+  description:  "얼어붙은 땅의 수호자. 적을 동결시키는 냉기를 다룬다."
+  type: COMBAT
+  entity-type: WOLF
+  base-rarity:  RARE
+  max-level: 100
+
+  base-stats:
+    health:  140.0
+    attack: 25.0
+    defense: 20.0
+    speed: 28.0
+    critical_chance: 12.0
+    critical_damage: 160.0
+
+  stats-per-level: 
+    health: 6.5
+    attack: 1.8
+    defense: 1.3
+    speed: 0.5
+    critical_chance: 0.1
+    critical_damage: 1.1
+
+  learnable-skills:
+    - wolf_bite
+    - frost_breath
+    - ice_armor
+    - blizzard_howl
+    - frozen_fang
+    - absolute_zero
+
+  skill-unlock-levels:
+    wolf_bite: 1
+    frost_breath: 5
+    ice_armor:  15
+    blizzard_howl: 30
+    frozen_fang: 50
+    absolute_zero: 75
+
+  evolution-paths:
+    - glacial_wolf
+
+  preferred-foods: 
+    - COOKED_COD
+    - SNOW_BALL
+    - ICE
+
+  abilities:
+    - cold_resistance
+    - freeze_aura
+    - ice_walk
+
+  obtain-methods:
+    - evolution
+
+  capture: 
+    enabled: false
+
+  custom-model-data: 3
+  scale: 1.2
+
+  sounds:
+    ambient:  ENTITY_WOLF_AMBIENT
+    hurt: ENTITY_WOLF_HURT
+    death:  ENTITY_WOLF_DEATH
+
+  base-speed: 0.38
+  attack-range: 2.0

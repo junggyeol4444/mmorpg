@@ -1,0 +1,423 @@
+#=========================================
+#  전투 스킬 설정
+#=========================================
+
+# ===== 늑대 스킬 =====
+
+wolf_bite:
+  name:  "늑대의 이빨"
+  description: "강력하게 물어뜯어 데미지를 준다."
+  type: ATTACK
+  passive: false
+  max-level: 10
+  cooldown: 5
+  mana-cost: 0
+  energy-cost: 10
+  required-level: 1
+  target-type: ENEMY
+  range: 2.0
+  aoe-radius: 0
+
+  effects:
+    damage: 20. 0
+
+  scaling:
+    damage:  5.0
+
+  upgrade-costs:  [1, 1, 2, 2, 3, 3, 4, 4, 5]
+
+  particle:  CRIT
+  sound: ENTITY_WOLF_GROWL
+
+wolf_howl:
+  name: "늑대의 울음"
+  description: "울부짖어 아군의 공격력을 높인다."
+  type: BUFF
+  passive: false
+  max-level: 5
+  cooldown:  30
+  mana-cost: 20
+  energy-cost: 0
+  required-level: 5
+  target-type: ALLY
+  range: 10.0
+  aoe-radius: 10. 0
+
+  effects: 
+    attack_bonus: 15.0
+    duration: 10
+
+  scaling:
+    attack_bonus: 3.0
+    duration: 2
+
+  upgrade-costs:  [2, 3, 4, 5, 6]
+
+  particle: NOTE
+  sound:  ENTITY_WOLF_HOWL
+
+pack_tactics:
+  name:  "무리 전술"
+  description: "주인과 함께 공격하면 추가 데미지."
+  type:  PASSIVE
+  passive: true
+  max-level: 5
+  cooldown:  0
+  required-level: 15
+
+  effects:
+    bonus_damage_percent: 10. 0
+
+  scaling: 
+    bonus_damage_percent: 5.0
+
+  upgrade-costs: [3, 4, 5, 6, 7]
+
+wild_charge:
+  name:  "야생의 돌진"
+  description:  "적에게 돌진하여 강력한 데미지와 기절."
+  type:  ATTACK
+  passive:  false
+  max-level: 5
+  cooldown:  20
+  mana-cost: 30
+  energy-cost: 20
+  required-level: 25
+  target-type: ENEMY
+  range: 8.0
+  aoe-radius: 0
+
+  effects: 
+    damage: 50.0
+    stun_duration: 2
+
+  scaling:
+    damage: 15.0
+    stun_duration: 0.5
+
+  upgrade-costs: [4, 5, 6, 7, 8]
+
+  particle: EXPLOSION_LARGE
+  sound: ENTITY_RAVAGER_ATTACK
+
+alpha_roar:
+  name: "우두머리의 포효"
+  description: "적들을 공포에 떨게 하여 방어력 감소."
+  type: DEBUFF
+  passive:  false
+  max-level: 5
+  cooldown: 45
+  mana-cost: 40
+  energy-cost:  0
+  required-level: 40
+  target-type: ENEMY
+  range: 8.0
+  aoe-radius: 8.0
+
+  effects:
+    defense_reduction: 20.0
+    duration: 8
+    fear_chance: 30.0
+
+  scaling:
+    defense_reduction: 5.0
+    duration: 1
+    fear_chance:  5.0
+
+  upgrade-costs: [5, 6, 7, 8, 10]
+
+  particle:  ANGRY_VILLAGER
+  sound:  ENTITY_ENDER_DRAGON_GROWL
+
+feral_instinct:
+  name: "야수의 본능"
+  description: "체력이 낮을 때 공격력과 속도 증가."
+  type: PASSIVE
+  passive: true
+  max-level: 5
+  cooldown: 0
+  required-level: 60
+
+  effects:
+    health_threshold: 30.0
+    attack_bonus: 30.0
+    speed_bonus: 20.0
+
+  scaling:
+    attack_bonus: 10.0
+    speed_bonus: 5.0
+
+  upgrade-costs: [6, 8, 10, 12, 15]
+
+# ===== 드래곤 스킬 =====
+
+dragon_claw:
+  name: "드래곤 클로"
+  description: "날카로운 발톱으로 할퀸다."
+  type: ATTACK
+  passive: false
+  max-level: 10
+  cooldown:  4
+  mana-cost: 0
+  energy-cost: 15
+  required-level: 1
+  target-type: ENEMY
+  range: 3.0
+  aoe-radius: 0
+
+  effects: 
+    damage: 30.0
+    bleed_damage: 5.0
+    bleed_duration: 3
+
+  scaling:
+    damage: 8.0
+    bleed_damage: 2.0
+
+  upgrade-costs:  [1, 2, 2, 3, 3, 4, 4, 5, 5]
+
+  particle: SWEEP_ATTACK
+  sound: ENTITY_ENDER_DRAGON_FLAP
+
+fire_breath:
+  name: "화염 브레스"
+  description:  "불꽃을 내뿜어 넓은 범위에 데미지."
+  type:  ATTACK
+  passive:  false
+  max-level: 10
+  cooldown: 15
+  mana-cost: 40
+  energy-cost: 0
+  required-level: 10
+  target-type: ENEMY
+  range: 8.0
+  aoe-radius: 4. 0
+
+  effects: 
+    damage: 40.0
+    burn_damage: 10.0
+    burn_duration: 5
+
+  scaling:
+    damage: 12.0
+    burn_damage: 3.0
+
+  upgrade-costs:  [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+  particle:  FLAME
+  sound: ENTITY_ENDER_DRAGON_SHOOT
+
+dragon_scales:
+  name:  "용의 비늘"
+  description: "단단한 비늘로 방어력 증가."
+  type: PASSIVE
+  passive: true
+  max-level:  5
+  cooldown:  0
+  required-level: 35
+
+  effects: 
+    defense_bonus: 20.0
+    fire_resistance: 25.0
+
+  scaling:
+    defense_bonus: 10.0
+    fire_resistance: 10.0
+
+  upgrade-costs: [5, 7, 9, 12, 15]
+
+inferno:
+  name: "인페르노"
+  description: "지옥의 불꽃으로 모든 것을 태운다."
+  type: ATTACK
+  passive: false
+  max-level: 5
+  cooldown:  60
+  mana-cost: 80
+  energy-cost: 0
+  required-level: 50
+  target-type: ENEMY
+  range: 10.0
+  aoe-radius: 6.0
+
+  effects:
+    damage:  100.0
+    burn_damage: 25.0
+    burn_duration: 8
+
+  scaling: 
+    damage: 30.0
+    burn_damage: 10.0
+
+  upgrade-costs: [10, 15, 20, 25, 30]
+
+  particle: LAVA
+  sound: ENTITY_GENERIC_EXPLODE
+
+meteor_shower:
+  name:  "메테오 샤워"
+  description: "하늘에서 불타는 운석을 떨어뜨린다."
+  type: ATTACK
+  passive: false
+  max-level:  5
+  cooldown: 90
+  mana-cost: 100
+  energy-cost: 0
+  required-level: 70
+  target-type: ENEMY
+  range: 15.0
+  aoe-radius: 8.0
+
+  effects:
+    damage: 150.0
+    meteor_count: 5
+    stun_chance: 20.0
+
+  scaling: 
+    damage: 40.0
+    meteor_count: 1
+
+  upgrade-costs:  [15, 20, 25, 30, 40]
+
+  particle:  EXPLOSION_HUGE
+  sound:  ENTITY_WITHER_BREAK_BLOCK
+
+# ===== 골렘 스킬 =====
+
+rock_punch:
+  name: "바위 주먹"
+  description: "돌 주먹으로 강하게 내려친다."
+  type: ATTACK
+  passive: false
+  max-level: 10
+  cooldown: 6
+  mana-cost: 0
+  energy-cost:  15
+  required-level: 1
+  target-type:  ENEMY
+  range:  2.5
+  aoe-radius: 0
+
+  effects:
+    damage: 25.0
+    knockback:  2.0
+
+  scaling:
+    damage: 7.0
+    knockback: 0.5
+
+  upgrade-costs: [1, 1, 2, 2, 3, 3, 4, 4, 5]
+
+  particle:  BLOCK_CRACK
+  sound:  ENTITY_IRON_GOLEM_ATTACK
+
+stone_wall:
+  name: "돌 벽"
+  description: "자신 앞에 돌 벽을 세워 피해 감소."
+  type: DEFENSE
+  passive: false
+  max-level: 5
+  cooldown:  25
+  mana-cost: 30
+  energy-cost: 0
+  required-level: 10
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects:
+    damage_reduction: 40.0
+    duration: 5
+
+  scaling: 
+    damage_reduction:  10.0
+    duration: 1
+
+  upgrade-costs: [3, 4, 5, 6, 8]
+
+  particle:  BLOCK_DUST
+  sound:  BLOCK_STONE_PLACE
+
+earthquake:
+  name:  "지진"
+  description: "땅을 내리쳐 주변 적들에게 데미지."
+  type: ATTACK
+  passive: false
+  max-level:  5
+  cooldown: 30
+  mana-cost: 50
+  energy-cost:  30
+  required-level: 25
+  target-type: ENEMY
+  range: 0
+  aoe-radius: 6.0
+
+  effects:
+    damage:  60.0
+    slow_duration: 3
+    slow_percent: 50. 0
+
+  scaling: 
+    damage: 20.0
+    slow_duration: 0.5
+
+  upgrade-costs: [5, 7, 9, 12, 15]
+
+  particle:  EXPLOSION_LARGE
+  sound: ENTITY_GENERIC_EXPLODE
+
+fortify:
+  name: "강화"
+  description: "몸을 단단하게 하여 방어력 대폭 증가."
+  type:  BUFF
+  passive: false
+  max-level: 5
+  cooldown:  45
+  mana-cost: 40
+  energy-cost: 0
+  required-level: 40
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects:
+    defense_bonus: 50.0
+    duration: 10
+    knockback_resistance: 100.0
+
+  scaling:
+    defense_bonus: 15.0
+    duration: 2
+
+  upgrade-costs:  [6, 8, 10, 13, 16]
+
+  particle: ENCHANTMENT_TABLE
+  sound:  BLOCK_ANVIL_USE
+
+ground_slam:
+  name: "대지 강타"
+  description:  "땅을 강하게 내리쳐 적들을 공중으로 띄운다."
+  type: ATTACK
+  passive: false
+  max-level: 5
+  cooldown:  35
+  mana-cost: 45
+  energy-cost: 25
+  required-level: 55
+  target-type: ENEMY
+  range: 0
+  aoe-radius: 5.0
+
+  effects:
+    damage:  80.0
+    launch_power: 1.5
+    stun_duration: 2
+
+  scaling: 
+    damage: 25.0
+    launch_power: 0.3
+
+  upgrade-costs: [7, 10, 13, 16, 20]
+
+  particle:  EXPLOSION_HUGE
+  sound:  ENTITY_RAVAGER_ROAR

@@ -1,0 +1,101 @@
+name: PetCore
+version: 1.0.0
+main: com.multiverse. pet.PetCore
+api-version:  1.19
+author:  Multiverse Team
+description: 종합 펫 시스템 플러그인 - 소환, 레벨링, 스킬, 진화, 장비, 교배, 대결
+
+depend:
+  - PlayerDataCore
+
+softdepend: 
+  - ItemCore
+  - MythicMobs
+
+commands:
+  pet: 
+    description: 펫 관련 명령어
+    usage: /<command> [args]
+    aliases: [펫, pets, p]
+  petadmin:
+    description: 펫 관리자 명령어
+    usage: /<command> [args]
+    aliases:  [petadm, pa]
+    permission: petcore.admin
+
+permissions:
+  # 기본 권한
+  petcore.use:
+    description: 기본 펫 명령어 사용
+    default: true
+  petcore.summon:
+    description: 펫 소환 권한
+    default: true
+  petcore.storage:
+    description: 펫 보관함 사용 권한
+    default: true
+  petcore.skill:
+    description: 펫 스킬 사용 권한
+    default:  true
+  petcore.evolve:
+    description: 펫 진화 권한
+    default: true
+  petcore.breed:
+    description: 펫 교배 권한
+    default: true
+  petcore.battle:
+    description: 펫 대결 권한
+    default: true
+  petcore.capture:
+    description:  펫 포획 권한
+    default: true
+  petcore.rename:
+    description:  펫 이름 변경 권한
+    default: true
+  petcore.release:
+    description:  펫 방생 권한
+    default: true
+
+  # VIP 권한
+  petcore.vip:
+    description: VIP 보너스
+    default: false
+  petcore. vip.plus:
+    description:  VIP+ 보너스
+    default: false
+  petcore.mvp:
+    description: MVP 보너스
+    default:  false
+  petcore.mvp.plus:
+    description:  MVP+ 보너스
+    default:  false
+
+  # 관리자 권한
+  petcore. admin:
+    description: 관리자 권한
+    default: op
+    children:
+      petcore.admin.give:  true
+      petcore. admin.remove: true
+      petcore.admin.setlevel: true
+      petcore.admin.reload: true
+      petcore.admin.debug: true
+      petcore.admin.bypass: true
+  petcore.admin. give:
+    description: 펫 지급 권한
+    default: op
+  petcore.admin. remove:
+    description: 펫 제거 권한
+    default: op
+  petcore. admin.setlevel:
+    description:  펫 레벨 설정 권한
+    default: op
+  petcore.admin. reload:
+    description: 플러그인 리로드 권한
+    default: op
+  petcore. admin.debug:
+    description: 디버그 모드 권한
+    default: op
+  petcore.admin.bypass:
+    description: 제한 우회 권한
+    default: op

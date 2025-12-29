@@ -1,0 +1,376 @@
+#=========================================
+#  채집 스킬 설정
+#=========================================
+
+# ===== 기본 채집 스킬 =====
+
+mining_assist:
+  name:  "채굴 보조"
+  description: "주인이 채굴할 때 추가 아이템 획득 확률 증가."
+  type:  PASSIVE
+  passive: true
+  max-level: 5
+  cooldown: 0
+  required-level: 1
+
+  effects: 
+    bonus_drop_chance: 10.0
+    bonus_exp:  5.0
+
+  scaling:
+    bonus_drop_chance: 5.0
+    bonus_exp:  3.0
+
+  upgrade-costs: [1, 2, 3, 4, 5]
+
+ore_detection:
+  name:  "광석 탐지"
+  description: "주변의 광석을 탐지하여 표시한다."
+  type: UTILITY
+  passive: false
+  max-level: 5
+  cooldown: 60
+  mana-cost: 30
+  energy-cost: 0
+  required-level: 10
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects: 
+    detection_range: 10.0
+    duration: 30
+
+  scaling: 
+    detection_range:  5.0
+    duration: 10
+
+  upgrade-costs: [2, 3, 4, 5, 6]
+
+  particle: VILLAGER_HAPPY
+  sound:  BLOCK_NOTE_BLOCK_PLING
+
+auto_pickup:
+  name:  "자동 수집"
+  description: "주변의 아이템을 자동으로 수집한다."
+  type: PASSIVE
+  passive: true
+  max-level: 5
+  cooldown: 0
+  required-level: 15
+
+  effects: 
+    pickup_range: 3.0
+
+  scaling:
+    pickup_range: 1.0
+
+  upgrade-costs: [2, 3, 4, 5, 7]
+
+fortune_aura:
+  name:  "행운의 기운"
+  description: "채집 시 희귀 아이템 드롭 확률 증가."
+  type: PASSIVE
+  passive: true
+  max-level: 5
+  cooldown: 0
+  required-level: 25
+
+  effects: 
+    rare_drop_chance:  5.0
+    fortune_level: 1
+
+  scaling:
+    rare_drop_chance:  3.0
+    fortune_level:  0.5
+
+  upgrade-costs: [4, 6, 8, 10, 15]
+
+speed_mining:
+  name:  "신속 채굴"
+  description: "주인의 채굴 속도를 증가시킨다."
+  type: BUFF
+  passive: false
+  max-level: 5
+  cooldown: 120
+  mana-cost: 50
+  energy-cost:  0
+  required-level: 30
+  target-type: OWNER
+  range: 0
+  aoe-radius: 0
+
+  effects: 
+    haste_level: 1
+    duration: 60
+
+  scaling: 
+    haste_level: 0.5
+    duration: 15
+
+  upgrade-costs: [5, 7, 9, 12, 15]
+
+  particle: ENCHANTMENT_TABLE
+  sound:  ENTITY_PLAYER_LEVELUP
+
+# ===== 나무꾼 스킬 =====
+
+lumbering_assist:
+  name:  "벌목 보조"
+  description: "나무를 벨 때 추가 아이템 획득."
+  type:  PASSIVE
+  passive:  true
+  max-level: 5
+  cooldown: 0
+  required-level: 1
+
+  effects: 
+    bonus_drop_chance: 10.0
+    sapling_chance: 15.0
+
+  scaling:
+    bonus_drop_chance: 5.0
+    sapling_chance:  5.0
+
+  upgrade-costs: [1, 2, 3, 4, 5]
+
+tree_feller:
+  name:  "나무꾼"
+  description: "나무 전체를 한 번에 벨 수 있다."
+  type: UTILITY
+  passive: false
+  max-level: 3
+  cooldown:  180
+  mana-cost: 60
+  energy-cost:  30
+  required-level: 35
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects:
+    max_logs: 20
+    duration: 30
+
+  scaling: 
+    max_logs:  10
+    duration: 15
+
+  upgrade-costs: [8, 12, 18]
+
+  particle:  BLOCK_CRACK
+  sound:  ENTITY_ZOMBIE_BREAK_WOODEN_DOOR
+
+# ===== 농사 스킬 =====
+
+farming_assist:
+  name:  "농사 보조"
+  description: "작물 수확 시 추가 수확물 획득."
+  type:  PASSIVE
+  passive:  true
+  max-level: 5
+  cooldown: 0
+  required-level: 1
+
+  effects: 
+    bonus_harvest:  15.0
+    seed_return_chance: 20.0
+
+  scaling:
+    bonus_harvest: 5.0
+    seed_return_chance: 10.0
+
+  upgrade-costs: [1, 2, 3, 4, 5]
+
+growth_aura:
+  name: "성장의 기운"
+  description: "주변 작물의 성장 속도 증가."
+  type: PASSIVE
+  passive: true
+  max-level: 5
+  cooldown: 0
+  required-level: 20
+
+  effects: 
+    growth_boost: 20.0
+    range: 5.0
+
+  scaling: 
+    growth_boost: 10.0
+    range: 1.0
+
+  upgrade-costs: [3, 5, 7, 9, 12]
+
+harvest_all:
+  name:  "대량 수확"
+  description: "주변의 다 자란 작물을 한 번에 수확."
+  type:  UTILITY
+  passive: false
+  max-level: 3
+  cooldown:  120
+  mana-cost: 40
+  energy-cost: 20
+  required-level: 40
+  target-type:  SELF
+  range:  0
+  aoe-radius: 8.0
+
+  effects:
+    harvest_radius: 5.0
+    auto_replant: true
+
+  scaling: 
+    harvest_radius:  2.0
+
+  upgrade-costs:  [6, 10, 15]
+
+  particle:  VILLAGER_HAPPY
+  sound: BLOCK_CROP_BREAK
+
+# ===== 낚시 스킬 =====
+
+fishing_assist:
+  name: "낚시 보조"
+  description: "낚시 시 더 좋은 아이템 획득 확률 증가."
+  type: PASSIVE
+  passive: true
+  max-level: 5
+  cooldown:  0
+  required-level: 1
+
+  effects: 
+    luck_of_sea: 1
+    lure:  1
+
+  scaling:
+    luck_of_sea: 0.5
+    lure:  0.5
+
+  upgrade-costs:  [1, 2, 3, 4, 5]
+
+fish_finder:
+  name:  "물고기 탐지"
+  description: "물고기가 많은 지역을 탐지한다."
+  type: UTILITY
+  passive: false
+  max-level: 3
+  cooldown:  180
+  mana-cost: 25
+  energy-cost: 0
+  required-level: 15
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects:
+    detection_range: 20.0
+    duration: 60
+
+  scaling: 
+    detection_range:  10.0
+    duration: 30
+
+  upgrade-costs: [3, 5, 8]
+
+  particle:  WATER_BUBBLE
+  sound:  ENTITY_FISHING_BOBBER_SPLASH
+
+auto_fish:
+  name:  "자동 낚시"
+  description: "펫이 대신 낚시를 해준다."
+  type: UTILITY
+  passive: false
+  max-level: 3
+  cooldown: 300
+  mana-cost: 80
+  energy-cost: 0
+  required-level: 50
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects:
+    fish_count: 5
+    treasure_chance: 5.0
+
+  scaling:
+    fish_count: 3
+    treasure_chance: 5.0
+
+  upgrade-costs: [10, 15, 25]
+
+  particle:  FISHING
+  sound: ENTITY_FISHING_BOBBER_RETRIEVE
+
+# ===== 탐험 스킬 =====
+
+treasure_hunter:
+  name: "보물 사냥꾼"
+  description:  "숨겨진 보물을 발견할 확률 증가."
+  type: PASSIVE
+  passive: true
+  max-level: 5
+  cooldown: 0
+  required-level: 30
+
+  effects: 
+    treasure_chance:  5.0
+    rare_treasure_chance: 2.0
+
+  scaling:
+    treasure_chance: 3.0
+    rare_treasure_chance:  1.0
+
+  upgrade-costs:  [5, 8, 12, 16, 20]
+
+dungeon_finder:
+  name:  "던전 탐지"
+  description: "주변의 던전과 구조물을 탐지한다."
+  type: UTILITY
+  passive: false
+  max-level:  3
+  cooldown: 300
+  mana-cost: 50
+  energy-cost: 0
+  required-level: 45
+  target-type: SELF
+  range: 0
+  aoe-radius: 0
+
+  effects:
+    detection_range: 50.0
+    duration: 120
+
+  scaling:
+    detection_range: 25.0
+    duration: 60
+
+  upgrade-costs: [8, 15, 25]
+
+  particle: END_ROD
+  sound:  BLOCK_BEACON_ACTIVATE
+
+night_vision_skill:
+  name:  "야간 투시"
+  description:  "어두운 곳에서도 잘 볼 수 있게 해준다."
+  type:  BUFF
+  passive: false
+  max-level: 3
+  cooldown:  60
+  mana-cost: 20
+  energy-cost: 0
+  required-level: 10
+  target-type: OWNER
+  range: 0
+  aoe-radius: 0
+
+  effects: 
+    duration: 180
+
+  scaling:
+    duration: 120
+
+  upgrade-costs: [2, 4, 6]
+
+  particle:  SPELL_WITCH
+  sound: ENTITY_BAT_AMBIENT
